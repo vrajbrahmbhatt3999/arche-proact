@@ -1,0 +1,60 @@
+@import "../../../../../styles/mixin.scss";
+.descrtiptionModalContainer {
+  width: 65%;
+  height: 100%;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+  }
+
+  .descriptionModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 25px 0px 0px 0px;
+  }
+
+  .descriptionDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 25px;
+  }
+
+  .descriptionText {
+    text-align: center;
+    @include font(var(--grey4), var(--font-18), var(--font-medium));
+    padding: 0px 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100px;
+  }
+
+  .notesDetailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // margin-left: 100px;
+
+    .notesDetailDate {
+      @include font(var(--black2), var(--font-18), var(--font-semibold));
+    }
+
+    .notesDetailText {
+        @include font(var(--grey4), var(--font-18), var(--font-medium));
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 100px;
+        padding: 10px 17px;
+      }
+  }
+  .tableContainer{
+    margin: 40px 0px 40px 0px;
+  }
+}

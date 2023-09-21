@@ -1,0 +1,51 @@
+@import "../../../styles/mixin.scss";
+.notFoundCointainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include responsive(768px) {
+    justify-content: flex-start;
+  }
+  @include responsive(568px) {
+    // justify-content: center;
+  }
+  .notFoundText404 {
+    background: linear-gradient(
+      91.42deg,
+      #5936f1 0%,
+      #2adbdf 99.54%,
+      #4bb3e7 99.98%,
+      #47dae3 99.99%
+    );
+    font-size: var(--font-124);
+    font-family: var(--font-extrabold);
+    background-clip: text;
+    color: transparent;
+    @include responsive(568px) {
+      font-size: var(--font-50);
+    }
+  }
+  .notFoundText {
+    @include font(var(--black2), var(--font-22), var(--font-medium));
+    margin: 10px 0;
+    @include responsive(568px) {
+      font-size: var(--font-16);
+    }
+  }
+  .notFoundVectorStyle{
+    padding-right: 20px;
+    height: 230px;
+    @include responsive(568px) {
+        width: 100%;
+        height: 100px;
+        padding-right: 10px;
+      }
+  }
+  .notFoundButtonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 50px 0px 0px 0px;
+  }
+}

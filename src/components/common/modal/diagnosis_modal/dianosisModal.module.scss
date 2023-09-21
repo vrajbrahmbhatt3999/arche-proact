@@ -1,0 +1,169 @@
+@import '../../../../styles/mixin.scss';
+
+.diagnosisModalContainer {
+  width: 600px;
+  height: 500px;
+  // overflow: auto;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  // backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 0px 20px 40px 30px;
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .diagnosisModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 35px 0px 0px 0px;
+  }
+
+  .diagnosisModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+
+  .diagnosisContainer {
+    width: 560px;
+    height: 350px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+    .diagnosisModalDateContainer {
+      @include flexVertical;
+      column-gap: 10px;
+      .diagnosisModalDateTitle {
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+      }
+      .diagnosisModalDate {
+        @include font(var(--grey4), var(--font-16), var(--font-normal));
+      }
+    }
+    .diagnosisDesctriptionText {
+      @include font(var(--black2), var(--font-12), var(--font-normal));
+      margin-top: 10px;
+      padding-right: 20px;
+      .readMoreStyle {
+        @include font(var(--blue1), var(--font-12), var(--font-normal));
+        cursor: pointer;
+      }
+    }
+    .scribeNotesContainer {
+      margin: 14px 0px 14px 0px;
+      .scribeNotesText {
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+        margin: 0px 0px 8px 0px;
+      }
+      .scribeNotesImgConatainer {
+        @include flexVertical;
+        flex-wrap: wrap;
+        column-gap: 12px;
+        row-gap: 12px;
+        .scribeNotesimg {
+          position: relative;
+          .scribeNotesImgStyle {
+            border: 1px solid #cdd4d8;
+            border-radius: 6px;
+            width: 80px;
+            height: 70px;
+          }
+          .scribeNotesImgOverlayContainer {
+            position: absolute;
+            top: 0;
+            left: 0px;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: 0;
+            transition: 0.5s ease;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 80px;
+            height: 70px;
+          }
+          .scribeNotesImgPreviewText {
+            @include font(var(--white1), var(--font-14), var(--font-medium));
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+          }
+        }
+        .scribeNotesimg:hover .scribeNotesImgOverlayContainer {
+          opacity: 1;
+        }
+      }
+      .scribeNotesImgNoFoundText {
+        @include font(var(--black2), var(--font-14), var(--font-normal));
+      }
+    }
+    .scribeImagesContainer {
+      .scribeImagesText {
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+        margin: 0px 0px 8px 0px;
+      }
+      .scribeImagesImgContainer {
+        @include flexVertical;
+        flex-wrap: wrap;
+        column-gap: 12px;
+        row-gap: 12px;
+        .scribeImage {
+          position: relative;
+          .scribeImgStyle {
+            border: 1px solid #cdd4d8;
+            border-radius: 6px;
+            width: 80px;
+            height: 70px;
+          }
+          .scribeImgOverlayContainer {
+            position: absolute;
+            top: 0;
+            left: 0px;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: 0;
+            transition: 0.5s ease;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 80px;
+            height: 70px;
+          }
+          .scribeImgPreviewText {
+            @include font(var(--white1), var(--font-14), var(--font-medium));
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+          }
+        }
+        .scribeImage:hover .scribeImgOverlayContainer {
+          opacity: 1;
+        }
+      }
+      .scribeImgNoFoundText {
+        @include font(var(--black2), var(--font-14), var(--font-normal));
+      }
+    }
+  }
+}

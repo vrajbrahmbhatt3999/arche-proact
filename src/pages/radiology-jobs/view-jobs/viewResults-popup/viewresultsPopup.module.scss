@@ -1,0 +1,38 @@
+@import "../../../../styles/mixin.scss";
+.viewResultsPopupContainer {
+  // width: 400px;
+  width: 28%;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+  }
+  .viewResultsContainer {
+    margin-top: 30px;
+    .title {
+      @include font(var(--black2), var(--font-24), var(--font-semibold));
+      text-align: center;
+    }
+    .dividerStyle {
+      margin: 0px auto 30px auto;
+      width: 60px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .viewResultsNotesInfo {
+      padding: 0 20px;
+      .descriptionText {
+        @include font(var(--grey4), var(--font-16), var(--font-normal));
+        margin: 5px 0 20px 0;
+        max-height: 100px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+    }
+  }
+}

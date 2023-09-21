@@ -1,0 +1,46 @@
+@import '../../../styles/mixin.scss';
+
+.mainContainerFormActionSidebar {
+  @include flexColumn;
+  width: 50px;
+  height: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  // backdrop-filter: blur(47px);
+  opacity: 0.7;
+  border-radius: 10px;
+  padding: 10px 0px;
+  //   margin: 0px 15px 0px 0px;
+  .floatingBarBtn {
+    border: none;
+    background: none;
+    padding: 0px;
+    // width: 10px;
+    // margin-bottom: 10px;
+    .iconStyleContainer {
+      margin: 13px 10px;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      .tooltiptext {
+        visibility: hidden;
+        width: 70px;
+        background-color: var(--white1);
+        font-size: var(--font-14);
+        color: var(--black2);
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        top: -4px;
+        right: 40px;
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+        // backdrop-filter: blur(47px);
+      }
+      &:hover .tooltiptext {
+        visibility: visible;
+        background-color: var(--white1);
+      }
+    }
+  }
+}

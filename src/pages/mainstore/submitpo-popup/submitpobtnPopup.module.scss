@@ -1,0 +1,51 @@
+@import "../../../styles//mixin.scss";
+
+.mainContainer {
+  margin-top: 30px;
+  display: flex;
+  .tabContent {
+    height: 38px;
+    margin-right: 20px;
+    @include flexCenter;
+    @include font(var(--white1), var(--font-13), var(--font-semibold));
+    min-height: 42px;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 78% 0);
+    background: var(--gredientColor);
+    border-radius: 12px 20px 0 0px;
+    padding: 0px 50px 0px 20px;
+    margin-left: 12px;
+    cursor: pointer;
+  }
+  .disableTab {
+    @include font(var(--black2), var(--font-13), var(--font-normal));
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+.tablestyle {
+  width: 98%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  overflow-x: auto;
+
+  th {
+    min-width: 150px;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.inputField {
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 8px;
+  width: 70px;
+}
+
+

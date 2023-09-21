@@ -1,0 +1,24 @@
+.tableContainer {
+  width: 90%;
+  margin: 30px auto;
+  .tableHeading {
+    // text-align: start !important;
+    padding-left: 20px;
+    // &:last-child {
+    //   text-align: end !important;
+    //   padding-right: 20px;
+    // }
+  }
+  .tableColumn {
+    // text-align: start;
+    padding-left: 20px;
+
+    // &:last-child {
+    //   text-align: end;
+    //   padding-right: 15px;
+    // }
+  }
+  // .customClasssForViewSlotTrHead {
+  //   display: block !important;
+  // }
+}

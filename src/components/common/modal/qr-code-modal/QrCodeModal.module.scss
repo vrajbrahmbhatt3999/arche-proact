@@ -1,0 +1,86 @@
+@import "../../../../styles/mixin.scss";
+
+.qrcodeModalContainer {
+  width: 1300px;
+  height: 683px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 17px 14px 60px 0px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+  }
+
+  .qrcodeModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 25px 0px 0px 0px;
+  }
+
+  .descriptionDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 25px;
+  }
+
+  //   .descriptionText {
+  //     text-align: center;
+  //     @include font(var(--grey4), var(--font-18), var(--font-medium));
+  //     padding: 0px 15px;
+  //     overflow-y: auto;
+  //     overflow-x: hidden;
+  //     max-height: 100px;
+  //   }
+
+  //   .notesDetailContainer {
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     flex-direction: column;
+  //     // margin-left: 100px;
+
+  //     .notesDetailDate {
+  //       @include font(var(--black2), var(--font-18), var(--font-semibold));
+  //     }
+
+  //     .notesDetailText {
+  //         @include font(var(--grey4), var(--font-18), var(--font-medium));
+  //         overflow-y: auto;
+  //         overflow-x: hidden;
+  //         max-height: 100px;
+  //         padding: 10px 17px;
+  //       }
+  //   }
+  .qrcodeDescriptionMain {
+    display: flex;
+    margin: auto;
+    margin-left: 78px;
+    padding-top: 16px;
+    .qrcodeDot {
+      margin-right: 11px;
+    }
+    .qrcodeText {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+      color: black;
+    }
+    .qrcodeTextCopy {
+      @include flexVertical;
+      column-gap: 10px;
+      margin-left: 17px;
+      position: relative;
+      .qrCodeCopyToolTip {
+        top: -40px;
+        right: -30px;
+      }
+    }
+    .linkTag {
+      color: #797979 !important;
+    }
+  }
+}

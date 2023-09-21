@@ -1,0 +1,147 @@
+@import '../../../../styles/mixin.scss';
+
+.viewAllImagesModalContainer {
+  width: 850px;
+  height: 450px;
+  // overflow: auto;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  // backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 0px 20px 40px 30px;
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .viewAllImagesModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 35px 0px 0px 0px;
+  }
+
+  .viewAllImagesModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+
+  .viewAllImagesContainer {
+    width: 800px;
+    height: 320px;
+    overflow: auto;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+    .imagesFilterAndCompareContainer {
+      @include flexVertical;
+      justify-content: space-between;
+      margin: 0px 0px 20px 0px;
+      .searchFieldContainer {
+        @include flexVertical;
+        column-gap: 10px;
+        .searchInput {
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 42px;
+          width: 165px;
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          padding: 0px 14px 0px 14px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          &::placeholder {
+            font-size: 13px;
+          }
+        }
+        .selectInputField {
+          outline: none;
+          box-shadow: none;
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          width: 165px;
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          .select_placeholder_text {
+            font-size: 13px;
+          }
+        }
+        .searchButton {
+          background: var(--green1);
+          padding: 10px 12px;
+          cursor: pointer;
+          border-radius: 20%;
+        }
+        .stylePrint {
+          cursor: pointer;
+        }
+        .styleExport {
+          cursor: pointer;
+        }
+      }
+      .copareAndInfoBtnContainer {
+        @include flexVertical;
+        column-gap: 5px;
+        position: relative;
+        .compareBtnStyle {
+          width: 70px;
+          height: 25px;
+          background: transparent;
+          @include font(var(--blue3), var(--font-12), var(--font-normal));
+          border: 1px solid var(--blue3);
+          border-radius: 20px;
+        }
+        .infoIconContainer {
+          @include flexVertical;
+          position: relative;
+          .showInfoIconText {
+            padding: 10px;
+            background: var(--white1);
+            box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+            // backdrop-filter: blur(97px);
+            border-radius: 6px;
+            width: 260px;
+            top: 30px;
+            right: 0px;
+            position: absolute;
+            opacity: 1;
+            transition: 0.5s ease;
+            @include font(var(--black1), var(--font-12), var(--font-medium));
+          }
+          .hideInfoIconText {
+            padding: 10px;
+            background: var(--white1);
+            box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+            // backdrop-filter: blur(97px);
+            border-radius: 6px;
+            width: 320px;
+            top: 40px;
+            right: 0px;
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s ease;
+            @include font(var(--black1), var(--font-14), var(--font-medium));
+          }
+        }
+      }
+    }
+  }
+}

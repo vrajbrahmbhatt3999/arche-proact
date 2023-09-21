@@ -1,0 +1,107 @@
+@import '../../../../styles/mixin.scss';
+
+.mainContainer {
+    width: 480px;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+
+    .closeIconContainer {
+        width: 5%;
+        height: 30px;
+        align-self: end;
+        margin: 10px;
+    }
+
+    .title {
+        text-align: center;
+        font-weight: var(--font-semibold);
+        font-size: var(--font-24);
+        color: var(--black2);
+    }
+
+    .dividerStyle {
+        margin: 10px auto 30px auto;
+        width: 80px;
+        height: 3px;
+        background: var(--green1);
+    }
+
+    .approvalFormContainer {
+        .approvalContainer {
+            width: 90%;
+            margin: 0px auto 0px auto;
+            display: grid;
+            grid-row-gap: 14px;
+
+            .formFieldContainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                position: relative;
+                // background-color: red;
+
+                @include responsive(768px) {
+                    width: 50%;
+                }
+
+                @include responsive(568px) {
+                    width: 100%;
+                }
+
+                .inputFieldContainer {
+                    @include flexVertical;
+                    width: 100%;
+
+                    .approvalLable {
+                        @include font(var(--black2), var(--font-16), var(--font-normal));
+                        margin-right: 15px;
+                        width: 30%;
+                        flex-shrink: 0;
+                        text-align: end;
+                        padding-top: 5px;
+                    }
+
+                    .insuranceTitle {
+                        margin: 0px;
+                        color: #797979;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+
+                    .inputField {
+                        background: var(--white1);
+                        border: 1px solid var(--grey6);
+                        border-radius: 6px;
+                        padding-left: 10px;
+                        height: 42px;
+                        width: 234px;
+
+                        @include responsive(568px) {
+                            width: 100%;
+                            max-width: none;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        .okButtonContainer {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+
+
+
+
+
+}

@@ -1,0 +1,317 @@
+@import '../../../styles/mixin.scss';
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .mainServiceContainer {
+    width: 95%;
+    height: 100%;
+    background-color: var(--white2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .invoiceInfoContainer {
+      display: flex;
+      flex-direction: row;
+
+      .invoiceNoContainer {
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        margin: 30px 0px 10px 15px;
+
+        .invoiceTextStyle {
+          padding: 0px 5px;
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+        }
+
+        .invoiceStyle {
+          padding: 0px 5px;
+          @include font(var(--grey4), var(--font-16), var(--font-normal));
+        }
+      }
+
+      .fileNoContainer {
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        margin: 30px 0px 10px 15px;
+
+        .invoiceFileTextStyle {
+          padding: 0px 5px;
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+        }
+
+        .invoiceFileStyle {
+          padding: 0px 5px;
+          @include font(var(--grey4), var(--font-16), var(--font-normal));
+        }
+      }
+    }
+
+    .paymentMainContainer {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      .paymentContainer {
+        width: 60%;
+        height: 580px;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 10px 0px 20px;
+        // font-size: 24px;
+
+        .amountStyle {
+          // width: 455px;
+          width: fit-content;
+          height: fit-content;
+          margin: 10px 0px;
+          padding: 12px;
+          border-radius: 6px;
+          @include font(var(--yellow1), var(--font-30), var(--font-medium));
+          background: rgba(255, 160, 9, 0.1);
+          font-size: 24px;
+        }
+
+        .outstandingStyle {
+          // width: 455px;
+          width: fit-content;
+          height: fit-content;
+          margin: 10px 0px;
+          padding: 12px;
+          border-radius: 6px;
+          @include font(var(--purple2), var(--font-30), var(--font-medium));
+          background: rgba(89, 54, 241, 0.1);
+          font-size: 24px;
+        }
+
+        .advanceDueStyle {
+          // width: 227px;
+          width: fit-content;
+          height: fit-content;
+          margin: 10px 0px;
+          padding: 12px;
+          border-radius: 6px;
+          @include font(var(--green1), var(--font-18), var(--font-medium));
+          background: rgba(2, 191, 144, 0.1);
+          font-size: 24px;
+        }
+
+        .copayDetailContainer {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 110px;
+          margin: 30px 0px;
+
+          .copayPercentageContainer {
+            width: 50;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .labelText {
+              margin-top: 10px;
+              @include font(
+                var(--black2),
+                var(--font-16),
+                var(--font-semibold)
+              );
+              width: 95px;
+              padding-right: 10px;
+            }
+
+            .inputField {
+              background-color: var(--grey13);
+              width: 234px;
+              border: 1px solid var(--grey6);
+              border-radius: 6px;
+              padding: 0px 15px;
+            }
+
+            .inputFieldDisable {
+              background: var(--grey8);
+              width: 234px;
+              height: 42px !important;
+              border: 1px solid var(--grey6);
+              border-radius: 6px;
+              padding: 0px 15px;
+              font-size: 16px !important;
+            }
+          }
+
+          .copayAmountContainer {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 40px;
+
+            .labelText {
+              margin-top: 10px;
+              @include font(
+                var(--black2),
+                var(--font-16),
+                var(--font-semibold)
+              );
+              width: 95px;
+              padding-right: 10px;
+            }
+
+            .inputField {
+              background-color: var(--grey13);
+              width: 234px;
+              border: 1px solid var(--grey6);
+              border-radius: 6px;
+              padding: 0px 15px;
+            }
+
+            .inputFieldDisable {
+              background: var(--grey8);
+              width: 234px;
+              height: 42px !important;
+              border: 1px solid var(--grey6);
+              border-radius: 6px;
+              padding: 0px 15px;
+              font-size: 16px !important;
+            }
+          }
+        }
+
+        .buttonContainer {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin: 35px 0px 30px 0px;
+          // height: 50px;
+
+          .addPaymentStyle {
+            width: 175px;
+            margin: 0px 20px 0px 0px;
+            @include font(var(--white1), var(--font-14), var(--font-normal));
+          }
+
+          .eSignButtonStyle {
+            width: 174px;
+            border: 1px solid var(--blue1);
+            background: none;
+            cursor: pointer;
+            @include font(var(--blue1), var(--font-12), var(--font-normal));
+            padding: 5px 0px;
+          }
+
+          .shareIcon {
+            position: absolute;
+            top: 13px;
+            right: 15px;
+          }
+
+          .printIcon {
+            margin: 10px 20px;
+          }
+
+          .exportIcon {
+            margin: 10px 0px;
+          }
+        }
+
+        .scribeContainer {
+          height: 100px;
+
+          //   background-color: aliceblue;
+          .eSignText {
+            @include font(var(--black1), var(--font-12), var(--font-normal));
+          }
+        }
+      }
+
+      .paymentDetailContainer {
+        width: 45%;
+        height: 400px;
+        // background-color: rgb(245, 202, 208);
+        margin: 0px 15px;
+
+        .linkGenreateContainer {
+          text-align: right;
+          cursor: pointer;
+          @include font(var(--blue1), var(--font-16), var(--font-medium));
+        }
+
+        .tableContainer {
+          margin-top: 50px;
+        }
+
+        .submitPaymentContainer {
+          display: flex;
+          justify-content: center;
+          margin-top: 35px;
+
+          .settle8Button {
+            width: 90px;
+            height: 42px;
+          }
+
+          .backButton {
+            width: 90px;
+            height: 42px;
+            font-weight: var(--font-semibold);
+            font-size: var(--font-16);
+            color: var(--white1);
+            margin-left: 25px;
+            background: none;
+            border: 1px solid var(--blue3);
+            border-radius: 6px;
+            @include font(var(--blue3), var(--font-12), var(--font-normal));
+          }
+        }
+      }
+    }
+  }
+
+  .mainContainerFormActionSidebar {
+    width: 50px;
+    height: 280px;
+    background: var(--white1);
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(47px);
+    opacity: 0.7;
+    border-radius: 10px;
+    margin: 0px 15px 0px 20px;
+
+    // z-index: 2;
+    .sidebarData {
+      .iconStyleContainer {
+        margin: 13px 10px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+
+        .tooltiptext {
+          visibility: hidden;
+          width: 70px;
+          background-color: var(--white1);
+          font-size: var(--font-14);
+          color: var(--black2);
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          top: -4px;
+          right: 142%;
+          box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+          backdrop-filter: blur(47px);
+        }
+
+        &:hover .tooltiptext {
+          visibility: visible;
+          background-color: var(--white1);
+        }
+      }
+    }
+  }
+}

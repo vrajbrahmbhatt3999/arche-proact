@@ -1,0 +1,257 @@
+@import '../../../../styles/mixin.scss';
+.NotificationMainContainer {
+  position: relative;
+  .rectangleIconStyle {
+    float: right;
+    margin-top: -13px;
+    margin-right: 67px;
+  }
+  .mainContainer {
+    width: 320px;
+    margin: 0px 0px 0px 0px;
+    background: var(--white1);
+    box-shadow: 0px 2px 6px rgba(13, 10, 44, 0.08);
+    border-radius: 20px;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    
+
+    .notificationTitle {
+      text-align: center;
+      padding-top: 25px;
+      @include font(var(--black2), var(--font-22), var(--font-semibold));
+    }
+    .headerDividerStyle {
+      margin: 10px auto 20px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .container {
+      width: 310px;
+      max-height: 300px;
+      background-color: var(--white1);
+      overflow-y: auto;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      border-radius: 20px;
+      margin-bottom: 5px;
+      &::-webkit-scrollbar {
+        width: 3px;
+        border-radius: 50px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        -webkit-box-shadow: inset 0 0 100px var(--grey10);
+      }
+      .noRecordTextStyle {
+        text-align: center;
+        margin: 50px auto;
+        font-size: var(--font-18);
+        font-weight: var(--font-semibold);
+      }
+      .readNotificationContainer {
+        // width: 97%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 11px;
+        cursor: default !important;
+        position: relative;
+        color: rgb(253, 228, 232);
+        .actionIconContainer {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          right: 0px;
+          top: 5px;
+          width: 8%;
+          height: 30px;
+          // .crossIconStyle {
+          //   display: none;
+          // }
+        }
+        &:hover {
+          background: linear-gradient(
+            91.42deg,
+            rgba(89, 54, 241, 0.1) 2.81%,
+            rgba(42, 219, 223, 0.1) 103.44%,
+            rgba(72, 179, 231, 0.1) 103.89%,
+            rgba(71, 218, 227, 0.1) 103.9%
+          );
+          margin: 0px 11px;
+
+
+          .crossIconStyle {
+            display: inline-block;
+          }
+        }
+        .notificationBox {
+          display: flex;
+          flex-direction: row;
+          .iconContainer {
+            margin: 18px 0px;
+          }
+          .notificationContentContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .readtitleStyle {
+              @include font(var(--grey4), var(--font-16), var(--font-semibold));
+              padding: 18px 11px 0px 15px;
+            }
+            .readDescriptionStyle {
+              @include font(var(--grey4), var(--font-12), var(--font-normal));
+              padding: 0px 11px 0px 15px;
+            }
+
+            .unReadtitleStyle {
+              @include font(
+                var(--black2),
+                var(--font-16),
+                var(--font-semibold)
+              );
+              padding: 18px 11px 0px 15px;
+            }
+            .unReadDescriptionStyle {
+              @include font(var(--grey4), var(--font-12), var(--font-normal));
+              padding: 0px 11px 0px 15px;
+            }
+            .readMoreLink {
+              color: var(--blue1);
+              cursor: pointer;
+            }
+            .dateTimeContainer {
+              display: flex;
+              flex-direction: row;
+              .readNotification_dayStyle {
+                @include font(var(--grey4), var(--font-12), var(--font-normal));
+                padding: 5px 0px 10px 15px;
+              }
+              .readNotification_timeStyle {
+                @include font(var(--grey4), var(--font-12), var(--font-normal));
+                padding: 5px 0px 10px 5px;
+              }
+              .unReadNotification_dayStyle {
+                @include font(var(--grey4), var(--font-12), var(--font-normal));
+                padding: 5px 0px 10px 15px;
+              }
+              .unReadNotification_timeStyle {
+                @include font(
+                  var(--black2),
+                  var(--font-12),
+                  var(--font-normal)
+                );
+                padding: 5px 0px 10px 5px;
+              }
+            }
+          }
+        }
+      }
+
+      .unReadNotificationContainer {
+        width: 97%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 4px;
+        cursor: pointer !important;
+        position: relative;
+        color: rgb(253, 228, 232);
+        .actionIconContainer {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          right: 0px;
+          top: 5px;
+          width: 8%;
+          height: 30px;
+          // .crossIconStyle {
+          //   display: none;
+          // }
+        }
+        &:hover {
+          background: linear-gradient(
+            91.42deg,
+            rgba(89, 54, 241, 0.1) 2.81%,
+            rgba(42, 219, 223, 0.1) 103.44%,
+            rgba(72, 179, 231, 0.1) 103.89%,
+            rgba(71, 218, 227, 0.1) 103.9%
+          );
+          .crossIconStyle {
+            display: inline-block;
+          }
+        }
+        .notificationBox {
+          display: flex;
+          flex-direction: row;
+          .iconContainer {
+            margin: 18px 0px;
+          }
+          .notificationContentContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .readtitleStyle {
+              @include font(var(--grey4), var(--font-16), var(--font-semibold));
+              padding: 18px 11px 0px 15px;
+            }
+            .readDescriptionStyle {
+              @include font(var(--grey4), var(--font-12), var(--font-normal));
+              padding: 0px 11px 0px 15px;
+            }
+
+            .unReadtitleStyle {
+              @include font(
+                var(--black2),
+                var(--font-16),
+                var(--font-semibold)
+              );
+              padding: 18px 11px 0px 15px;
+            }
+            .unReadDescriptionStyle {
+              @include font(var(--grey4), var(--font-12), var(--font-normal));
+              padding: 0px 11px 0px 15px;
+            }
+            .readMoreLink {
+              color: var(--blue1);
+              cursor: pointer;
+            }
+            .dateTimeContainer {
+              display: flex;
+              flex-direction: row;
+              .readNotification_dayStyle {
+                @include font(var(--grey4), var(--font-12), var(--font-normal));
+                padding: 5px 0px 10px 15px;
+              }
+              .readNotification_timeStyle {
+                @include font(var(--grey4), var(--font-12), var(--font-normal));
+                padding: 5px 0px 10px 5px;
+              }
+              .unReadNotification_dayStyle {
+                @include font(var(--grey4), var(--font-12), var(--font-normal));
+                padding: 5px 0px 10px 15px;
+              }
+              .unReadNotification_timeStyle {
+                @include font(
+                  var(--black2),
+                  var(--font-12),
+                  var(--font-normal)
+                );
+                padding: 5px 0px 10px 5px;
+              }
+            }
+          }
+        }
+      }
+      .dividerStyle {
+        background: var(--grey5);
+        width: 96%;
+        height: 0.5px;
+        margin: 2px 12px 0px 12px;
+        border-radius: 0px;
+        border: 0px;
+      }
+    }
+  }
+}

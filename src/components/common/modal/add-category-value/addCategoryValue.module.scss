@@ -1,0 +1,85 @@
+@import "../../../../styles/mixin.scss";
+.mainContainer {
+  width: 500px;
+  height: 100%;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .addCategoryContainer {
+    margin-top: 50px;
+    .title {
+      text-align: center;
+      @include font(var(--black2), var(--font-24), var(--font-semibold));
+    }
+    .dividerStyle {
+      margin: 10px auto 50px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .formLayoutContainer {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 92%;
+      margin: 30px auto 0px auto;
+      .formContainer {
+        width: 100%;
+        margin-bottom: 30px;
+        .inputContainer {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-bottom: 20px;
+          .labelField {
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            margin: auto;
+            .labelText {
+              margin-right: 10px;
+              @include font(
+                var(--black2),
+                var(--font-16),
+                var(--font-semibold)
+              );
+              width: 90px;
+              display: flex;
+              align-items: center;
+            }
+            .fieldErrorContainer {
+              .inputField {
+                background: var(--white1);
+                width: 280px;
+                border: 1px solid var(--grey6);
+                border-radius: 5px;
+                padding: 8px 5px;
+              }
+              .selectInputField {
+                width: 280px;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+      .buttonConatiner {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        .resetButtonStyle {
+          background: none;
+          border: 1px solid var(--blue1);
+          border-radius: 6px;
+          color: var(--blue1);
+        }
+      }
+    }
+  }
+}

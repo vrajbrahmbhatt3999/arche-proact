@@ -1,0 +1,85 @@
+@import '../../../styles/mixin.scss';
+
+.mobileAppNewsContainer {
+    @include pageWrapper(20px);
+    margin-top: unset;
+
+    .mobileAppNewsTitle {
+        @include font(var(--black2), var(--font-18), var(--font-semibold));
+        margin-bottom: 18px;
+    }
+
+    .mobileAppNewsForm {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .formContainer {
+            padding: 20px;
+            margin: 0 30px 30px 0;
+            border: 1px solid var(--grey6);
+            border-radius: 10px;
+            width: 480px;
+
+            .newsName {
+                @include font(var(--blue1), var(--font-14), var(--font-semibold));
+                margin-bottom: 20px;
+            }
+
+            .formFieldContainer {
+                margin-top: 28px;
+
+                .inputFieldContainer {
+                    display: flex;
+                    flex-direction: row;
+
+                    .formLabel {
+                        @include font(var(--black2), var(--font-16), var(--font-semibold));
+                        width: 115px;
+                        text-align: right;
+                        margin: 10px 15px 0px 0px;
+                    }
+
+                    .formInput {
+                        background: var(--white1);
+                        border: 1px solid var(--grey6);
+                        border-radius: 6px;
+                        padding: 10px 15px;
+                        width: 230px;
+                    }
+
+                    .textArea {
+                        background: var(--white1);
+                        border: 1px solid var(--grey6);
+                        border-radius: 6px;
+                        padding: 10px 15px;
+                        width: 230px;
+                        height: 90px;
+                    }
+                }
+
+                .errorContainer {
+                    display: flex;
+
+                    .extraSpan {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+
+        .formButtonContainer {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 50px 0px 0px 0px;
+
+            .resetBtn {
+                color: var(--blue1);
+                border: 1px solid var(--blue1);
+                border-radius: 6px;
+                background: var(--white1);
+            }
+        }
+    }
+}

@@ -1,0 +1,170 @@
+@import '../../../styles/mixin.scss';
+
+.mobileAppointmentRequestModalContainer {
+  width: 1000px;
+  height: 500px;
+  // overflow: auto;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 0px 20px 20px 20px;
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .mobileAppointmentModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 30px 0px 0px 0px;
+  }
+
+  .mobileAppointmentDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+  .mobileAppointmentContainer {
+    width: 975px;
+    height: 380px;
+    overflow: auto;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+
+    .searchReloadIconContainer {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      // column-gap: 20px;
+      padding-top: 20px;
+      .searchIconContainer {
+        @include flexVertical;
+        .searchFieldContainer {
+          @include flexVertical;
+          column-gap: 12px;
+          margin-right: 10px;
+          .searchLabel {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            width: 50px;
+            text-align: right;
+          }
+          .searchInput {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            width: 180px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+            padding: 0px 14px 0px 14px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+          }
+        }
+        .searchButton {
+          background: var(--green1);
+          padding: 10px 12px;
+          cursor: pointer;
+          border-radius: 20%;
+          margin-right: 10px;
+        }
+        .mobileAppointmentSearch {
+          // background: rgba(255, 255, 255, 0.7) !important;
+          // box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05) !important;
+          width: 180px !important;
+        }
+      }
+      // .mobileAppointmentReloadButton {
+      // }
+    }
+    .dropDownContainer {
+      @include flexVertical;
+      column-gap: 20px;
+      // margin-top: 20px;
+      .formFieldContainer {
+        @include flexVertical;
+        position: relative;
+        margin-top: 17px;
+
+        .inputFieldContainer {
+          display: flex;
+          align-items: center;
+          position: relative;
+          column-gap: 16px;
+
+          .formAppointmentLabel {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            width: 102px;
+            text-align: right;
+          }
+
+          .formStatusLabel {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            width: 60px;
+            text-align: right;
+          }
+
+          .branchDropDownField {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            width: 200px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+            padding: 0px 14px 0px 14px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+          }
+
+          .inputField {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            width: 160px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+            padding: 0px 14px 0px 14px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+          }
+
+          .downArrowStyle {
+            position: absolute;
+            right: 8px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .tableContainer {
+      // height: 100%;
+      width: 100%;
+      white-space: nowrap;
+      // overflow-x: auto;
+      margin-top: 35px;
+    }
+  }
+}

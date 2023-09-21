@@ -1,0 +1,58 @@
+@import "../../../../../styles/mixin.scss";
+.mainContainer {
+  width: 400px;
+  height: 100%;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 17px 14px 10px 14px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+  }
+  .heading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+  }
+  .dividerStyle {
+    margin: 10px auto 30px auto;
+    width: 80px;
+    height: 3px;
+    background: var(--green1);
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    .formContainer {
+      display: flex;
+      flex-direction: column;
+      .labelFieldContainer {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        .labelText {
+          margin-top: 10px;
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 85px;
+        }
+        .fieldErrorContainer {
+          .inputField {
+            background: var(--white1);
+            width: 220px;
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            padding: 10px 15px;
+          }
+        }
+      }
+      .buttonStyle {
+        width: 90px;
+        margin: 30px auto 10px auto;
+        justify-content: center;
+        padding: 10px;
+      }
+    }
+  }
+}

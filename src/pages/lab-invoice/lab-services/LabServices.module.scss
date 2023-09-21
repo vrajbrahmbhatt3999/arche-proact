@@ -1,0 +1,260 @@
+@import "../../../styles/mixin.scss";
+
+.mainContainer {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding-bottom: 35px;
+
+
+  .lableContainer {
+    display: flex;
+    margin-left: 28px;
+  }
+
+  .invoiceInfoContainer {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0px 10px 15px;
+
+    .invoiceTextStyle {
+      padding: 0px 5px;
+      @include font(var(--black2), var(--font-16), var(--font-semibold));
+    }
+
+    .invoiceStyle {
+      padding: 0px 5px;
+      @include font(var(--grey4), var(--font-16), var(--font-normal));
+    }
+  }
+
+  .searchContainer {
+    margin-left: 33px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 35px 0px 0px 0px;
+
+    .searchInputContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .inputSearchContainer {
+        width: 270px;
+        height: 50px;
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+      }
+
+      .inputSearchButton {
+        height: 43px;
+      }
+
+    }
+
+    .smartInputContainer {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .inputSearchContainer {
+        width: 285px;
+        height: 50px;
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        padding: 0px 0px 0px 50px;
+      }
+
+      .searchIconStyle {
+        position: absolute;
+        width: 15%;
+        height: 22px;
+        background-color: var(--white1);
+        left: 5px;
+        top: 14px;
+        cursor: pointer;
+      }
+    }
+
+    .addServices {
+      .newServiceButton {
+        background: none;
+        border: 1px solid var(--blue3);
+        border-radius: 6px;
+        width: 156px;
+        height: 42px;
+        @include font(var(--blue3), var(--font-12), var(--font-normal));
+        margin-left: 28px;
+      }
+    }
+
+    .iconContainer {
+      margin-left: 28px;
+      cursor: pointer;
+    }
+
+  }
+
+  .tableContainer {
+    margin: 30px 33px;
+
+    tr {
+      border-top: 1px solid var(--grey8);
+    }
+  }
+
+  // .labelContainer {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+
+  //   .amountText {
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     background: rgba(89, 54, 241, 0.1);
+  //     color: var(--blue2);
+  //     width: 187px;
+  //     padding: 5px 11px;
+  //     height: 34px;
+  //     border-radius: 4px;
+  //     font-weight: var(--font-medium);
+  //     font-size: var(--font-12);
+  //   }
+
+  //   .discountText {
+  //     display: flex;
+  //     justify-content:space-evenly;
+  //     align-items: center;
+  //     margin-left: 37px;
+  //     background: rgba(2, 191, 144, 0.1);
+  //     border-radius: 4px;
+  //     width: 187px;
+  //     padding: 5px 13px;
+
+  //     height: 34px;
+  //     font-weight: var(--font-medium);
+  //     font-size: var(--font-12);
+  //     color: var(--green1);
+
+  //     .inputContainer{
+  //       width: 45px;
+  //       height: 23px;
+  //       border-radius: 6px;
+  //       border: 1px solid #02BF90;
+  //       padding: 0 8px;
+  //   }
+
+  //   }
+
+  //   .dueAmountText {
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     margin-left: 37px;
+
+  //     background: rgba(177, 19, 19, 0.1);
+  //     border-radius: 4px;
+  //     width: 160px;
+  //     height: 34px;
+  //     padding: 5px 13px;
+
+  //     color: var(--red2);
+  //     font-weight: var(--font-medium);
+  //     font-size: var(--font-12);
+  //   }
+  // }
+
+  .totalAmountContainer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px auto 0px auto;
+
+    .amountStyle {
+      height: 40px;
+      margin: 10px 0px 12px 20px;
+      padding: 12px 5px;
+      border-radius: 6px;
+      text-align: center;
+      @include font(var(--purple2), var(--font-12), var(--font-medium));
+      background: rgba(89, 54, 241, 0.1);
+    }
+
+    .discountStyle {
+      height: 40px;
+      margin: 10px 0px 12px 20px;
+      padding: 5px 5px;
+      border-radius: 6px;
+      text-align: center;
+      @include font(var(--green1), var(--font-12), var(--font-medium));
+      background: rgba(2, 191, 144, 0.1);
+
+      .inputFieldServiceTable {
+        border: 1px solid var(--green1);
+        border-radius: 6px;
+        padding: 5px;
+        width: 50px;
+        text-align: center;
+        margin-left: 2px;
+      }
+    }
+
+    .netAmountStyle {
+      height: 40px;
+      margin: 10px 0px 12px 20px;
+      padding: 12px 5px;
+      border-radius: 6px;
+      text-align: center;
+      @include font(var(--red3), var(--font-12), var(--font-medium));
+      background: rgba(177, 19, 19, 0.1);
+    }
+  }
+
+  .proeedButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+
+    .proeedButton {
+      background: linear-gradient(91.42deg,
+          #5936f1 2.81%,
+          #2adbdf 103.44%,
+          #4bb3e7 103.89%,
+          #47dae3 103.9%);
+      width: 175px;
+      height: 42px;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-16);
+      color: var(--white1);
+    }
+
+    .backButton {
+      width: 175px;
+      height: 42px;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-16);
+      color: var(--white1);
+      margin-left: 25px;
+      background: none;
+      border: 1px solid var(--blue3);
+      border-radius: 6px;
+      @include font(var(--blue3), var(--font-12), var(--font-normal));
+    }
+  }
+
+}

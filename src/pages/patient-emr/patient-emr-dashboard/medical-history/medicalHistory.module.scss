@@ -1,0 +1,79 @@
+.mainContainer {
+  position: relative;
+  .medicalHistoryContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.13);
+    border-radius: 10px;
+    background-color: var(--white1);
+    padding: 15px;
+    .titleContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .title {
+        font-weight: var(--font-semibold);
+        font-size: var(--font-18);
+        color: var(--black2);
+        margin-left: 15px;
+      }
+    }
+  }
+  .optionsContainer {
+    position: absolute;
+    right: 0;
+    top: 53px;
+    z-index: 1;
+    background-color: var(--white1);
+    border-radius: 10px;
+    padding: 15px 35px 35px 15px;
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+    .optionList {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 40px;
+      position: relative;
+      .content {
+        margin-left: 10px;
+        font-weight: var(--font-normal);
+        font-size: var(--font-16);
+        color: var(--black2);
+        cursor: pointer;
+        &:hover {
+          color: var(--green1);
+        }
+      }
+      .showQuestionContainer {
+        position: absolute;
+        background-color: var(--white1);
+        left: -64px;
+        padding: 12px;
+        top: -15px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7px);
+        .linkStyle {
+          cursor: pointer;
+        }
+      }
+      .showQuestionContainer::before {
+        content: '';
+        position: absolute;
+        top: 24%;
+        left: 100%;
+        margin-top: 2px;
+        border-width: 8px;
+        border-left: solid 10px var(--white1);
+        border-bottom: solid 10px transparent;
+        border-top: solid 10px transparent;
+        box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

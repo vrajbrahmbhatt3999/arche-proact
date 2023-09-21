@@ -1,0 +1,17 @@
+@import '../../../styles//mixin.scss';
+
+.reloadButtonSection {
+  @include flexVertical;
+  .reloadButton {
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background: var(--green1);
+  }
+  .reloadButtonText {
+    width: 91px;
+    @include font(var(--grey4), var(--font-12), var(--font-normal));
+  }
+}

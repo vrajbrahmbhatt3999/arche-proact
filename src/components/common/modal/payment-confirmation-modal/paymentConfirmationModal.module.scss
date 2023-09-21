@@ -1,0 +1,48 @@
+.notesPopupContainer {
+  width: 450px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .notesContainer {
+    margin-top: 50px;
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .deleteText {
+      font-weight: var(--font-normal);
+      font-size: var(--font-16);
+      text-align: center;
+    }
+    .btnContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 35px 0;
+      .yesButtonStyle {
+        width: 100px;
+      }
+      .noButtonStyle {
+        color: var(--blue1);
+        border: 1px solid var(--blue1);
+        background: var(--white1);
+        width: 100px;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import '../../../../../styles/mixin.scss';
+.compareModalContainer {
+  min-width: 750px;
+  width: 100%;
+  max-width: fit-content;
+  height: 500px;
+  overflow: auto;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  // backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 0px 20px 40px 30px;
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .compareModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 35px 0px 0px 0px;
+  }
+  .compareModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+  .compateImagesContainer {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px 0px 0px;
+    .docs {
+      margin-right: 15px;
+      border-radius: 6px;
+      box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      &::-webkit-scrollbar {
+        display: block;
+        width: 7px;
+        height: 7px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--grey7);
+        border-radius: 10px;
+        border: 1px solid var(--grey7);
+      }
+    }
+    .iframeContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .viewButton {
+        margin-top: 20px;
+        width: 70px;
+        height: 25px;
+        background: transparent;
+        @include font(var(--blue3), var(--font-12), var(--font-normal));
+        border: 1px solid var(--blue3);
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  &::-webkit-scrollbar {
+    display: block;
+    width: 7px;
+    height: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--grey7);
+    border-radius: 10px;
+    border: 1px solid var(--grey7);
+  }
+}

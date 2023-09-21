@@ -1,0 +1,97 @@
+@import "../../../styles//mixin.scss";
+
+.issueItemPopupMainContainer {
+  width: 70%;
+  height: 450px;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 0px 20px 40px 20px;
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .issuedItemsModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 35px 0px 0px 0px;
+  }
+
+  .issuedItemsModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+
+  .issuedItemsContainer {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+    .searchContainer {
+      @include flexVertical;
+      margin: 20px 0px 0px 0px;
+      // padding: 0px 10px;
+      .search {
+        @include flexVertical;
+        .searchInput {
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 42px;
+          width: 200px;
+          padding: 0px 12px 0px 10px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        .searchButton {
+          background: var(--green1);
+          padding: 10px 12px;
+          cursor: pointer;
+          border-radius: 20%;
+          margin: 0px 10px;
+        }
+        .smartSearchInput {
+          width: 200px;
+        }
+      }
+    }
+    .tableContainer {
+      width: 100%;
+      white-space: nowrap;
+      margin: 40px 0px 0px 0px;
+      tr {
+        th {
+          min-width: 120px;
+        }
+      }
+      .viewPdfLink {
+        @include font(var(--blue1), var(--font-12), var(--font-medium));
+        cursor: pointer;
+      }
+    }
+  }
+}

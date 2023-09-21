@@ -1,0 +1,73 @@
+.notesPopupContainer {
+  width: 500px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+
+  .notesContainer {
+    margin-top: 50px;
+
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+
+    .titleContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 20px;
+      margin-bottom: 20px;
+
+      .profileText {
+        font-weight: var(--font-semibold);
+        font-size: var(--font-20);
+      }
+
+      .profileName {
+        font-weight: var(--font-semibold);
+        font-size: var(--font-18);
+        color: var(--grey2);
+        margin-left: 10px;
+      }
+    }
+
+    .table {
+      margin: 20px;
+      height: 200px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: block;
+        width: 7px;
+        height: 7px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--grey7);
+        border-radius: 10px;
+        border: 1px solid var(--grey7);
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@import '../../../styles/mixin.scss';
+
+.servicesContainer {
+  width: 100%;
+  display: flex;
+  // flex-direction: row;
+  .mainFormContainer {
+    width: 98%;
+    height: 100%;
+    .configurationContainer {
+      display: flex;
+      flex-direction: row;
+      // margin-right: 20px;
+      justify-content: space-between;
+
+      .mainContainer {
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(97px);
+        border-radius: 10px;
+        padding: 27px 20px 33px 43px;
+        width: 97%;
+        // margin-right: 20px;
+
+        .searchBtnContainer {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .dropdownContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 40px;
+            .labelText {
+              font-weight: var(--font-semibold);
+              font-size: var(--font-16);
+              color: var(--black2);
+              // margin-right: 12px;
+              margin: auto auto;
+              width: 70px;
+            }
+            .select {
+              width: 200px;
+            }
+          }
+          .btnStyle {
+            width: 200px;
+          }
+        }
+
+        .NewPlanBtn {
+          // margin-top: 37px;
+          // margin-left:70px;
+
+          .btnPlan {
+            width: 175px;
+          }
+          .viewBtn {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+
+    .searchFieldContainer {
+      display: flex;
+      margin: 29px 0px 22px 0px;
+
+      .inputFieldContainer {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        .inputSearchContainer {
+          width: 225px;
+          height: 50px;
+          // border: 1px solid hsl(0, 0%, 80%);
+          border: none;
+          padding: 15px;
+          border-radius: 10px;
+          background: rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+          border-radius: 8px;
+        }
+        .inputSearchButton {
+          position: absolute;
+          right: -55px;
+          top: 4px;
+          // cursor: pointer;
+        }
+      }
+      .radioFieldContainer {
+        margin: auto 0px auto 100px;
+      }
+
+      .addServicebtn {
+        align-items: end;
+        margin-left: 70px;
+      }
+    }
+    .TableMainContainer {
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(97px);
+      border-radius: 10px;
+      padding: 27px 26px 33px 26px;
+      width: 97%;
+      margin-right: 20px;
+    }
+  }
+
+  .mainContainerFormActionSidebar {
+    width: 50px;
+    height: 280px;
+    background: var(--white1);
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(47px);
+    opacity: 0.7;
+    border-radius: 10px;
+    margin: 0px 15px 0px 20px;
+    // z-index: 2;
+    .sidebarData {
+      .iconStyleContainer {
+        margin: 13px 10px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        .tooltiptext {
+          visibility: hidden;
+          width: 70px;
+          background-color: var(--white1);
+          font-size: var(--font-14);
+          color: var(--black2);
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          top: -4px;
+          right: 142%;
+          box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+          backdrop-filter: blur(47px);
+        }
+        &:hover .tooltiptext {
+          visibility: visible;
+          background-color: var(--white1);
+        }
+      }
+    }
+  }
+}

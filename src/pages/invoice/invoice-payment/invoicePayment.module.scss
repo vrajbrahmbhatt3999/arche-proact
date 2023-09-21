@@ -1,0 +1,306 @@
+@import '../../../styles/mixin.scss';
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .mainServiceContainer {
+    width: 95%;
+    height: 100%;
+    background-color: var(--white2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .invoiceInfoContainer {
+      height: 30px;
+      display: flex;
+      flex-direction: row;
+      margin: 30px 15px;
+
+      .userNameContainer {
+        display: flex;
+        flex-direction: row;
+
+        .userTextStyle {
+          padding: 0px 5px;
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+        }
+
+        .userNameStyle {
+          padding: 0px 5px;
+          @include font(var(--grey4), var(--font-16), var(--font-normal));
+        }
+      }
+
+      .invoiceDateContainer {
+        display: flex;
+        flex-direction: row;
+        margin-left: 24px;
+
+        .invoiceDateTextStyle {
+          padding: 0px 5px;
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+        }
+
+        .invoiceDateStyle {
+          padding: 0px 5px;
+          @include font(var(--grey4), var(--font-16), var(--font-normal));
+        }
+      }
+    }
+
+    .paymentMainContainer {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      //   background-color: rgb(245, 224, 245);
+      .paymentContainer {
+        width: 60%;
+        height: 580px;
+        display: flex;
+        flex-direction: column;
+        // background-color: rgb(248, 248, 178);
+        margin: 0px 10px 0px 20px;
+
+        .amountStyle {
+          // width: 500px;
+          // height: 70px;
+          width: fit-content;
+          height: fit-content;
+          margin: 10px 0px;
+          padding: 12px;
+          border-radius: 6px;
+          @include font(var(--yellow1), var(--font-24), var(--font-medium));
+          background: rgba(255, 160, 9, 0.1);
+        }
+
+        .outstandingStyle {
+          // width: 500px;
+          // height: 70px;
+          width: fit-content;
+          height: fit-content;
+          margin: 10px 0px;
+          padding: 12px;
+          border-radius: 6px;
+          @include font(var(--purple2), var(--font-24), var(--font-medium));
+          background: rgba(89, 54, 241, 0.1);
+        }
+
+        .advanceDueStyle {
+          // width: 240px;
+          // height: 50px;
+          width: fit-content;
+          height: fit-content;
+          margin: 10px 0px;
+          padding: 12px;
+          border-radius: 6px;
+          @include font(var(--green1), var(--font-18), var(--font-medium));
+          background: rgba(2, 191, 144, 0.1);
+        }
+
+        .copayDetailContainer {
+          display: flex;
+          flex-direction: row;
+          height: 40px;
+          margin: 30px 0px 0px 0px;
+
+          .copayPercentageContainer {
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+
+            .labelText {
+              margin-top: 10px;
+              @include font(
+                var(--black2),
+                var(--font-16),
+                var(--font-semibold)
+              );
+              width: 90px;
+              padding-right: 10px;
+            }
+
+            .inputField,
+            .inputFieldDisable {
+              background: var(--white1);
+              width: 133px;
+              border: 1px solid var(--grey6);
+              border-radius: 6px;
+              padding: 10px 15px;
+            }
+
+            .inputFieldDisable {
+              background: var(--grey8);
+            }
+          }
+
+          .copayAmountContainer {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+            margin-left: 30px;
+
+            .labelText {
+              margin-top: 10px;
+              @include font(
+                var(--black2),
+                var(--font-16),
+                var(--font-semibold)
+              );
+              width: 145px;
+              padding-right: 10px;
+            }
+
+            .inputField,
+            .inputFieldDisable {
+              background: var(--white1);
+              width: 133px;
+              border: 1px solid var(--grey6);
+              border-radius: 6px;
+              padding: 10px 15px;
+            }
+
+            .inputFieldDisable {
+              background: var(--grey8);
+            }
+          }
+        }
+
+        .buttonContainer {
+          display: flex;
+          flex-direction: row;
+          margin: 30px 0px;
+          height: 50px;
+
+          .addPaymentStyle {
+            width: 150px;
+            margin: 0px 20px 0px 0px;
+            @include font(var(--white1), var(--font-14), var(--font-normal));
+          }
+
+          .eSignButtonStyle {
+            width: 185px;
+            border: 1px solid var(--blue1);
+            background: none;
+            padding: 0px 30px 0px 0px;
+            margin: 0px;
+            cursor: pointer;
+            @include font(var(--blue1), var(--font-12), var(--font-normal));
+          }
+
+          .shareIcon {
+            position: absolute;
+            top: 13px;
+            right: 15px;
+          }
+
+          .printIcon {
+            margin: 10px 20px;
+          }
+
+          .exportIcon {
+            margin: 10px 0px;
+          }
+        }
+
+        .scribeContainer {
+          height: 100px;
+
+          .eSignText {
+            @include font(var(--black1), var(--font-12), var(--font-normal));
+          }
+        }
+      }
+
+      .paymentDetailContainer {
+        width: 45%;
+        margin: 0px 15px;
+        display: flex;
+        flex-direction: column;
+
+        .linkGenreateContainer {
+          text-align: right;
+          cursor: pointer;
+          @include font(var(--blue1), var(--font-16), var(--font-medium));
+        }
+
+        .tableContainer {
+          margin-top: 50px;
+        }
+
+        .submitPaymentContainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 30px 0px;
+
+          .buttonStyle {
+            // margin: 30px auto;
+            width: 90px;
+          }
+
+          .backButton {
+            width: 90px;
+            height: 42px;
+            font-weight: var(--font-semibold);
+            font-size: var(--font-16);
+            color: var(--white1);
+            margin-left: 25px;
+            background: none;
+            border: 1px solid var(--blue3);
+            border-radius: 6px;
+            @include font(var(--blue3), var(--font-12), var(--font-normal));
+          }
+        }
+      }
+    }
+  }
+
+  .mainContainerFormActionSidebar {
+    width: 50px;
+    height: 280px;
+    background: var(--white1);
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(47px);
+    opacity: 0.7;
+    border-radius: 10px;
+    margin: 0px 15px 0px 20px;
+
+    // z-index: 2;
+    .sidebarData {
+      .iconStyleContainer {
+        margin: 13px 10px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+
+        .tooltiptext {
+          visibility: hidden;
+          width: 70px;
+          background-color: var(--white1);
+          font-size: var(--font-14);
+          color: var(--black2);
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          top: -4px;
+          right: 142%;
+          box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+          backdrop-filter: blur(47px);
+        }
+
+        &:hover .tooltiptext {
+          visibility: visible;
+          background-color: var(--white1);
+        }
+      }
+    }
+  }
+}

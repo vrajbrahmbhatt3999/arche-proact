@@ -1,0 +1,183 @@
+@import '../../../../styles/mixin.scss';
+
+.notesPopupContainer {
+  width: 740px;
+  // height: 250px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .notesContainer {
+    margin-top: 50px;
+    // padding: 0px 30px;
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .searchContainer {
+      @include flexVertical;
+      padding: 0px 10px;
+      margin-bottom: 25px;
+      .search {
+        @include flexVertical;
+        .searchInput {
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 42px;
+          width: 200px;
+          padding: 0px 12px 0px 10px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        .searchButton {
+          background: var(--green1);
+          padding: 10px 12px;
+          cursor: pointer;
+          border-radius: 20%;
+          margin: 0px 10px;
+        }
+        .smartSearchInput {
+          width: 200px;
+        }
+      }
+    }
+    .inputFieldContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      // justify-content: space-between;
+      margin: 40px 0 20px 0;
+      padding: 0px 20px;
+      .inputSearchContainer {
+        width: 225px;
+        height: 45px;
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+      }
+      .inputSearchButton {
+        margin-left: 10px;
+      }
+
+      .labelField {
+        display: flex;
+        flex-direction: row;
+        // justify-content: end;
+        // align-items: end;
+        .labelText {
+          font-weight: var(--font-semibold);
+          font-size: var(--font-16);
+          width: 150px;
+          text-align: end;
+          margin-top: 10px;
+        }
+        .inputStyle {
+          padding-left: 10px;
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 42px;
+          margin: 0 10px;
+        }
+      }
+    }
+    .mainContainer {
+      padding: 0px 20px;
+      height: 300px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: block;
+        width: 7px;
+        height: 7px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--grey7);
+        border-radius: 10px;
+        border: 1px solid var(--grey7);
+      }
+      .greyDivider {
+        margin: 40px 0 10px 0;
+        height: 0.6px;
+      }
+      .fieldContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        .labelField {
+          display: flex;
+          flex-direction: row;
+          width: 50%;
+          // align-items: center;
+          .labelText {
+            font-weight: var(--font-semibold);
+            font-size: var(--font-16);
+            width: 142px;
+            white-space: nowrap;
+            margin-top: 10px;
+          }
+          .inputStyle {
+            padding-left: 10px;
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 50px;
+            width: 182px;
+            margin: 0 10px;
+          }
+        }
+      }
+      .labelField {
+        display: flex;
+        flex-direction: row;
+        // align-items: center;
+        width: 50%;
+        margin-top: 10px;
+        .labelText {
+          font-weight: var(--font-semibold);
+          font-size: var(--font-16);
+          width: 142px;
+          margin-top: 10px;
+          text-align: end;
+        }
+        .inputStyle {
+          padding-left: 10px;
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 50px;
+          width: 182px;
+          margin: 0 10px;
+        }
+      }
+      .btnStyle {
+        margin: 30px auto;
+        text-align: center;
+      }
+    }
+  }
+}

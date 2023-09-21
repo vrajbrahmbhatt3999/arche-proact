@@ -1,0 +1,88 @@
+@import '../../styles/mixin.scss';
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white2);
+    border-radius: 10px;
+    padding: 0px 20px 20px 20px;
+
+    .formContainer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .unitTypeContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+
+        .labelFieldContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 10px;
+            margin-top: 20px;
+            // background-color: red;
+
+            .labelText {
+                margin-top: 10px;
+                @include font(var(--black2),
+                    var(--font-16),
+                    var(--font-semibold));
+                width: 135px;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .fieldErrorContainer {
+                margin-left: 10px;
+                height: 42px;
+                padding: 2px;
+
+                .inputField {
+                    background: var(--white1);
+                    width: 234px;
+                    border: 1px solid var(--grey6);
+                    border-radius: 6px;
+                    padding: 10px 15px;
+                }
+
+                .selectInputField {
+                    width: 234px;
+                    height: 42px;
+                    margin-top: 0px;
+                    padding: 10px 14px 10px 10px;
+                    border-radius: 6px;
+                    border: 1px solid var(--grey6);
+                    background: var(--white1);
+                }
+
+                .searchInputField {
+                    background: var(--white1);
+                    width: 234px;
+                    height: 42px;
+                    border: 1px solid var(--grey6);
+                    border-radius: 6px;
+                    padding: 10px 5px 10px 10px;
+                }
+            }
+        }
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+
+        .resetButtonStyle {
+            width: 145px;
+            margin-left: 20px;
+        }
+    }
+
+    .tableContainer {
+        margin-top: 40px;
+    }
+}

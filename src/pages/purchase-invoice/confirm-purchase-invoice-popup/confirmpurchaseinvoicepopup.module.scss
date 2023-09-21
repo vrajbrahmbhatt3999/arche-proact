@@ -1,0 +1,37 @@
+.PurchaseInvoicePopupMainContainer{
+    width: 1000px;
+    margin: auto;
+    background: var(--white1);
+    border-radius: 10px;
+    padding: 50px 50px;
+    .closeIconStyle {
+      cursor: pointer;
+      float: right;
+    }
+    .paymentContainer {
+      .title {
+        text-align: center;
+        font-weight: var(--font-semibold);
+        font-size: var(--font-24);
+        line-height: 36px;
+        color: var(--black2);
+      }
+      .dividerStyle {
+        margin: 10px auto 30px auto;
+        width: 80px;
+        height: 3px;
+        background: var(--green1);
+      }
+    }
+    
+  .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .tableContainer{
+    margin-top: 42px;
+  }
+}

@@ -1,0 +1,30 @@
+.notesPopupContainer {
+  width: 600px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .notesContainer {
+    margin-top: 50px;
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .table {
+      margin-bottom: 40px;
+    }
+  }
+}

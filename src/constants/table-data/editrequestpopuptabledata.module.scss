@@ -1,0 +1,20 @@
+
+@import "../../styles/mixin.scss";
+
+.textField {
+    width: 95px;
+    height: 33px;
+    background-color: var(--white1);
+    border: 1px solid var(--grey6);
+    border-radius: 6px;
+  }
+  .btn{
+    @include font(var(--blue3), var(--font-12), var(--font-semibold));
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 1.4px solid var(--blue3);
+    padding: 5px 12px;
+    border-radius: 14px;
+    margin-top: 5px;
+  }

@@ -1,0 +1,31 @@
+@import '../../styles/mixin.scss';
+.mainContainer {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(97px);
+  border-radius: 10px;
+  margin: 10px 20px 0px 0px;
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 20px;
+    .moduleBoxContainer {
+      background: var(--white1);
+      width: 275px;
+      height: 104px;
+      padding: 10px 20px 10px 0px;
+      border: 1px solid var(--grey6);
+      border-radius: 6px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      .moduleNameStyle {
+        @include font(var(--black2), var(--font-18), var(--font-semibold));
+        padding: 30px;
+        text-align: center;
+      }
+    }
+  }
+}

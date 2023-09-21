@@ -1,0 +1,86 @@
+.medicationContainer {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(97px);
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  .filterDropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    .dropdownBtnContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .filterContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 20px;
+        .filterText {
+          font-weight: var(--font-semibold);
+          font-size: var(--font-16);
+          color: var(--black2);
+          margin-right: 15px;
+        }
+        .selectContainer {
+          border: 1px solid #cdd4d8;
+          border-radius: 6px;
+          background-color: var(--white1);
+          padding: 10px;
+          width: 200px;
+        }
+        .select {
+          width: 200px;
+          background-color: var(--white1);
+        }
+      }
+      .addBtn {
+        color: var(--blue1);
+        border: 1px solid var(--blue1);
+        background: var(--white1);
+        width: fit-content;
+        padding: 0 15px;
+      }
+    }
+    .medicineBtn {
+      color: var(--blue1);
+      border: 1px solid var(--blue1);
+      background: var(--white1);
+      width: fit-content;
+      padding: 10px 15px;
+      height: fit-content;
+    }
+  }
+}
+
+.saveBtn {
+  margin: 65px 0 40px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .endButtonStyle {
+    color: var(--blue1);
+    border: 1px solid var(--blue1);
+    background: var(--white1);
+    margin-left: 20px;
+  }
+}
+.inputField {
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 8px;
+  width: 70px;
+}
+
+.iconStyle {
+  cursor: pointer;
+  height: 21px;
+  width: 22px;
+}

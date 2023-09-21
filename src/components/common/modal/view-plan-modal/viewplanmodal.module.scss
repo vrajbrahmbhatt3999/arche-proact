@@ -1,0 +1,70 @@
+@import '../../../../styles/mixin.scss';
+
+.notesPopupContainer {
+    width: 75%;
+    // height: 250px;
+    margin: auto;
+    background: var(--white1);
+    border-radius: 10px;
+    padding: 10px 30px 10px 30px;
+    .closeIconStyle {
+      cursor: pointer;
+      float: right;
+    }
+    .notesContainer {
+      margin-top: 10px;
+      // padding: 0px 30px;
+      .title {
+        text-align: center;
+        font-weight: var(--font-semibold);
+        font-size: var(--font-24);
+        line-height: 36px;
+        color: var(--black2);
+      }
+      .dividerStyle {
+        margin: 10px auto 30px auto;
+        width: 80px;
+        height: 3px;
+        background: var(--green1);
+      }
+      .searchContainer {
+        @include flexVertical;
+        padding: 0px 10px;
+        margin-bottom: 25px;
+        .search {
+          @include flexVertical;
+          .searchInput {
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            width: 200px;
+            padding: 0px 12px 0px 10px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+          }
+          .searchButton {
+            background: var(--green1);
+            padding: 10px 12px;
+            cursor: pointer;
+            border-radius: 20%;
+            margin: 0px 10px;
+          }
+         
+          .smartSearch{
+            margin-left: 30px;
+            .smartSearchInput {
+              width: 200px;
+            }
+          }
+        }
+      }
+      .tableContainer {
+        padding : 0px 20px;
+margin-top: 25px;      
+      }
+    }
+  }
+  

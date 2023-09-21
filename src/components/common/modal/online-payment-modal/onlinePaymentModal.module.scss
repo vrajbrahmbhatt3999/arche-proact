@@ -1,0 +1,152 @@
+@import "../../../../styles/mixin.scss";
+.mainContainer {
+  width: 750px;
+  height: 100%;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 17px 14px 10px 14px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+  }
+  .heading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+  }
+  .dividerStyle {
+    margin: 10px auto 30px auto;
+    width: 80px;
+    height: 3px;
+    background: var(--green1);
+  }
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    .formLayoutContainer {
+      display: flex;
+      flex-direction: column;
+      .formFieldContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .formFieldLeftlayout {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          .labelFieldContainer {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+            .labelText {
+              margin-top: 10px;
+              @include font(
+                var(--black2),
+                var(--font-16),
+                var(--font-semibold)
+              );
+              width: 100px;
+            }
+            .fieldErrorContainer {
+              .inputField {
+                background: var(--white1);
+                width: 220px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 15px;
+                height: 40px;
+              }
+              .selectInputField {
+                width: 220px;
+                height: 40px;
+                margin-top: 0px;
+                padding: 10px 10px;
+                border-radius: 6px;
+                border: 1px solid var(--grey6);
+                background: var(--white1);
+              }
+              .phoneNumberInput {
+                background: var(--white1);
+                border: 1px solid #cdd4d8;
+                border-radius: 6px;
+                height: 40px;
+                width: 220px;
+              }
+            }
+          }
+        }
+        .formFieldRightlayout {
+          display: flex;
+          flex-direction: column;
+          width: 52%;
+          .labelFieldContainer {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+            .labelText {
+              margin-top: 10px;
+              @include font(
+                var(--black2),
+                var(--font-16),
+                var(--font-semibold)
+              );
+              width: 130px;
+            }
+            .fieldErrorContainer {
+              .inputField {
+                background: var(--white1);
+                width: 220px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 15px;
+                height: 40px;
+              }
+            }
+          }
+        }
+      }
+      // notes and url link
+      .formNotesUrlContainer {
+        display: flex;
+        flex-direction: column;
+        .labelFieldContainer {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 15px;
+          .labelText {
+            align-self: center;
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            width: 100px;
+          }
+          .fieldErrorContainer {
+            .noteInputField {
+              background: var(--white1);
+              width: 570px;
+              border: 1px solid var(--grey6);
+              border-radius: 6px;
+              padding: 10px 15px;
+            }
+          }
+        }
+      }
+    }
+    .buttonContainer {
+      display: flex;
+      flex-direction: row;
+      margin: 0px auto 15px auto;
+      .sendMessageButtonStyle {
+        width: 120px;
+        padding: 10px;
+      }
+      .cancelButtonStyle {
+        width: 120px;
+        padding: 10px;
+        background: none;
+        border: 1px solid var(--blue3);
+        color: var(--blue3);
+      }
+    }
+  }
+}

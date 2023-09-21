@@ -1,0 +1,307 @@
+@import '../../styles/mixin.scss';
+
+.view {
+  color: var(--blue1);
+  cursor: pointer;
+}
+
+.columnFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.viewPopupLink {
+  @include font(var(--blue1), var(--font-12), var(--font-medium));
+  cursor: pointer;
+}
+
+.buttonStyle {
+  font-weight: var(--font-normal);
+  font-size: var(--font-12);
+  border: 1px solid var(--blue3);
+  border-radius: 20px;
+  background-color: var(--white1);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.blueLinkText {
+  color: var(--blue1);
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.viewLink,
+.PENDING,
+.GENERATED {
+  color: var(--blue1);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.viewLink {
+  cursor: pointer;
+}
+
+.PENDING {
+  color: #ffa009;
+  cursor: pointer;
+}
+
+.GENERATED {
+  color: #02bf90;
+  cursor: default;
+}
+
+.Confirmed {
+  color: var(--green1);
+}
+
+.Reconfirmed {
+  color: #e49e00;
+}
+
+.Cancelled {
+  color: #b11313;
+}
+
+.inprogress,
+.scheduled,
+.pending,
+.cancelled,
+.completed,
+.arrived,
+.waitinglist,
+.rescheduled,
+.noshow,
+.arrivedCrm,
+.inperson,
+.deleted {
+  border-radius: 6px;
+  width: fit-content;
+  margin: auto;
+  padding: 5px;
+  border-radius: 6px;
+  width: 100px;
+}
+
+.completed {
+  color: var(--green1);
+  background-color: var(--green3);
+}
+
+.pending {
+  color: #e49e00;
+  background-color: #ffebbe;
+}
+
+.scheduled {
+  color: #5936f1;
+  background-color: #ded7ff;
+}
+
+.inprogress,
+.inperson {
+  color: #293f54;
+  background-color: #d8e6f1;
+}
+
+.cancelled,
+.deleted {
+  color: #b11313;
+  background-color: #f7d9d9;
+}
+
+.arrived {
+  color: #408d93;
+  background-color: #d5e2e6;
+}
+
+.arrivedCrm {
+  color: #347a80;
+  background-color: #b0dce8;
+}
+
+.noShow {
+  color: #868282;
+  background-color: #e9e9e9;
+}
+
+.noshow {
+  color: #868282;
+  background-color: #e9e9e9;
+}
+
+.rescheduled {
+  color: #ea7101;
+  background-color: #ffdbba;
+}
+
+.waitinglist {
+  color: #0046fb;
+  background-color: #d1e9fe;
+}
+
+.inprogress,
+.SCHEDULED,
+.PENDING,
+.CANCELLED,
+.COMPLETED,
+.ARRIVED,
+.waitinglist,
+.RESCHEDULED,
+.noShow,
+.arrivedCrm {
+  border-radius: 6px;
+  width: fit-content;
+  margin: auto;
+  padding: 5px;
+  border-radius: 6px;
+  width: 100px;
+}
+
+.COMPLETED {
+  color: var(--green1);
+}
+
+.PENDING {
+  color: #e49e00;
+}
+
+.SCHEDULED {
+  color: #5936f1;
+}
+
+.inprogress {
+  color: #293f54;
+  background-color: #d8e6f1;
+}
+
+.CANCELLED {
+  color: #b11313;
+}
+
+.ARRIVED {
+  color: #408d93;
+  background-color: #d5e2e6;
+}
+
+.arrivedCrm {
+  color: #347a80;
+  background-color: #b0dce8;
+}
+
+.noShow {
+  color: #868282;
+  background-color: #e9e9e9;
+}
+
+.RESCHEDULED {
+  color: #ea7101;
+}
+
+.waitinglist {
+  color: #0046fb;
+  background-color: #d1e9fe;
+}
+
+.inputField {
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 8px;
+  width: 70px;
+}
+
+.customClassForDropdownItem {
+  text-align: start !important;
+  @include font(
+    var(--grey4) !important,
+    var(--font-14) !important,
+    var(--font-normal) !important
+  );
+}
+
+.dropdownHeaderBox {
+  margin-left: unset !important;
+}
+
+.dropdownMainContainer {
+  justify-content: center;
+  min-width: 130px;
+}
+
+.addNotePopupLink {
+  @include font(var(--blue1), var(--font-12), var(--font-normal));
+  cursor: pointer;
+}
+
+.dropdownBody {
+  top: 32px !important;
+}
+
+.tatStyle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+
+  .iconContainer {
+    margin-left: 5px;
+  }
+
+  .tatText {
+    position: absolute;
+    left: 50px;
+    bottom: -5px;
+    width: 120px;
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--white1);
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.08);
+  }
+
+  .inputFieldServiceTable {
+    border: 1px solid var(--grey6);
+    border-radius: 6px;
+    padding: 5px;
+    width: 80px;
+    text-align: center;
+  }
+}
+
+.inputFieldServiceTable {
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 5px;
+  width: 80px;
+  text-align: center;
+}
+.iconImg {
+  max-width: unset !important;
+  display: inline-block !important;
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 5px !important;
+}
+
+.select {
+  margin: auto;
+  width: 160px;
+}
+.cursorPointor {
+  cursor: pointer;
+}
+.cursorDefault {
+  cursor: default;
+}
+
+.editIconStyleDisable {
+  cursor: default;
+}
+
+.editIconStyle {
+  cursor: pointer;
+}

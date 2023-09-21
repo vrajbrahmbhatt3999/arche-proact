@@ -1,0 +1,41 @@
+.globalFilterSection {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .searchIconStyle {
+    position: absolute;
+    left: 12px;
+    top: 16px;
+  }
+
+  .disableSearchInput {
+    opacity: 0.5;
+    width: 285px;
+    height: 50px;
+    border: none;
+    padding: 15px 15px 15px 45px;
+    border-radius: 10px;
+    background: var(--grey15);
+    border-radius: 10px;
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(97px);
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  .globalSearchInput {
+    width: 285px;
+    height: 50px;
+    border: none;
+    padding: 15px 15px 15px 45px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    &:focus {
+      outline: none !important;
+    }
+  }
+}

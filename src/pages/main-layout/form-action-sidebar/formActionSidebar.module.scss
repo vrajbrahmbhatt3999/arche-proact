@@ -1,0 +1,37 @@
+@import '../../../styles/mixin.scss';
+.mainContainer {
+  width: 50px;
+  height: 343px;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(47px);
+  opacity: 0.7;
+  border-radius: 10px;
+  margin: 0px 15px 0px 0px;
+  z-index: 2;
+  .sidebarData {
+    .iconStyleContainer {
+      margin: 13px 10px;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      .tooltiptext {
+        visibility: hidden;
+        width: 70px;
+        background-color: var(--white1);
+        font-size: var(--font-14);
+        color: var(--black2);
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        top: -4px;
+        right: 142%;
+      }
+      &:hover .tooltiptext {
+        visibility: visible;
+        background-color: var(--white1);
+      }
+    }
+  }
+}

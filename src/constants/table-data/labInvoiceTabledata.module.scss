@@ -1,0 +1,21 @@
+.inputFieldServiceTable {
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 5px;
+  width: 80px;
+  text-align: center;
+}
+.inactive {
+  color: var(--errorColor);
+}
+.active {
+  color: var(--black1);
+}
+.emrFileNoActive {
+  color: var(--blue1);
+  cursor: pointer;
+}
+.emrFileNoInactive {
+  color: var(--errorColor);
+  cursor: pointer;
+}

@@ -1,0 +1,105 @@
+@import '../../../../styles/mixin.scss';
+
+.addPaymentModeModalContainer {
+  width: 900px;
+  height: 500px;
+  // overflow: auto;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  // backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 0px 20px 40px 20px;
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .addPaymentModeModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 35px 0px 0px 0px;
+  }
+
+  .addPaymentModeModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+  .addPaymentModeContainer {
+    width: 870px;
+    height: 300px;
+    overflow: auto;
+    padding: 10px 30px 10px 30px;
+    display: flex;
+    gap: 40px 42px;
+    flex-wrap: wrap;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+    .addPaymentModeActiveCard {
+      width: 28%;
+      cursor: pointer;
+      @include flexColumn;
+      align-items: center;
+      padding: 40px 60px;
+      border-radius: 6px;
+      border: 3px solid var(--border, #02bf90);
+      .addPaymentModeCardText {
+        margin: 10px 0px 0px 0px;
+        @include font(var(--grey4), var(--font-20), var(--font-medium));
+      }
+    }
+    .addPaymentModeCard {
+      width: 28%;
+      cursor: pointer;
+      @include flexColumn;
+      align-items: center;
+      padding: 40px 60px;
+      border-radius: 6px;
+      border: 1px solid var(--border, #cdd4d8);
+      .addPaymentModeCardText {
+        margin: 10px 0px 0px 0px;
+        @include font(var(--grey4), var(--font-20), var(--font-medium));
+      }
+    }
+    .addPaymentModeDisableCard {
+      width: 28%;
+      cursor: not-allowed;
+      user-select: none;
+      @include flexColumn;
+      align-items: center;
+      padding: 40px 60px;
+      border-radius: 6px;
+      border: 1px solid var(--border, #cdd4d8);
+      .addPaymentModeCardText {
+        margin: 10px 0px 0px 0px;
+        @include font(var(--grey4), var(--font-20), var(--font-medium));
+      }
+    }
+  }
+  .addPaymentModeBtnContaniner {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .addPaymentModeBtn {
+      width: fit-content;
+      padding: 10px 50px;
+      font-weight: var(--font-normal);
+    }
+  }
+}

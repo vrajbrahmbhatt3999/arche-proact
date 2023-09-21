@@ -1,0 +1,198 @@
+.mainContainer {
+  // max-width: 1200px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(97px);
+  border-radius: 10px;
+  padding: 34px;
+  font-weight: var(--font-semibold);
+  font-size: var(--font-16);
+  font-style: normal;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  .addNewButtonStyle {
+    text-align: center;
+    color: #0e26a3;
+    height: 42px;
+    border-radius: 6px;
+    background: transparent;
+    border: 1px solid #0e26a3;
+    padding: 10px 15px;
+  }
+
+  .wrapper {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .textarea {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #cdd4d8;
+    border-radius: 6px;
+    padding-left: 10px;
+  }
+
+  .textarea[data-diagnosis] {
+    height: 235px;
+  }
+
+  .textarea[data-notes] {
+    height: 111px;
+  }
+
+  .inputWrapper {
+    display: grid;
+    grid-template-columns: 130px 1fr 83px;
+    gap: 0.8rem;
+
+    .inputWrapperLabel {
+      width: 100%;
+      margin: 0;
+      text-align: right;
+    }
+    .inputWrapperLabelCentered {
+      width: 100%;
+      margin: 0;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+
+    .textareaWrapper {
+      width: 100%;
+    }
+
+    .diagnosis_icons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .symptomTags {
+      display: grid;
+      grid-template-columns: 130px 1fr 83px;
+      gap: 0.8rem;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      display: flex;
+      flex-wrap: wrap;
+
+      .symptomsWrapper {
+        padding: 8px 0px 0px 0px;
+        position: relative;
+        cursor: pointer;
+
+        .symptoms {
+          background-color: #ffffff;
+          border: 1px solid #eaeaea;
+          border-radius: 50px;
+
+          .symptomLabel {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            padding: 8px 12px;
+            margin: 0;
+            cursor: pointer;
+            color: #8d94a7;
+          }
+        }
+
+        .closeIcon {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .symptomTagsContainer {
+    display: grid;
+    gap: 0.8rem;
+    .inputWrapperForSearchBar {
+      display: grid;
+      grid-template-columns: 130px 682px;
+      gap: 0.8rem;
+      position: relative;
+
+      .inputWrapperLabelCentered {
+        width: 100%;
+        margin: 0;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+
+      .symptomsTagInput {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid lightgray;
+        width: 682px;
+        // cursor: pointer;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: '#8F9493';
+        padding: 5px 25px;
+      }
+
+      .symptomTagsInputWrapper {
+        width: 682px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        position: relative;
+
+        .searchIconContainerForSymptomsTag {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .scribeAttachments {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .scribeSingleAttachmentWrapper {
+    position: relative;
+    padding: 10px 0px 0px 0px;
+    cursor: pointer;
+
+    .scribeSingleAttachment {
+      width: 72px;
+      height: 57px;
+      z-index: -1;
+
+      img {
+        border-radius: 12px;
+        border: 1px solid var(--grey6);
+      }
+    }
+    .closeIconContainer {
+      position: absolute;
+      top: 0;
+      right: -5px;
+      z-index: 9999;
+    }
+  }
+
+  .buttonContainer {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

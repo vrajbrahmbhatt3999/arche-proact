@@ -1,0 +1,25 @@
+@import '../../../styles/mixin.scss';
+.colorSchemeContainer {
+  background: var(--white1);
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+  // backdrop-filter: blur(7px);
+  border-radius: 10px;
+  padding: 5px 15px;
+  // max-height: 130px;
+  // overflow: auto;
+  .colorTitleContainer {
+    margin: 3px 0px;
+    display: flex;
+    align-items: center;
+    .colorBox {
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      border-radius: 3px;
+      margin-right: 10px;
+    }
+    .statusTitle {
+      @include font(var(--black2), var(--font-14), var(--font-medium));
+    }
+  }
+}

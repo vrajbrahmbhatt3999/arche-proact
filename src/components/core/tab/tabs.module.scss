@@ -1,0 +1,24 @@
+@import '../../../styles//mixin.scss';
+
+.tabData {
+  display: flex;
+  padding-left: 5px;
+  .activeTab {
+    @include flexCenter;
+    @include font(var(--white1), var(--font-13), var(--font-semibold));
+    min-height: 42px;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 78% 0);
+    background: var(--gredientColor);
+    border-radius: 12px 50px 0 0px;
+    padding: 0px 50px 0px 20px;
+    margin-left: 12px;
+  }
+
+  .tabContent {
+    @include flexVertical;
+    @include font(var(--black2), var(--font-13), var(--font-normal));
+    height: 38px;
+    margin-right: 20px;
+    padding: 20px;
+  }
+}

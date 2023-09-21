@@ -1,0 +1,58 @@
+@import '../../../styles/mixin.scss';
+.mainContainer {
+  background-color: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 0 20px 50px 0;
+  .appointmentStatusInputMain {
+    display: flex;
+    .appointmanetInput {
+      .appointmentLable {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .inputSearchContainer {
+        margin-left: 12px;
+        width: 300px;
+        // min-width: fit-content;
+        height: 42px;
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+        border-radius: 6px;
+        border: 1px solid #cdd4d8;
+      }
+      .inputAttechments {
+        display: flex;
+        margin-left: 20px;
+        width: 160px;
+        align-items: center;
+      }
+      .appointmentLables {
+        font-weight: 600;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .buttonMainColor {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .addBUtton {
+      width: 90px;
+      height: 42px;
+    }
+  }
+}
+.errorContainer {
+  padding-left: 64px;
+}
+.errorContainers {
+  padding-left: 22px;
+}

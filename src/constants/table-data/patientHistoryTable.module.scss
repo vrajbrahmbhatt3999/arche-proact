@@ -1,0 +1,42 @@
+@import "../../styles/mixin.scss";
+
+.appointmentDate {
+  position: relative;
+  right: 8px;
+}
+
+.viewPopupLink {
+  @include font(var(--blue1), var(--font-12), var(--font-medium));
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.attachmentsHeaderContainer {
+  position: relative;
+  top: 18px;
+  .attachmentsHeaderBtn {
+    @include font(var(--blue3), var(--font-12), var(--font-semibold));
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 1.4px solid var(--blue3);
+    padding: 5px 12px;
+    border-radius: 14px;
+    margin-top: 5px;
+  }
+}
+
+.imagesHeaderContainer {
+  position: relative;
+  top: 18px;
+  .imagesHeaderBtn {
+    @include font(var(--blue3), var(--font-12), var(--font-semibold));
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 1.4px solid var(--blue3);
+    padding: 5px 12px;
+    border-radius: 14px;
+    margin-top: 5px;
+  }
+}

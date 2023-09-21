@@ -1,0 +1,62 @@
+@import "../../../styles/mixin.scss";
+
+.medicalCenterSearchContainer {
+  height: 80px;
+  margin: 10px 0px 30px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .searchContainer {
+    display: flex;
+    flex-direction: row;
+    width: 86%;
+    margin-left: 5px;
+    .globalFilterSection {
+      display: flex;
+      align-items: center;
+      position: relative;
+      .searchIconStyle {
+        position: absolute;
+        left: 30px;
+        top: 16px;
+      }
+      .globalSearchInput {
+        width: 285px;
+        height: 50px;
+        border: none;
+        padding: 15px 0px 15px 45px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        margin-left: 18px;
+        &:focus {
+          outline: none !important;
+        }
+      }
+    }
+    .smartSearchStyle {
+      margin-left: 15px;
+    }
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: end;
+    .medicalCenterButtonStyle {
+      width: 180px;
+      height: 42px;
+      margin: 0px;
+    }
+  }
+  .dropDownContainer {
+    display: flex;
+    flex-direction: row;
+    .packageTitle {
+      display: flex;
+      align-items: center;
+      padding-right: 16px;
+      font-size: var(--font-16);
+    }
+  }
+}

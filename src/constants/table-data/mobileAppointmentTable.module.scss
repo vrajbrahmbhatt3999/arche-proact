@@ -1,0 +1,87 @@
+.viewEmrLink {
+  cursor: pointer;
+  color: var(--blue1);
+  position: relative;
+  right: 4px;
+}
+
+.dropdownContainer {
+  position: relative;
+  top: 6px;
+
+  .optionContainer {
+    position: absolute;
+    left: -8px;
+    z-index: 2;
+    background-color: var(--white1);
+    border-radius: 6px;
+    padding: 10px;
+    width: 120px;
+    height: 130px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-right: none;
+      border-left: none;
+    }
+
+    &::-webkit-scrollbar-track-piece:end {
+      background: transparent;
+      margin-bottom: 10px;
+    }
+
+    &::-webkit-scrollbar-track-piece:start {
+      background: transparent;
+      margin-top: 10px;
+    }
+  }
+
+  .pending,
+  .waitingList,
+  .confirmed,
+  .cancel {
+    position: relative;
+    width: 102px;
+    border-radius: 6px;
+    padding: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    .iconStyle {
+      cursor: pointer;
+      position: absolute;
+      right: 8px;
+    }
+  }
+
+  .pending {
+    color: #e49e00;
+    background-color: #ffebbe;
+  }
+
+  .waitingList {
+    color: #0046fb;
+    background-color: #d1e9fe;
+  }
+
+  .confirmed {
+    color: #02bf90;
+    background-color: #bcfaea;
+  }
+
+  .cancel {
+    color: #b11313;
+    background-color: #f4d7d7;
+  }
+}

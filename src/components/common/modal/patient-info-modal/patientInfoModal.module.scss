@@ -1,0 +1,47 @@
+@import "../../../../styles/mixin.scss";
+
+.rectangleIconStyle {
+  position: absolute;
+  right: -9px;
+  top: 38px;
+  z-index: 2;
+}
+.patientInfoMainContainer {
+  // position: relative;
+  width: 360px;
+  margin-top: 4px;
+  border-radius: 10px;
+  background-color: var(--white1);
+  box-shadow: 0px 2px 6px rgba(13, 10, 44, 0.08);
+  position: absolute;
+  z-index: 2;
+  right: -33px;
+  display: flex;
+  flex-direction: row;
+  height: 108px;
+  .patientDetailContainer {
+    width: 440px;
+    margin: 10px 0px;
+    // background-color: rgb(255, 199, 255);
+    .labelTextStyle {
+      padding: 10px 5px 10px 10px;
+      @include font(var(--black2), var(--font-14), var(--font-semibold));
+    }
+    .inputField {
+      width: 140px;
+      margin-top: 5px;
+      height: 30px;
+      padding: 5px;
+      // background: yellow;
+      border: none;
+      border-radius: 6px;
+    }
+  }
+  .patientImageContainer {
+    width: 165px;
+    height: 91px;
+    margin: 10px 10px;
+    border: 1px solid var(--grey6);
+    border-radius: 6px;
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../../../styles/mixin.scss";
+
+.viewLinkStyle {
+  text-decoration: none;
+  color: #0e26a3;
+}
+
+.actionIconStyle {
+  cursor: pointer;
+
+  .iconStyle {
+    margin: 0px;
+  }
+}
+
+.noReordFoundText {
+  text-align: center;
+  @include font(var(--black1), var(--font-16), var(--font-bold));
+  padding: 12px 0px;
+}
+
+.descriptionStyle {
+  cursor: pointer;
+  color: #0e26a3;
+  width: 70px;
+  margin: auto;
+}
+
+.toogleStyle {
+  display: flex;
+  justify-content: center;
+}
+
+.priceListing {
+  @include font(var(--green1), var(--font-12), var(--font-normal));
+  position: relative;
+  left: -10px;
+}
+
+.imgStyle {
+  width: 38px;
+  height: 38px;
+  border-radius: 40%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.typeStyle {
+  position: relative;
+  left: -8px;
+  text-transform: lowercase;
+}
+
+.titleStyle {
+  position: relative;
+  left: -8px;
+}

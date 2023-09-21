@@ -1,0 +1,294 @@
+@import '../../../styles/mixin.scss';
+
+.pageWrapper {
+  background: var(--white1);
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 46px 40px;
+  margin: 0px 20px 30px 0px;
+
+  // Search Container
+  .searchContainer {
+    @include flexVertical;
+
+    .search {
+      @include flexVertical;
+
+      .searchInput {
+        @include font(var(--grey4), var(--font-16), var(--font-medium));
+        background: var(--white1);
+        border: 1px solid var(--grey6);
+        border-radius: 6px;
+        height: 50px;
+        width: 285px;
+        padding: 0px 12px 0px 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+      .searchButton {
+        background: var(--green1);
+        // padding: 17px 14px 0px;
+        cursor: pointer;
+        border-radius: 20%;
+        margin: 0 18px 0 5px;
+        height: 50px;
+        width: 50px;
+        @include flexCenter;
+      }
+    }
+    // Compare Button
+  }
+
+  // Radio Container
+  // .radioFieldContainer {
+  //   margin: 30px 0;
+
+  //   .radioLabel {
+  //     @include font(var(--grey4), var(--font-16), var(--font-semibold));
+  //     margin-right: 32px;
+  //   }
+
+  //   // .customRadio {
+  //   //   left: -8px;
+  //   //   top: 4px;
+  //   //   cursor: pointer;
+  //   //   width: 17px;
+  //   //   height: 17px;
+  //   //   border: 2px solid var(--grey6);
+  //   //   border-radius: 50%;
+  //   //   display: inline-block;
+  //   //   position: relative;
+  //   // }
+
+  //   /* for inner filled circle */
+  //   // .customRadio::after {
+  //   //   content: '';
+  //   //   width: 10px;
+  //   //   height: 10px;
+  //   //   background: var(--green1);
+  //   //   position: absolute;
+  //   //   border-radius: 50%;
+  //   //   top: 50%;
+  //   //   left: 50%;
+  //   //   transform: translate(-50%, -50%);
+  //   //   opacity: 0;
+  //   //   transition: opacity 0.2s;
+  //   // }
+
+  //   // .radioInput {
+  //   //   visibility: hidden;
+  //   // }
+
+  //   // .radioInput:checked+span:after {
+  //   //   opacity: 1;
+  //   // }
+  // }
+
+  // Table
+  .mainTableContainer {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+    .tableContainer {
+      height: 100%;
+      width: 100%;
+      white-space: nowrap;
+      overflow-x: auto;
+
+      tr {
+        border-top: 1px solid var(--grey8);
+      }
+    }
+
+    // View Job Table
+    .DropDownContainer {
+      position: relative;
+
+      .resultDropDown {
+        width: 100px;
+        height: 32px;
+        padding-left: 5px;
+        border-radius: 6px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+
+        option {
+          border-radius: 6px;
+        }
+      }
+    }
+
+    .downArrowStyle {
+      position: absolute;
+      right: 18%;
+      top: 13px;
+      cursor: pointer;
+    }
+
+    // add Result
+    .viewJobAddResults {
+      @include font(var(--blue3), var(--font-12), var(--font-normal));
+      cursor: pointer;
+      border: 1px solid var(--blue3);
+      border-radius: 20px;
+      padding: 6px 10px;
+    }
+
+    .viewJobViewAttachment {
+      @include font(var(--blue3), var(--font-12), var(--font-normal));
+      cursor: pointer;
+    }
+
+    .raiseInvoiceContainer {
+      .raiseText {
+        @include font(var(--blue1), var(--font-12), var(--font-normal));
+        cursor: pointer;
+        border: 1px solid var(--blue1);
+        border-radius: 20px;
+        padding: 4px 8px;
+      }
+
+      .generatedText {
+        @include font(var(--green1), var(--font-12), var(--font-normal));
+        border: 1px solid var(--green1);
+        border-radius: 20px;
+        padding: 4px 14px;
+        cursor: pointer;
+      }
+    }
+
+    .viewJobAddAttachmentsContainer {
+      // width: 56%;
+      // height: 24px;
+      // width: 132px;
+      @include flexCenter;
+
+      .viewJobAddAttachments {
+        @include flexCenter;
+        @include font(var(--blue3), var(--font-12), var(--font-normal));
+        cursor: pointer;
+        border: 1px solid var(--blue3);
+        border-radius: 20px;
+        padding: 0 6px;
+        // .attachIcon {
+        //   margin-bottom: 4px;
+        // }
+      }
+    }
+
+    .viewJobViewReports {
+      @include font(var(--blue3), var(--font-12), var(--font-normal));
+      cursor: pointer;
+    }
+
+    .viewJobViewResults {
+      @include font(var(--blue3), var(--font-12), var(--font-normal));
+      cursor: pointer;
+    }
+  }
+}
+
+.dateFieldContainer {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0;
+  align-items: center;
+
+  .dateContainer {
+    flex-basis: 27%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    p {
+      flex-basis: 16%;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    input {
+      flex-basis: 84%;
+      width: 100%;
+      height: 50px;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+    }
+  }
+  .compareButton {
+    @include font(var(--black2), var(--font-14), var(--font-normal));
+    border: 1px solid var(--blue1);
+    // border: 1px solid var(--grey6);
+    width: 92px;
+    background: var(--white1);
+    // background: var(--grey14);
+  }
+}
+
+.view_Btn {
+  color: var(--blue1);
+  font-size: var(--font-12);
+  font-weight: var(--font-medium);
+  text-decoration: underline;
+  cursor: pointer;
+  // position: relative;
+  // left: 8px;
+}
+
+.labRequestPendingText {
+  // position: relative;
+  // left: 28px;
+  @include font(var(--blue1), var(--font-12), var(--font-normal));
+  cursor: pointer;
+  border: 1px solid var(--blue1);
+  border-radius: 20px;
+  padding: 4px 14px;
+  width: fit-content;
+  margin: auto;
+}
+
+.labConfirmRaiseInvoice {
+  // position: relative;
+  // left: 28px;
+  @include font(var(--green1), var(--font-12), var(--font-normal));
+  cursor: pointer;
+  border: 1px solid var(--green1);
+  border-radius: 20px;
+  padding: 4px 14px;
+  width: fit-content;
+  margin: auto;
+}
+
+.disabledInvoice {
+  background: var(--grey14);
+  border: 1px solid var(--grey6);
+  color: var(--grey6);
+}
+
+.branchNameWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 33.33%;
+  margin-top: 30px;
+
+  label {
+    font-size: 16px;
+  }
+
+  select {
+    flex-basis: 70%;
+    border: 1px solid var(--grey6);
+    border-radius: 5px;
+    height: 42px;
+    padding: 0 7px;
+  }
+}

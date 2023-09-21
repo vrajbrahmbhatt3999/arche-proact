@@ -1,0 +1,175 @@
+@import '../../../styles/mixin.scss';
+
+.mainContainer {
+  //   position: relative;
+  margin: 0px 20px 50px 0px;
+  background: var(--white2);
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 15px 20px;
+  .patientFormContainer {
+    @include flexVertical;
+    // display: flex;
+    // align-items: flex-start;
+    width: 100%;
+
+    column-gap: 15px;
+    .formSectionOne {
+      width: 40%;
+      .inputFieldContainer {
+        @include flexVertical;
+        column-gap: 12px;
+        margin: 0px 0px 20px 0px;
+        .formLabel {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 104px;
+          text-align: right;
+        }
+        .inputField {
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 42px;
+          width: 50%;
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          padding: 0px 14px 0px 14px;
+        }
+        .patientEMRLink {
+          @include font(var(--blue1), var(--font-16), var(--font-medium));
+          cursor: pointer;
+        }
+      }
+    }
+    .formSectionTwo {
+      width: 35%;
+      .inputFieldContainer {
+        @include flexVertical;
+        column-gap: 12px;
+        margin: 0px 0px 20px 0px;
+        .formLabel {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 110px;
+          text-align: right;
+        }
+        .inputField {
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 42px;
+          width: 65%;
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          padding: 0px 14px 0px 14px;
+        }
+        .selectInputField {
+          outline: none;
+          cursor: pointer;
+          box-shadow: none;
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          width: 65%;
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+        }
+        .extraInputField {
+          width: 65%;
+          height: 42px;
+        }
+      }
+      .radioFieldContainer {
+        @include flexVertical;
+        column-gap: 12px;
+        margin: 0px 0px 20px 0px;
+        .radioFormLabel {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 110px;
+          text-align: right;
+        }
+        .radioBtnContainer {
+          height: 42px;
+          width: 60%;
+          //   padding: 0px 14px 0px 14px;
+          @include flexVertical;
+          column-gap: 5px;
+          .radioLabel {
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+            display: flex;
+            // width: 50px;
+          }
+          .radioLabel:checked {
+            color: red !important;
+            // @include font(var(--black2), var(--font-14), var(--font-semibold))!important;
+          }
+          .customRadio {
+            left: -7px;
+            top: 3px;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--grey6);
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+          }
+
+          // / for inner filled circle /
+          .customRadio::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--blue4);
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.2s;
+          }
+          .radioInput {
+            visibility: hidden;
+          }
+          .radioInput:checked + span:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .formSectionThree {
+      width: 25%;
+      border: 1px solid var(--grey6);
+      border-radius: 30px;
+      padding: 15px;
+      .patienProfileImgDiv {
+        width: 100%;
+        .patientProfileImg {
+          border-radius: 17px;
+          width: 100%;
+          display: inline-block;
+          max-width: 390px;
+          max-height: 290px;
+        }
+      }
+    }
+  }
+  .patientFormBtnTagContainer {
+    @include flexVertical;
+    justify-content: space-between;
+    .patientBtnContainer {
+      width: 75%;
+      @include flexVertical;
+      // column-gap: 25px;
+    }
+    .patientTagContainer {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      .tagImage {
+        margin: 0px 5px 0px 0px;
+        display: inline-block;
+        max-width: 25px;
+        max-height: 25px;
+      }
+    }
+  }
+}

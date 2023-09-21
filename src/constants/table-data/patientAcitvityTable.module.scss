@@ -1,0 +1,40 @@
+@import "../../styles/mixin.scss";
+
+.activityName {
+  @include font(var(--black3), var(--font-12), var(--font-normal));
+}
+
+.activityStatusGreen,
+.activityStatusRed,
+.activityStatusYellow {
+  position: relative;
+  right: 8px;
+}
+
+.activityStatusGreen {
+  @include font(var(--green1), var(--font-12), var(--font-normal));
+}
+
+.activityStatusYellow {
+  @include font(var(--yellow1), var(--font-12), var(--font-normal));
+}
+
+.activityStatusRed {
+  @include font(var(--red3), var(--font-12), var(--font-normal));
+}
+
+.userStyle {
+  position: relative;
+  right: 6px;
+  @include font(var(--black3), var(--font-12), var(--font-semibold));
+}
+
+.dateTimeStyle {
+  position: relative;
+  right: 6px;
+  @include font(var(--black3), var(--font-12), var(---font-normal));
+}
+
+.hostStyle {
+  @include font(var(--black2), var(--font-12), var(--font-semibold));
+}

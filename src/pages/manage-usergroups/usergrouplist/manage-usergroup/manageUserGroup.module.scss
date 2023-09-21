@@ -1,0 +1,140 @@
+@import '../../../../styles//mixin.scss';
+.manageUserGroupContainer {
+  @include pageWrapper(20px);
+  .manageUserGroupForm {
+    width: 100%;
+    margin: 15px 0px 0px 0px;
+    .manageUserGroupFormFiledFlex {
+      display: flex;
+      .userGroupInputFieldContainer {
+        margin-right: 30px;
+        display: flex;
+        .formLabel {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          margin-right: 15px;
+          margin-top: 8px;
+          width: 100%;
+        }
+        .inputErrorContainer {
+          width: 100%;
+          .userGroupInputField {
+            border: 1px solid var(--grey6);
+            background: var(--white1);
+            height: 42px;
+            border-radius: 6px;
+            width: 300px;
+            padding: 0px 10px;
+          }
+          .textareaUserGroupInputField {
+            border: 1px solid var(--grey6);
+            background: var(--white1);
+            height: 42px;
+            padding: 6px 0px 0px 10px;
+            border-radius: 6px;
+            width: 300px;
+          }
+          .selectInputField {
+            background: #ffffff;
+            width: 270px;
+            border-radius: 6px;
+          }
+        }
+      }
+      .submitButton {
+        margin: unset;
+      }
+      .resetButton {
+        margin: 0px 0px 0px 20px;
+        color: var(--blue1);
+        border: 1px solid var(--blue1);
+        border-radius: 6px;
+        background: var(--white1);
+      }
+    }
+  }
+  .childrenPage {
+    margin: 50px 0px 0px 0px;
+    .divider {
+      background: var(--grey6);
+      height: 1px;
+    }
+    .tabContainer {
+      padding: 0px;
+      a {
+        margin-left: unset !important;
+      }
+    }
+    .primaryUserGroupContainer {
+      width: 100%;
+      .userGroupListflex {
+        display: flex;
+        .moduleListContainer {
+          width: 20%;
+          border-right: 2px solid var(--grey6);
+          .moduleTitleContainer {
+            padding: 20px 0px 20px 10px;
+            border-bottom: 2px solid var(--grey6);
+            .moduleTitle {
+              background: var(--gredientColor);
+              background-clip: text;
+              font-weight: var(--font-semibold);
+              font-size: var(--font-18);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+          .moduleList {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0px 20px 10px;
+            .moduleListName {
+              margin: 20px 0px 0px 0px;
+              cursor: pointer;
+              @include font(
+                var(--black2),
+                var(--font-16),
+                var(--font-semibold)
+              );
+            }
+            .moduleListNameActive {
+              margin: 20px 0px 0px 0px;
+              cursor: pointer;
+              @include font(
+                var(--green1),
+                var(--font-16),
+                var(--font-semibold)
+              );
+            }
+          }
+        }
+        .actionsTabsListContainer {
+          width: 80%;
+          .userGroupName {
+            padding: 20px 0px 20px 10px;
+            border-bottom: 2px solid var(--grey6);
+            min-height: 68.6px;
+            .usergroupNameLabel {
+              @include font(
+                var(--black2),
+                var(--font-16),
+                var(--font-semibold)
+              );
+            }
+            .usergroupNameValue {
+              @include font(var(--grey4), var(--font-16), var(--font-normal));
+              margin: 0px 0px 0px 10px;
+            }
+          }
+        }
+      }
+    }
+    .savePermssionButton {
+      margin: 20px 0px 0px 0px;
+      text-align: center;
+      .updateButton {
+        width: fit-content;
+        padding: 10px;
+      }
+    }
+  }
+}

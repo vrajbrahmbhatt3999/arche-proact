@@ -1,0 +1,77 @@
+.branchStoreRequestItemPopupMainContainer {
+  width: 35%;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 13px 10px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+    // padding-top: 16px;
+    // padding-right: 13px;
+  }
+  .paymentContainer {
+    margin-top: 15px;
+    padding: 20px 15px 0px 15px;
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+  }
+
+  .searchContainer {
+    display: flex;
+    margin-top: 40px;
+    .search {
+      .inputSearch {
+        border: 1px solid var(--white1);
+        width: 285px;
+        height: 50px;
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+      }
+    }
+    .smartSearch {
+      margin-left: 18px;
+      .inputSearch {
+        border: 1px solid var(--white1);
+        width: 285px;
+        height: 50px;
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  .content {
+    margin-top: 15px;
+    padding-bottom: 30px;
+
+    //  .content h2 :nth-child(2){
+    //   margin-top: 17px;
+    //  }
+
+    .docId {
+      color: #181818;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      text-align: left;
+      padding-left: 50px;
+      margin-bottom: 17px;
+      .docIdValue {
+        color: #797979;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+  }
+}

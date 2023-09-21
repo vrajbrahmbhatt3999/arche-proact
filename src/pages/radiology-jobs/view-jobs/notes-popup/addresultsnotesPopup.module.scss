@@ -1,0 +1,54 @@
+@import "../../../../styles/mixin.scss";
+.addResultsNotesPopupContainer {
+  width: 400px;
+  height: 250px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+  }
+
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+    button:nth-child(1) {
+      width: 80px;
+      height: 35px;
+    }
+    button:nth-child(2) {
+      width: 80px;
+      height: 35px;
+      background: none;
+      border: 1px solid var(--blue1);
+      border-radius: 6px;
+      color: var(--black1);
+    }
+  }
+
+  .textContainer {
+    width: 100%;
+    height: 80px;
+    border-radius: 6px;
+    border: 1px solid var(--grey2);
+    padding: 8px;
+  }
+  .addResultsNotesContainer {
+    margin-top: 30px;
+    .title {
+      @include font(var(--black2), var(--font-24), var(--font-semibold));
+      text-align: center;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 0px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+  }
+}

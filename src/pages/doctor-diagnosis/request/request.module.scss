@@ -1,0 +1,179 @@
+@import '../../../styles/mixin.scss';
+
+.requestContainer {
+  margin: 0px 20px 50px 0px;
+  background: var(--white2);
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 15px 20px;
+  .requestFormContainer {
+    width: 100%;
+    .radioBtnContainer {
+      @include flexCenter;
+      column-gap: 20px;
+      margin: 25px 0px;
+      .singlRadioBtnConatainer {
+        @include flexVertical;
+        .radioLabelTxt {
+          user-select: none;
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+        }
+        .radioLabel {
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          display: flex;
+        }
+        .radioLabel:checked {
+          color: red !important;
+          // @include font(var(--black2), var(--font-14), var(--font-semibold))!important;
+        }
+        .customRadio {
+          left: -7px;
+          top: 3px;
+          cursor: pointer;
+          width: 17px;
+          height: 17px;
+          border: 2px solid var(--green1);
+          border-radius: 50%;
+          display: inline-block;
+          position: relative;
+        }
+
+        // / for inner filled circle /
+        .customRadio::after {
+          content: '';
+          width: 8px;
+          height: 8px;
+          background: var(--green1);
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: opacity 0.2s;
+        }
+        .radioInput {
+          visibility: hidden;
+        }
+        .radioInput:checked + span:after {
+          opacity: 1;
+        }
+      }
+    }
+    .formFieldContainer {
+      margin: 0px 0px 25px 0px;
+      @include flexVertical;
+      .inputFieldContainer {
+        display: flex;
+        align-items: baseline;
+        column-gap: 12px;
+        flex: 1;
+        // flex-basis: 33%;
+        .formLabel {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 110px;
+          text-align: right;
+        }
+
+        .fieldAndErrorTxtContainer {
+          width: 60%;
+          .inputField {
+            width: 106%;
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+            padding: 0px 14px 0px 14px;
+          }
+          .selectInputField {
+            outline: none;
+            cursor: pointer;
+            box-shadow: none;
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+          }
+          .formError {
+            @include font(
+              var(--errorColor),
+              var(--font-12),
+              var(--font-normal)
+            );
+            margin-left: 5px;
+            margin-top: 5px;
+          }
+        }
+
+        .extraInputField {
+          width: 60%;
+        }
+      }
+      .singleFieldContainer {
+        align-items: center;
+        .insuranceFieldAndErrorTxtContainer {
+          width: 64%;
+        }
+      }
+    }
+    .textAreaFieldContainer {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      column-gap: 25px;
+      .formLabel {
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+        width: 110px;
+        text-align: right;
+      }
+      .textArea {
+        background: var(--white1);
+        border: 1px solid var(--grey6);
+        border-radius: 6px;
+        height: 107px;
+        width: 100%;
+        @include font(var(--grey4), var(--font-16), var(--font-medium));
+        padding: 10px 14px 0px 14px;
+      }
+    }
+    .requestFormBtnContainer {
+      @include flexCenter;
+      margin: 25px 0px 60px 0px;
+      .submitButton {
+        width: 150px;
+        height: 42px;
+        @include font(var(--white1), var(--font-16), var(--font-medium));
+      }
+    }
+  }
+  .requestDataContaniner {
+    padding: 30px 18px 40px 18px;
+    border-radius: 10px;
+    background: var(--white1);
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+    .requestBtnContainer {
+      margin: 25px 0px 0px 0px;
+      @include flexCenter;
+      column-gap: 15px;
+      .sendButton {
+        @include font(var(--white1), var(--font-16), var(--font-medium));
+      }
+      .endButton {
+        background: transparent;
+        border: 1px solid var(--blue1);
+        border-radius: 6px;
+        @include font(var(--blue1), var(--font-16), var(--font-medium));
+      }
+      .skipButton {
+        background: transparent;
+        border: 1px solid var(--blue1);
+        border-radius: 6px;
+        @include font(var(--blue1), var(--font-16), var(--font-medium));
+        width: 120px !important;
+      }
+    }
+  }
+}

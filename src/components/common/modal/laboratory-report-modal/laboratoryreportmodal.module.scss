@@ -1,0 +1,111 @@
+@import '../../../../styles/mixin.scss';
+
+.patientActivityModalContainer {
+  width: 60%;
+  height: 600px;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  // backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 40px;
+  @include font(var(--grey4), var(--font-16), var(--font-normal));
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    cursor: pointer;
+  }
+  .patientActivityLogModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+  }
+
+  .patientActivityLogModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+
+  .search {
+    @include flexVertical;
+    gap: 15px;
+    margin: 20px 0;
+
+    .searchInput {
+      @include font(var(--grey4), var(--font-16), var(--font-medium));
+      background: var(--white1);
+      border: 1px solid var(--grey6);
+      border-radius: 6px;
+      height: 50px;
+      width: 285px;
+      padding: 0px 12px 0px 10px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    .searchButton {
+      background: var(--green1);
+      // padding: 17px 14px 0px;
+      cursor: pointer;
+      border-radius: 20%;
+      margin: 0 18px 0 5px;
+      height: 50px;
+      width: 50px;
+      @include flexCenter;
+    }
+    .stylePrint {
+      cursor: pointer;
+    }
+    .styleExport {
+      cursor: pointer;
+    }
+  }
+
+  .textContainer {
+    display: flex;
+    .text {
+      display: flex;
+      .subText {
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+      }
+      .physicianName {
+        margin-left: 10px;
+      }
+    }
+    .text1 {
+      display: flex;
+      margin-left: 20px;
+      .subText {
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+      }
+      .physicianName {
+        margin-left: 10px;
+      }
+    }
+  }
+  .tableContainer {
+    width: 100%;
+    white-space: nowrap;
+    overflow: auto;
+    height: 250px;
+    margin-top: 35px;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+  }
+}

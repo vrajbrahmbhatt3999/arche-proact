@@ -1,0 +1,34 @@
+.mainHeaderContainer {
+  width: 97%;
+  margin: auto;
+  background-color: var(--white1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  height: 55px;
+  padding-left: 15px;
+  .buttonContainer {
+    display: flex;
+    .buttonOutline {
+      width: 100%;
+      white-space: nowrap;
+      background: none;
+      height: 30px;
+      padding: 0px 8px;
+      border: 1px solid var(--blue1);
+      border-radius: 6px;
+      color: var(--blue1);
+      font-weight: var(--font-normal);
+      font-size: var(--font-12);
+    }
+  }
+  .colorSchemeContainer {
+    display: flex;
+    align-items: center;
+    .doubleBookingMsg {
+      left: -95px !important;
+    }
+  }
+}

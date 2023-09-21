@@ -1,0 +1,16 @@
+@import '../../../styles/mixin.scss';
+
+.informationContainer {
+  position: relative;
+  margin-right: 15px;
+  .infoTitle {
+    margin-right: 8px;
+    @include font(var(--black1), var(--font-12), var(--font-medium));
+  }
+  .infoChildren {
+    position: absolute;
+    z-index: 1;
+    top: 37px;
+    left: -40px;
+  }
+}

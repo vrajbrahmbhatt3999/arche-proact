@@ -1,0 +1,136 @@
+@import '../../../../styles/mixin.scss';
+
+.comparePopupContainer {
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  width: 50%;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+  }
+  // Search Container
+  .searchContainer {
+    @include flexVertical;
+    padding: 18px 44px;
+    .search {
+      @include flexVertical;
+      .searchInput {
+        @include font(var(--grey4), var(--font-16), var(--font-medium));
+        background: var(--white1);
+        border: 1px solid var(--grey6);
+        border-radius: 6px;
+        height: 50px;
+        width: 285px;
+        padding: 0px 12px 0px 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      .searchButton {
+        background: var(--green1);
+        // padding: 17px 14px 0px;
+        cursor: pointer;
+        border-radius: 20%;
+        margin-left: 8px;
+        height: 50px;
+        width: 50px;
+        @include flexCenter;
+      }
+    }
+  }
+  .comparativeButton {
+    @include font(var(--black2), var(--font-14), var(--font-normal));
+    border: 1px solid var(--blue1);
+    border-radius: 6px;
+    margin-left: 40px;
+    width: 190px;
+    height: 44px;
+    // padding: 12px 16px;
+    background: var(--white1);
+  }
+  .compareContainer {
+    padding: 0 30px 50px 34px;
+    .tableContainer {
+      width: 100%;
+      max-height: 300px;
+      white-space: nowrap;
+      overflow: auto;
+      th {
+        padding: 12px 0px 12px 22px;
+        font-family: Poppins;
+      }
+      td {
+        padding: 12px 0px 12px 10px;
+        margin: 0 auto;
+      }
+      // compare popup
+      .resultViewContainer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: 28px;
+        .resultView {
+          @include font(var(--blue1), var(--font-12), var(--font-normal));
+          font-family: Poppins;
+          cursor: pointer;
+        }
+        .checkboxContainer {
+          display: block;
+          position: relative;
+          padding-left: 30px;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          width: 100px;
+          margin-left: 18px;
+          .checkboxField {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+          .checkboxLabel {
+            position: absolute;
+            bottom: -11px;
+            left: 40%;
+            height: 22px;
+            width: 22px;
+            background-color: var(--white1);
+            border: 1.5px solid var(--grey4);
+            border-radius: 3px;
+          }
+          .checkboxField:checked ~ .checkboxLabel {
+            background-color: var(--white1);
+            border: 1.5px solid var(--green1);
+          }
+          .checkboxLabel:after {
+            content: '';
+            position: absolute;
+            display: none;
+          }
+          .checkboxField:checked ~ .checkboxLabel:after {
+            display: block;
+          }
+          .checkboxLabel:after {
+            left: 7px;
+            top: 3px;
+            width: 6px;
+            height: 12px;
+            border: solid var(--green1);
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}

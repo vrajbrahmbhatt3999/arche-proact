@@ -1,0 +1,449 @@
+@import '../../../styles/mixin.scss';
+.mainContainer {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 20px 20px 0px 40px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .addCategoryContainer {
+    margin-top: 50px;
+
+    .buttonConatiner {
+      margin-top: 68px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 45px;
+    }
+
+    .title {
+      text-align: center;
+      @include font(var(--black2), var(--font-24), var(--font-semibold));
+    }
+    .dividerStyle {
+      margin: 10px auto 50px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    // .formLayoutContainer {
+    //   display: flex;
+    //   flex-direction: column;
+    //   height: 100%;
+    //   width: 92%;
+    //   margin: 30px auto 0px auto;
+    //   .formContainer {
+    //     width: 100%;
+    //     margin-bottom: 60px;
+    //     .inputContainer {
+    //       display: flex;
+    //       flex-direction: row;
+    //       flex-wrap: wrap;
+    //       .labelField {
+    //         display: flex;
+    //         flex-direction: row;
+    //         width: 100%;
+    //         .labelText {
+    //           margin-right: 15px;
+    //           @include font(
+    //             var(--black2),
+    //             var(--font-16),
+    //             var(--font-semibold)
+    //           );
+    //           width: 150px;
+    //           display: flex;
+    //           align-items: center;
+    //         }
+    //         .fieldErrorContainer {
+    //           .inputField {
+    //             background: var(--white1);
+    //             width: 280px;
+    //             border: 1px solid var(--grey6);
+    //             border-radius: 6px;
+    //             padding: 10px 15px;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    //   .buttonConatiner {
+    //     height: 100%;
+    //     display: flex;
+    //     justify-content: center;
+    //     margin-bottom: 30px;
+    //     .resetButtonStyle {
+    //       background: none;
+    //       border: 1px solid var(--blue1);
+    //       border-radius: 6px;
+    //       color: var(--blue1);
+    //     }
+    //   }
+    // }
+
+    // .formRowContainer {
+    //   @include flexVertical;
+    //   justify-content: start;
+    //   flex-wrap: wrap;
+    //   width: 100%;
+    //   .formFieldContainer {
+
+    //     .errorContainer{
+    //       text-align: start;
+    //       margin-left: 70px;
+    //     }
+
+    // //  .errorContainer:nth-child(1){
+    // //   margin-left: 70px !important;
+    // //  }
+
+    //     @include flexVertical;
+    //     margin-top: 32px;
+    //     flex-direction: column;
+    //     width: 33.33%;
+    //     position: relative;
+    //     @include responsive(768px) {
+    //       width: 50%;
+    //     }
+    //     @include responsive(568px) {
+    //       width: 100%;
+    //     }
+    //     .inputFieldContainer {
+    //       @include flexVertical;
+    //       position: relative;
+    //       width: 100%;
+    //       // align-items: center;
+    //       .formLabel {
+    //         @include font(var(--black2), var(--font-16), var(--font-semibold));
+
+    //         width: 35%;
+    //         flex-shrink: 0;
+    //         max-width: 300px;
+    //         text-align: end;
+    //         margin: auto 15px auto 0px;
+
+    //       }
+    //       .selectInputField {
+    //         background: var(--white1);
+    //         border: 1px solid var(--grey6);
+    //         border-radius: 6px;
+    //         color: var(--grey4);
+    //         height: 42px;
+    //         width: 100%;
+    //         flex: 1;
+    //         position: relative;
+    //         @include responsive(568px) {
+    //           width: 100%;
+    //           max-width: none;
+    //         }
+    //       }
+    //       .inputField {
+    //         background: var(--white1);
+    //         border: 1px solid var(--grey6);
+    //         border-radius: 6px;
+    //         color: var(--grey4);
+    //         height: 42px;
+    //         width: 100%;
+    //         flex: 1;
+    //         padding:0 8px;
+    //         position: relative;
+    //         @include responsive(568px) {
+    //           width: 100%;
+    //           max-width: none;
+    //         }
+    //       }
+
+    //     }
+
+    //   }
+    //   .textareaFieldContainer{
+    //     @include flexVertical;
+    //     margin-top: 35px;
+    //     flex-direction: column;
+    //     width: 100%;
+    //     position: relative;
+    //     .inputFieldContainer {
+    //       @include flexVertical;
+    //       position: relative;
+    //       width: 100%;
+    //       .formLabel {
+    //         @include font(var(--black2), var(--font-16), var(--font-semibold));
+    //         margin-right: 15px;
+    //         width: 17%;
+    //         flex-shrink: 0;
+    //         max-width: 300px;
+    //         text-align: end;
+    //       }
+    //     .textareaInputField{
+    //       background: var(--white1);
+    //       border: 1px solid var(--grey6);
+    //       border-radius: 6px;
+    //       color: var(--grey4);
+    //       height: 84px;
+    //       width: 100%;
+    //       flex: 1;
+    //       padding: 8px 12px;
+    //       position: relative;
+    //       @include responsive(568px) {
+    //         width: 100%;
+    //         max-width: none;
+    //       }
+    //     }
+    //   }
+    //   }
+    //   // radioField Container
+    //   .radioFieldMainContainer {
+    //     @include flexVertical;
+    //     .radioFieldName {
+    //       @include font(var(--black2), var(--font-16), var(--font-semibold));
+    //       flex-shrink: 0;
+    //       text-align: end;
+    //       width: 128px;
+    //     }
+    //     .radioFieldContainer {
+    //       display: flex;
+    //       .radioInput {
+    //         -webkit-appearance: none;
+    //         -moz-appearance: none;
+    //         appearance: none;
+    //         height: 17px;
+    //         width: 17px;
+    //         border-radius: 50%;
+    //         outline: none;
+    //         border: 2px solid gray;
+    //         position: relative;
+    //         margin-right: 8px;
+    //       }
+    //       .radioInput:before {
+    //         cursor: pointer;
+    //         content: "";
+    //         top: 52%;
+    //         left: 52%;
+    //         width: 70%;
+    //         height: 70%;
+    //         position: absolute;
+    //         border-radius: 50%;
+    //         display: block;
+    //         transform: translate(-50%, -50%);
+    //         transition: opacity 0.2s;
+    //       }
+    //       .radioInput:checked:before {
+    //         background: var(--green1);
+    //       }
+    //       .radioInput:checked {
+    //         border-color: var(--green1) !important;
+    //       }
+    //       .selectText {
+    //         @include font(var(--green1), var(--font-15), var(--font-semibold));
+    //         margin-bottom: 0px;
+    //         margin-right: 18px;
+    //       }
+    //       .radioLable {
+    //         @include font(var(--grey4), var(--font-15), var(--font-semibold));
+    //         margin-right: 18px;
+    //       }
+    //     }
+    //   }
+    // }
+
+    .formFieldRow {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      column-gap: 10px;
+      // .kk {
+      //   margin: 40px 0px;
+      //   width: 138px;
+      //   height: 42px;
+      // }
+
+      // .kk1 {
+      //   margin: 40px 0px;
+      //   width: 138px;
+      //   height: 42px;
+      // }
+
+      .formFieldContainer {
+        display: flex;
+        margin-top: 25px;
+        flex-direction: column;
+        width: 31.33%;
+        // gap: 10px;
+        // margin-right: 20px;
+        position: relative;
+
+        .errorContainer {
+          margin-left: 130px;
+        }
+
+        @include responsive(768px) {
+          width: 33.33%;
+        }
+        @include responsive(568px) {
+          width: 100%;
+        }
+        .inputFieldContainer {
+          display: flex;
+          flex-direction: row;
+          // justify-content: center;
+          align-items: center;
+          gap: 10px;
+          position: relative;
+          // width: 33.33%;
+
+          .selectInputField {
+            background: var(--white1);
+            border-radius: 6px;
+            min-height: 42px !important;
+            width: 100%;
+          }
+
+          .contentCenter {
+            display: flex;
+
+            .centerButton {
+              margin-top: 32px !important;
+            }
+
+            .infoContainer {
+              position: relative;
+              .iconStyle {
+                cursor: pointer;
+                margin-left: 10px;
+                margin-top: 45px;
+              }
+              .infoText {
+                @include font(
+                  var(--black2),
+                  var(--font-14),
+                  var(--font-medium)
+                );
+                padding: 8px;
+                background-color: var(--white1);
+                text-transform: capitalize;
+                box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                width: 248px;
+                z-index: 1;
+                left: 40px;
+                top: 20px;
+                position: absolute;
+              }
+            }
+          }
+
+          ::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            padding-right: 5px;
+          }
+          ::-moz-appearance-calendar-picker-indicator {
+            cursor: pointer;
+            padding-right: 5px;
+          }
+          .radioFieldContainer {
+            width: 300px;
+            marker-end: 0;
+          }
+          .formLabel {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            // margin-right: 16px;
+
+            // width: auto;
+            flex-shrink: 0;
+            width: 100px;
+            text-align: end;
+            // align-items: center;
+
+            margin: auto 13px auto 0px;
+          }
+
+          .textArea {
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            width: 100%;
+            flex: 1;
+
+            padding-left: 5px;
+            padding-top: 8px;
+            @include responsive(568px) {
+              width: 100%;
+              max-width: none;
+            }
+          }
+          .textArea:focus {
+            border: 2px solid #2684ff;
+          }
+          .inputField {
+            // @include font(var(--grey4), var(--font-16), var(--font-medium));
+
+            background: var(--white1);
+            border: 1px solid #cdd4d8;
+            border-radius: 6px;
+            height: 42px !important;
+            width: 100%;
+            flex: 1;
+            padding-left: 10px;
+            position: relative;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            @include responsive(568px) {
+              width: 100%;
+              max-width: none;
+            }
+          }
+          .inputField:disabled {
+            background: #eaeaea !important;
+            //  border:  2px solid #bbbbbb;
+          }
+          .inputField:focus {
+            border: 2px solid #2684ff;
+          }
+          .downArrowStyle {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+            cursor: pointer;
+          }
+          .searchIconStyle {
+            position: absolute;
+            right: 3%;
+          }
+        }
+
+        .addVoucherModal {
+          margin-left: 10px;
+          position: absolute;
+          right: 0;
+          left: 99%;
+          top: 23%;
+          z-index: 10;
+          .iconStyle {
+            cursor: pointer;
+          }
+        }
+        .errorContainer {
+          @include flexVertical;
+          position: relative;
+          width: 100%;
+
+          .extraSpan {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+
+            flex-shrink: 0;
+            // max-width: 300px;
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}

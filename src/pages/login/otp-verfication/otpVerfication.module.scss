@@ -1,0 +1,61 @@
+@import '../../../styles/mixin.scss';
+.formTitle {
+  font-size: var(--font-28);
+  font-weight: var(--font-semibold);
+  padding-top: 20px;
+  @include responsive(768px) {
+    font-size: var(--font-28);
+    padding-top: 5px;
+  }
+}
+.otpContent {
+  @include font(var(--grey4), var(--font-14), var(--font-normal));
+}
+.formContainer {
+  margin: 30px 0px;
+
+  .otpForm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .otpInputStyle {
+      width: 100%;
+      height: 70px;
+      margin-top: 10px;
+
+      .inputStyle {
+        @include font(var(--black1), var(--font-20), var(--font-medium));
+        width: 100% !important;
+        max-width: 300px !important;
+        height: 65px;
+        border: 1px solid rgba(160, 162, 179, 0.2);
+        border-radius: 20px;
+        caret-color: var(--green1);
+      }
+      .focusStyle {
+        border: 1px solid var(--green1);
+        outline: 'none';
+      }
+    }
+
+    .atemptContainer {
+      @include font(var(--grey4), var(--font-12), var(--font-semibold));
+      padding: 20px 0px;
+      .noOfAttempts {
+        margin-right: 5px;
+      }
+      .resendLinkStyle {
+        color: var(--green1);
+        padding: 0px 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  .verifyOtpButtonStyle {
+    margin: 10px 0px !important;
+    width: 100% !important;
+    max-width: 366px !important;
+    cursor: pointer;
+  }
+}

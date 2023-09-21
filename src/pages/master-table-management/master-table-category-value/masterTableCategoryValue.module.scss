@@ -1,0 +1,41 @@
+@import "../../../styles/mixin.scss";
+.mainContainer {
+  background-color: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 0 20px 50px 0;
+  .searchContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    .inputFieldContainer {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      .inputSearchContainer {
+        width: 200px;
+        height: 50px;
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+      }
+      .inputSearchButton {
+        margin: 5px 0px 0px 15px;
+      }
+    }
+    .addCategoryValueButton {
+      width: 200px;
+    }
+  }
+  .tableContainer {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}

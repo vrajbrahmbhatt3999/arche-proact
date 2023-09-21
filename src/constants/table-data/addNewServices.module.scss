@@ -1,0 +1,52 @@
+@import "../../styles/mixin.scss";
+
+.viewPopupLink {
+  @include font(var(--blue1), var(--font-12), var(--font-medium));
+  cursor: pointer;
+}
+.addServiceButton {
+  border: 1px solid var(--blue1);
+  width: 56px;
+  height: 25px;
+  background: none;
+  padding: auto;
+  @include font(var(--blue1), var(--font-12), var(--font-medium));
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.addToJobAddGreenText {
+  @include font(var(--green1), var(--font-12), var(--font-normal));
+  border: 1px solid var(--green1);
+  width: 56px;
+  height: 25px;
+  background: none;
+  padding: auto;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+
+// .........................................................
+
+.addedServiceButton {
+  border: 1px solid var(--blue1);
+  width: 56px;
+  height: 25px;
+  background: none;
+  padding: auto;
+  @include font(var(--blue1), var(--font-12), var(--font-medium));
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.addServiceButton {
+  border: 1px solid var(--green1);
+  width: 56px;
+  height: 25px;
+  background: none;
+  padding: auto;
+  @include font(var(--green1), var(--font-12), var(--font-medium));
+  cursor: pointer;
+  border-radius: 20px;
+}

@@ -1,0 +1,261 @@
+@import "../../../../styles/mixin.scss";
+
+.mainContainer {
+  // max-width: 1200px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(97px);
+  border-radius: 10px;
+  font-weight: var(--font-semibold);
+  font-size: var(--font-16);
+  font-style: normal;
+  margin-right: 20px;
+  margin-bottom: 40px;
+
+  .addNewButtonStyle {
+    text-align: center;
+    color: #0e26a3;
+    height: 42px;
+    border-radius: 6px;
+    background: transparent;
+    border: 1px solid #0e26a3;
+    padding: 10px 15px;
+  }
+
+  .headerContainer {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .searchContainer {
+    margin: 45px 0px 20px 0px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .searchInputContainer {
+      position: relative;
+    }
+
+    .searchIconStyle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 14px 13px;
+    }
+  }
+
+  .amountContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px;
+  }
+
+  .amountContainer > * {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    // grid-template-columns: repeat(auto-fill, 200px);
+    height: 44px;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: var(--font-medium);
+    font-size: var(--font-18);
+  }
+
+  .amountContainer > div:first-child {
+    color: #5936f1;
+    background: rgba(89, 54, 241, 0.1);
+  }
+  .amountContainer > div:nth-child(2) {
+    color: #02bf90;
+    background: rgba(2, 191, 144, 0.1);
+  }
+  .amountContainer > div:last-child {
+    color: #ffa009;
+    background: rgba(255, 160, 9, 0.1);
+  }
+  .buttonContainer {
+    display: flex;
+    place-content: center;
+    .endButtonStyle {
+      color: var(--blue1);
+      border: 1px solid var(--blue1);
+      background: var(--white1);
+      margin-left: 20px;
+    }
+  }
+  .tableContainer {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+  }
+
+  .toothSelection {
+    margin-bottom: 24px;
+    text-align: center;
+    background-color: #ffffff;
+
+    .title {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+      border-bottom: 1px solid gray;
+    }
+    
+      .toothRaw{
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+
+        .toothDiv{
+          cursor: pointer;
+          margin-left:5px;
+          margin-right:5px;
+          margin-bottom:5px;
+          padding:0px;
+          border: 2px solid transparent;
+          height: 130px;
+
+          &:hover {
+              border:2px solid blueviolet;
+          }         
+        }
+      } 
+  }
+
+
+  .labelFieldContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+
+    .labelText {
+      margin-top: 10px;
+      @include font(var(--black2),
+        var(--font-16),
+        var(--font-semibold));
+      width: 135px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .fieldErrorContainer {
+      position: relative;
+      margin-left: 10px;
+      height: 42px;
+      padding: 2px;
+
+      ::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+      }
+
+      ::-moz-appearance-calendar-picker-indicator {
+        cursor: pointer;
+      }
+
+      .select {
+        width: 200px;
+      }
+
+      .radioFieldName {
+        @include font(var(--black2),
+          var(--font-16),
+          var(--font-semibold));
+        flex-shrink: 0;
+        text-align: end;
+      }
+
+      .radioLabel {
+        @include font(var(--black2),
+          var(--font-14),
+          var(--font-semibold));
+        margin-right: 14px;
+      }
+
+      .customRadio {
+        left: -7px;
+        top: 3px;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        border: 2px solid var(--grey6);
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        margin-left: -9px;
+      }
+
+      /* for inner filled circle */
+      .customRadio::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: var(--green1);
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+
+      .radioInput {
+        height: 25px;
+        visibility: hidden;
+      }
+
+      .radioInput:checked+span:after {
+        opacity: 1;
+      }
+ 
+      .radiofieldStyle {
+        margin-left: 0px;
+      }
+
+      .radioStyle {
+        font-weight: 400;
+        font-size: 16px;
+        padding: 0px 8px 0px 5px;
+        color: var(--grey4);
+      }
+
+      .inputField {
+        background: var(--white1);
+        width: 234px;
+        border: 1px solid var(--grey6);
+        border-radius: 6px;
+        padding: 10px 15px;
+      } 
+    }
+ 
+  }
+
+}

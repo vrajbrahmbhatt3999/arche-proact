@@ -1,0 +1,16 @@
+.paginationContainer {
+  display: flex;
+  align-items: center;
+  .iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    width: 34px;
+    background: var(--white1);
+    border: 1px solid var(--grey6);
+    border-radius: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}

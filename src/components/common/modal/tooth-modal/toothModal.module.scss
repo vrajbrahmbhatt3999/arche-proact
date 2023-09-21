@@ -1,0 +1,232 @@
+@import "../../../../styles/mixin.scss";
+.popupContainer {
+    width: 1200px;
+    margin: auto;
+    background: var(--white1);
+    border-radius: 10px;
+    padding: 10px;
+    .closeIconStyle {
+      cursor: pointer;
+      float: right;
+    }
+    .toothSelection {
+      margin-top: 0px;
+      
+      .title {
+        text-align: center;
+        font-weight: var(--font-semibold);
+        font-size: var(--font-24);
+        line-height: 36px;
+        color: var(--black2);
+      }
+      .dividerStyle {
+        margin: 10px auto 30px auto;
+        width: 80px;
+        height: 3px;
+        background: var(--green1);
+      }
+      .mainContainer {
+        margin: 0 40px 40px 40px;
+  
+        .filterContainer {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 20px;
+          .filterText {
+            font-weight: var(--font-semibold);
+            font-size: var(--font-16);
+            color: var(--black2);
+            margin-right: 15px;
+          }
+          .selectContainer {
+            border: 1px solid #cdd4d8;
+            border-radius: 6px;
+            background-color: var(--white1);
+            padding: 10px;
+            width: 200px;
+          }
+        }
+
+        .toothRaw{
+          margin-bottom: 25px;
+          display: flex;
+          flex-direction: row; 
+          justify-content: center;
+          align-items: center;
+
+          .toothDiv{
+            cursor: pointer;
+            margin-left:5px;
+            margin-right:5px;
+            margin-bottom:5px;
+            padding:4px;
+            border: 2px solid white;
+            height: 120px;
+
+            &:hover {
+                border:2px solid yellow;
+            }
+
+           
+          }
+
+          .selected{
+            border:2px solid green;
+          }
+
+        }
+
+        .formContainer {
+          margin-top: 8px;
+          height: 500px;
+          overflow-y: auto;
+
+          .form {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+
+              .labelField {
+                  display: flex;
+                  flex-direction: row;
+                  margin-left: 20px;
+                  margin-bottom: 8px;
+
+                  .labelText {
+                      margin-right: 8px;
+                      font-weight: var(--font-semibold);
+                      font-size: --font-16;
+                      color: var(--black2);
+                      width: 125px;
+                      margin-top: 8px;
+                  }
+
+                  .fieldErrorContainer {
+                      .inputField {
+                          background: var(--white1);
+                          width: 200px;
+                          border: 1px solid #cdd4d8;
+                          border-radius: 6px;
+                          padding: 10px 15px;
+                          text-align: left;
+                      }
+
+                      .textareaField {
+                        background: var(--white1);
+                        width: 330px;
+                        border: 1px solid #cdd4d8;
+                        border-radius: 6px;
+                        padding: 10px 15px;
+                      }
+
+                      .select {
+                          width: 200px;
+                      }
+
+                      .iconStyle {
+                          margin-top: 7px;
+                      }
+
+                      .radioFieldName {
+                        @include font(var(--black2),
+                          var(--font-16),
+                          var(--font-semibold));
+                        flex-shrink: 0;
+                        text-align: end;
+                      }
+                
+                      .radioLabel {
+                        @include font(var(--black2),
+                          var(--font-14),
+                          var(--font-semibold));
+                        margin-right: 14px;
+                      }
+                
+                      .customRadio {
+                        left: -7px;
+                        top: 3px;
+                        cursor: pointer;
+                        width: 16px;
+                        height: 16px;
+                        border: 2px solid var(--grey6);
+                        border-radius: 50%;
+                        display: inline-block;
+                        position: relative;
+                        margin-left: -9px;
+                      }
+                
+                      /* for inner filled circle */
+                      .customRadio::after {
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        background: var(--green1);
+                        position: absolute;
+                        border-radius: 50%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        transition: opacity 0.2s;
+                      }
+                
+                      .radioInput {
+                        height: 25px;
+                        visibility: hidden;
+                      }
+                
+                      .radioInput:checked+span:after {
+                        opacity: 1;
+                      }
+                 
+                      .radiofieldStyle {
+                        margin-left: 0px;
+                      }
+                
+                      .radioStyle {
+                        font-weight: 400;
+                        font-size: 16px;
+                        padding: 0px 8px 0px 5px;
+                        color: var(--grey4);
+                      }
+                
+                  }
+              }
+          }
+
+          .btnContainer {
+              margin: 20px auto 40px auto;
+              text-align: center;
+          }
+
+          &::-webkit-scrollbar {
+              display: block;
+              width: 7px;
+              height: 7px;
+          }
+
+          &::-webkit-scrollbar-track {
+              background: transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+              background-color: var(--grey7);
+              border-radius: 10px;
+              border: 1px solid var(--grey7);
+          }
+        }
+
+      }
+    }
+
+    .selectBtn {
+      color: var(--blue1);
+      border: 1px solid var(--blue1);
+      background: var(--white1);
+      width: fit-content;
+      padding: 0 15px;
+    }
+
+  }
+  

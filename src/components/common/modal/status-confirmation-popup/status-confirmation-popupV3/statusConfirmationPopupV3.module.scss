@@ -1,0 +1,98 @@
+@import "../../../../../styles/mixin.scss";
+
+.popupContainer {
+  width: 480px;
+  //   height: 0px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .statusContainer {
+    margin-top: 50px;
+    text-align: center;
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 10px auto 20px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--red3);
+    }
+    .formFieldRow {
+      display: flex;
+      width: 100%;
+      margin-top: 17px;
+      .formFieldContainer {
+        display: flex;
+        // align-items: center;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        .textAreaFieldContainer {
+          display: flex;
+          align-items: flex-start;
+          position: relative;
+          column-gap: 16px;
+          .formLabel {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            min-width: 100px;
+            text-align: right;
+          }
+          .textAreaContainer {
+            display: flex;
+            flex-direction: column;
+            .textArea {
+              background: var(--white1);
+              border: 1px solid var(--grey6);
+              border-radius: 6px;
+              height: 107px;
+              width: 300px;
+              @include font(var(--grey4), var(--font-16), var(--font-medium));
+              padding: 10px 14px 0px 14px;
+            }
+            .formError {
+              color: var(--errorColor);
+              font-size: var(--font-12);
+              font-weight: var(--font-normal);
+              margin-top: 5px;
+              width: 130px;
+            }
+          }
+        }
+      }
+    }
+    .userText {
+      font-weight: var(--font-normal);
+      font-size: var(--font-16);
+      color: var(--black2);
+      // margin-bottom: 20px;
+      margin: 0 20px 20px 20px;
+      text-align: center;
+    }
+    .btnContainer {
+      margin: 20px 0 30px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .btnStyle,
+      .yesButton {
+        width: 100px;
+      }
+      .yesButton {
+        margin-left: 15px;
+        border: 1px solid var(--blue1);
+        background: var(--white1);
+        color: var(--blue1);
+      }
+    }
+  }
+}

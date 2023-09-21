@@ -1,0 +1,25 @@
+@import '../../../styles/mixin.scss';
+
+.iconTooltipText {
+  @include font(var(--white1), var(--font-14), var(--font-normal));
+  width: fit-content;
+  background-color: var(--black1);
+  text-align: center;
+  padding: 8px 10px;
+  position: absolute;
+  z-index: 11111111;
+  margin-left: 55px;
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  border-radius: 10px;
+  user-select: none;
+}
+.iconTooltipText::after {
+  content: '';
+  position: absolute;
+  right: 40%;
+  margin-top: 28px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: var(--black1) transparent transparent transparent;
+}

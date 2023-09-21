@@ -1,0 +1,90 @@
+@import '../../../../styles/mixin.scss';
+.mainLayoutContainer {
+  width: 98%;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding: 40px 25px;
+  .inputFieldsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0px auto;
+    .labelField {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 25px;
+      .labelText {
+        align-self: center;
+        margin-right: 10px;
+        font-weight: var(--font-semibold);
+        font-size: --font-16;
+        color: var(--black2);
+        width: 130px;
+      }
+      .fieldErrorContainer1 {
+        width: 270px;
+        align-self: center;
+      }
+      .fieldErrorContainer {
+        position: relative;
+        .inputField {
+          background: #ffffff;
+          width: 270px;
+          border: 1px solid #cdd4d8;
+          border-radius: 6px;
+          padding: 10px 15px;
+        }
+        .phoneNumberInput {
+          background: var(--white1);
+          border: 1px solid #cdd4d8;
+          border-radius: 6px;
+          height: 42px;
+          width: 100%;
+          // flex: 1;
+          min-width: 270px;
+          // max-width: 400px;
+          @include responsive(568px) {
+            width: 100%;
+            max-width: none;
+          }
+        }
+        .selectInputField {
+          background: #ffffff;
+          width: 270px;
+          border-radius: 6px;
+        }
+        .doubleBookingCheckboxContainer {
+          margin: 15px 0px 0px 0px;
+          display: flex;
+          align-items: center;
+          .doubleBookingText {
+            margin: 0px 0px 0px 5px;
+            @include font(var(--black2), var(--font-14), var(--black2));
+          }
+        }
+        .addButtonStyle {
+          position: absolute;
+          right: -30px;
+          top: 7px;
+        }
+      }
+    }
+  }
+  .buttonConatiner {
+    display: flex;
+    justify-content: center;
+    // margin-top: 30px;
+    .resetButtonStyle {
+      background: none;
+      border: 1px solid var(--blue1);
+      border-radius: 6px;
+      color: var(--blue1);
+    }
+  }
+}

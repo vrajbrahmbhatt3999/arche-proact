@@ -1,0 +1,47 @@
+.paginationSection {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  .paginationButton,
+  .selectedPage {
+    background: var(--grey1);
+    border: 1px solid var(--grey6);
+    border-radius: 2px;
+    font-weight: var(--font-medium);
+    font-size: var(--font-14);
+    letter-spacing: 0.01em;
+    color: var(--grey4);
+    padding: 4px 0px;
+    width: 30px;
+    text-align: center;
+    margin-right: 7px;
+    cursor: pointer;
+  }
+
+  .selectedPage {
+    background: var(--green1);
+    border: none;
+    color: var(--white1);
+  }
+  .setPageSizeSection {
+    display: flex;
+    align-items: baseline;
+    margin-left: 25px;
+    .setPageSizeText {
+      font-weight: var(--font-medium);
+      font-size: var(--font-14);
+      color: var(--grey4);
+      margin-right: 5px;
+    }
+
+    .selectPageSize {
+      border: 1px solid var(--grey6);
+      border-radius: 2px;
+      font-weight: var(--font-medium);
+      font-size: var(--font-14);
+      color: var(--grey4);
+      outline: none;
+      width: 47px;
+    }
+  }
+}

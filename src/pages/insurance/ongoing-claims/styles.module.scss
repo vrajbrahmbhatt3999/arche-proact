@@ -1,0 +1,138 @@
+@import '../../../styles/mixin.scss';
+
+.pageWrapper {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 28px;
+  margin: 0px 20px 32px 0px;
+}
+
+.claims_Wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    width: max-content;
+    font-weight: 400;
+    padding: 0 30px;
+  }
+}
+
+// Table
+.TableMainContainer {
+  .tableContainer {
+    padding-block: 22px;
+
+    tr {
+      border-top: 1px solid var(--grey8);
+
+      td {
+        padding: 12px 14px 12px 0px;
+      }
+    }
+  }
+}
+
+// Radio Container
+.radioFieldContainer {
+  margin-top: 30px;
+}
+
+//popup styles
+.PopupContainer {
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  width: 80%;
+  position: relative;
+
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 2%;
+    top: 5%;
+  }
+
+  .addClaimContainer {
+    padding: 20px 30px;
+
+    .titleContainer {
+      position: relative;
+    }
+
+    .textUnderline {
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      background: #02bf90;
+      width: 62px;
+      height: 3px;
+      transform: translate(-50%, -50%);
+    }
+
+    .addClaimHeading {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 800;
+      margin-top: 3%;
+    }
+  }
+
+  .formWrapper {
+    margin-block: 30px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .inputWrapper {
+      flex-basis: 48%;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      label {
+        flex-basis: 30%;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: right;
+        margin-bottom: 0;
+      }
+
+      .inputContainer {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 70%;
+      }
+
+      .inputField {
+        width: 100%;
+        background: var(--white1);
+        border: 1px solid var(--grey6);
+        border-radius: 6px;
+        padding: 0px 8px;
+        height: 42px;
+        @include font(var(--grey4), var(--font-16), var(--font-medium));
+        cursor: pointer;
+      }
+      .selectField {
+        width: 100%;
+        background: var(--white1);
+        border-radius: 6px;
+        height: 42px;
+        @include font(var(--grey4), var(--font-16), var(--font-medium));
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// table css
+
+.view {
+  color: var(--blue1);
+  cursor: pointer;
+}

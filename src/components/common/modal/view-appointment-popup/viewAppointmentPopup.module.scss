@@ -1,0 +1,165 @@
+.popupContainer {
+  // width: 800px;
+  height: 550px;
+  // width: 400px;
+  //   height: 0px;
+  // margin: 50px auto;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px 10px 50px 25px;
+  .iconContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    .closeIconStyle {
+      cursor: pointer;
+      margin-left: 50px;
+    }
+    .infoText {
+      position: absolute;
+      background-color: var(--white1);
+      box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      width: 204px;
+      padding: 10px;
+      right: 0px;
+    }
+  }
+  .viewAppointment {
+    margin-top: 5px;
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .mainContent {
+      // width: 775px;
+      height: 400px;
+      overflow: auto;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      &::-webkit-scrollbar {
+        display: block;
+        width: 7px;
+        height: 7px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--grey7);
+        border-radius: 10px;
+        border: 1px solid var(--grey7);
+      }
+      // margin: 0 40px;
+      .searchContainer,
+      .filterContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 15px;
+        .labelText {
+          font-weight: var(--font-semibold);
+          font-size: var(--font-16);
+          color: var(--black2);
+          width: 60px;
+        }
+        .inputField,
+        .selectContainer {
+          // cursor: pointer;
+          background: var(--white1);
+          border: 1px solid #cdd4d8;
+          border-radius: 6px;
+          height: 42px;
+          margin: 0 15px;
+          width: 180px;
+          box-shadow: none;
+        }
+.DateinputField{
+  cursor: pointer;
+  background: var(--white1);
+  border: 1px solid #cdd4d8;
+  border-radius: 6px;
+  height: 42px;
+  margin: 0 15px;
+  width: 180px;
+  box-shadow: none;
+}
+.daysSelectContainer{
+  cursor: pointer;
+  background: var(--white1);
+  border: 1px solid #cdd4d8;
+  border-radius: 6px;
+  height: 42px;
+  margin: 0 15px;
+  width: 180px;
+  box-shadow: none;
+}
+.branchsSelectContainer{
+  cursor: pointer;
+  background: var(--white1);
+  border: 1px solid #cdd4d8;
+  border-radius: 6px;
+  height: 42px;
+  margin: 0 15px;
+  width: 180px;
+  box-shadow: none;
+}
+        .searchIconStyle {
+          position: absolute;
+          right: 20px;
+          top: 12px;
+        }
+        .printIconStyle {
+          margin: 0 20px;
+        }
+      }
+
+      .btnContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 30px 0 25px 0px;
+        .viewBtn {
+          background: var(--green1);
+          border-radius: 6px;
+          font-weight: var(--font-medium);
+          font-size: var(--font-14);
+        }
+        .btnStyle {
+          background: var(--white1);
+          border: 1px solid var(--green1);
+          border-radius: 6px;
+          color: var(--black2);
+          font-weight: var(--font-medium);
+          font-size: var(--font-14);
+        }
+        .printIconStyle {
+          margin: 0 20px;
+        }
+      }
+      .tableContainer {
+        .noRecord {
+          font-weight: 600;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .popupStyles {
+    height: 100% !important;
+    z-index: 2 !important;
+    overflow: hidden !important;
+  }
+}

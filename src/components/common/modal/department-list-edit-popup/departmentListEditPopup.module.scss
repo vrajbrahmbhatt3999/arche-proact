@@ -1,0 +1,103 @@
+.notesPopupContainer {
+  width: 650px;
+  // height: 250px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+
+  .notesContainer {
+    margin-top: 50px;
+
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+
+    .mainContainer {
+      margin: 20px;
+
+      .dropdownBtn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .lableText {
+          font-weight: var(--font-semibold);
+          font-size: var(--font-16);
+          color: var(--black2);
+          margin-right: 15px;
+        }
+
+        .select {
+          width: 210px;
+        }
+
+        .btnStyle {
+          margin-left: 20px;
+          width: 100px;
+        }
+      }
+
+      .table {
+        height: 200px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          display: block;
+          width: 7px;
+          height: 7px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: var(--grey7);
+          border-radius: 10px;
+          border: 1px solid var(--grey7);
+        }
+      }
+
+      .btnContainer {
+        text-align: center;
+        margin: 20px auto;
+      }
+    }
+  }
+}
+
+.inputField {
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 8px;
+  width: 70px;
+}
+
+.iconStyle {
+  cursor: pointer;
+  height: 21px;
+  width: 22px;
+}
+
+.errorText {
+  color: var(--red1);
+  margin-top: 4px;
+}

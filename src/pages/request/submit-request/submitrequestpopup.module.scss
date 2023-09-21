@@ -1,0 +1,117 @@
+.submitRequestPopupMainContaier {
+  width: 1100px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 30px;
+
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+
+  .uploadContainer {
+    margin-top: 50px;
+
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+
+    .searchContainer {
+      display: flex;
+      margin-top: 40px;
+
+      .search {
+        .inputSearch {
+          border: 1px solid var(--white1);
+          width: 285px;
+          height: 50px;
+          box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      .smartSearch {
+        margin-left: 18px;
+
+        .inputSearch {
+          border: 1px solid var(--white1);
+          width: 285px;
+          height: 50px;
+          box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+        }
+      }
+      .DateinputField,
+      .inputField {
+        // cursor: pointer;
+        background: var(--white1);
+        border: 1px solid #cdd4d8;
+        border-radius: 6px;
+        height: 40px;
+        margin: 0 15px;
+        width: 180px;
+        box-shadow: none;
+        padding: 0 5px;
+      }
+      .DateinputField {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        &::-webkit-calendar-picker-indicator {
+          cursor: pointer;
+        }
+        &::-moz-appearance-calendar-picker-indicator {
+          cursor: pointer;
+        }
+      }
+      .inputField {
+        // cursor: default;
+        width: 200px;
+        margin-right: 0;
+      }
+      .select {
+        width: 200px;
+      }
+    }
+
+    .tableContainer {
+      margin: 40px 0px 0px 0px;
+      height: 250px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: block;
+        width: 7px;
+        height: 7px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--grey7);
+        border-radius: 10px;
+        border: 1px solid var(--grey7);
+      }
+
+      td:nth-last-child(2) {
+        color: var(--green1);
+      }
+
+      td:nth-last-child(3) {
+        color: var(--yellow1);
+      }
+    }
+  }
+}

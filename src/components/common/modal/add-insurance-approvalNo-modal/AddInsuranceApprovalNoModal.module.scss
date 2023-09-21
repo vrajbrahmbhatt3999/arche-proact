@@ -1,0 +1,72 @@
+@import "../../../../styles/mixin.scss";
+.mainContainer {
+  width: 420px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .addCategoryContainer {
+    margin-top: 42px;
+    .title {
+      text-align: center;
+      @include font(var(--black2), var(--font-24), var(--font-semibold));
+    }
+    .dividerStyle {
+      margin: 10px auto 40px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .formLayoutContainer {
+      display: flex;
+      flex-direction: column;
+      height: 220px;
+      margin: 10px auto;
+      .formLayout {
+        display: flex;
+        flex-direction: row;
+        height: 62px;
+        margin: 0px 10px 10px 10px;
+        .labelFieldContainer {
+          display: flex;
+          flex-direction: row;
+          margin-right: 10px;
+          width: 100%;
+          .labelText {
+            margin-top: 10px;
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+          }
+          .fieldErrorContainer {
+            .inputPlanNameField {
+              @include font(var(--grey4), var(--font-16), var(--font-normal));
+              border: none;
+              padding: 10px;
+            }
+            .inputField {
+              background: var(--white1);
+              border: 1px solid var(--grey6);
+              border-radius: 6px;
+              padding: 10px 15px;
+              margin-left: 15px;
+            }
+            .dashboardFormError {
+              color: var(--errorColor);
+              font-size: var(--font-12);
+              font-weight: var(--font-normal);
+              margin-top: 5px;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .buttonStyle {
+        margin: 20px auto;
+        width: 100px;
+      }
+    }
+  }
+}

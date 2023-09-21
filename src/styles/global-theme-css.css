@@ -1,0 +1,870 @@
+.button {
+  background: linear-gradient(
+    91.42deg,
+    #5936f1 2.81%,
+    #2adbdf 103.44%,
+    #4bb3e7 103.89%,
+    #47dae3 103.9%
+  );
+  border-radius: 6px;
+  width: 156px;
+  height: 42px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--white1);
+  cursor: pointer;
+  margin: 5px;
+}
+.pageWrapper {
+  background: var(--white1);
+  /* backdrop-filter: blur(6px); */
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 20px 30px 0px;
+}
+
+.dashboardFormError {
+  color: var(--errorColor);
+  font-size: var(--font-12);
+  font-weight: var(--font-normal);
+  margin-top: 5px;
+}
+.dashboardFormError1 {
+  color: var(--errorColor);
+  font-size: var(--font-12);
+  font-weight: var(--font-normal);
+  margin-top: 5px;
+  margin-right: 20px;
+}
+.proactTable {
+  width: 1200px;
+  margin: 100px auto;
+  border-radius: 10px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  /* backdrop-filter: blur(97px); */
+}
+
+table {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  /* border: 1px solid #ddd; */
+  text-align: center;
+  padding: 8px;
+  /* width: 25%; */
+}
+
+table th {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+table tr:nth-child(odd) {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+table tr:nth-child(even) {
+  background: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* table tr:hover {
+  background-color: #ddd;
+} */
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  /* background-color: #4caf50; */
+  color: #202a3c;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+table td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #202a3c;
+}
+
+.sortIcon {
+  font-size: 20px;
+  color: #d9d9d9;
+  position: relative;
+  left: 5px;
+  top: 5px;
+}
+
+.detailLink,
+.noteLink {
+  font-weight: 400;
+  font-size: 12px;
+  color: #0e26a3;
+  text-decoration: none;
+}
+
+.searchIcon {
+  color: #353751;
+  font-size: 25px;
+  margin-right: 16px;
+}
+
+.globalSearchInput {
+  border: none;
+  outline: none;
+  width: 220px;
+}
+
+.globalSearchInput::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+.paginationSection {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.paginationButton {
+  background: #fefefe;
+  border: 1px solid #cdd4d8;
+  border-radius: 2px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #797979;
+  padding: 4px 6px 4px 7px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.selectedPage {
+  background: #02bf90;
+  border: 1px solid #cdd4d8;
+  border-radius: 2px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  padding: 4px 6px 4px 7px;
+  margin-right: 7px;
+}
+
+.setPageSizeSection {
+  display: flex;
+  align-items: baseline;
+  margin-left: 20px;
+}
+
+.setPageSizeText {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #797979;
+  margin-right: 5px;
+}
+
+.selectPageSize {
+  border: 1px solid #cdd4d8;
+  border-radius: 2px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #797979;
+  outline: none;
+  width: 47px;
+}
+
+.filterAndAddSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.filterSection {
+  display: flex;
+}
+
+.setPackageSection {
+  display: flex;
+  align-items: baseline;
+  margin-left: 70px;
+}
+
+.setPackageText {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #181818;
+  margin-right: 16px;
+}
+
+.selectPackage {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #797979;
+  outline: none;
+  width: 230px;
+  background: #ffffff;
+  border: 1px solid #cdd4d8;
+  border-radius: 6px;
+  padding: 10px 10px 10px 8px;
+}
+.viewLinkStyle {
+  text-decoration: none;
+  color: #0e26a3;
+}
+.errorText {
+  color: var(--errorColor);
+  font-size: var(--font-12);
+  font-weight: var(--font-medium);
+  padding: 5px 0px;
+  text-align: left;
+}
+.css-1fdsijx-ValueContainer {
+  text-align: initial;
+  padding: 0px 8px !important;
+}
+.css-1u9des2-indicatorSeparator {
+  background-color: white !important;
+}
+.css-1nmdiq5-menu {
+  margin-top: 0px !important;
+}
+
+.react-tel-input .country-list {
+  margin: 0px !important;
+}
+
+.css-1nmdiq5-menu {
+  /* background-color: aquamarine !important; */
+  /* background: #0e26a3 !important; */
+  /* max-height: 220px !important; */
+  /* margin: 0 !important; */
+  text-align: initial;
+  overflow-y: scroll !important;
+}
+.css-1nmdiq5-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.react-select__menu-list {
+  background-color: #02bf90 !important;
+}
+.option:hover {
+  background: rgb(195, 227, 254) !important;
+  color: var(--black2) !important;
+}
+.optionContainer {
+  justify-content: end;
+}
+.highlightOption {
+  background: rgb(195, 227, 254) !important;
+  color: var(--black2) !important;
+}
+.chip {
+  background: rgb(34, 151, 247) !important;
+}
+.asterick {
+  color: var(--red3);
+}
+.asterickFormLayoutAge {
+  color: var(--red3);
+  margin-left: -1px;
+}
+.css-13cymwt-control {
+  max-height: 45.6px !important;
+  overflow: auto !important;
+  cursor: pointer !important;
+}
+.react-tel-input {
+  /* margin-left: 5px !important; */
+}
+button {
+  outline: none !important;
+}
+/* label {
+  margin-bottom: unset !important;
+} */
+
+/****** Default Inputs CSS declared globally  ******/
+/* common-input-wrapper is the wrapper around the label and input field or searchable select */
+.common-input-wrapper {
+  display: grid;
+  grid-template-columns: 90px 224px;
+  column-gap: 12px;
+  flex-direction: row;
+  place-items: center;
+}
+
+.common-input-wrapper__label {
+  width: 100px;
+  text-align: right;
+  margin: 0;
+}
+
+.common-input-wrapper__searchable-select {
+  width: 234px;
+}
+
+.common-input-wrapper__searchable-select-for-dataTable {
+  width: 150px;
+}
+
+.common-input-wrapper__input {
+  padding: 0px 10px;
+  width: 234px;
+  height: 42px;
+  background: #ffffff;
+  border: 1px solid #cdd4d8;
+  border-radius: 6px;
+}
+
+.common-input-wrapper__textarea {
+  padding: 0px 10px;
+  width: 234px;
+  background: #ffffff;
+  border: 1px solid #cdd4d8;
+  border-radius: 6px;
+}
+
+.common-input-wrapper__input-for-dataTable {
+  padding: 0px 10px;
+  width: 61px;
+  height: 29px;
+  background: #ffffff;
+  border: 1px solid #cdd4d8;
+  border-radius: 6px;
+}
+
+.common-input-wrapper__error-container {
+  grid-column-start: 2;
+  width: 234px;
+}
+/****** Default Inputs CSS declared globally  ******/
+
+/****** Default dialog CSS declared globally ******/
+.dialog {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+  margin: auto;
+  z-index: 2;
+}
+
+/****** Default dialog CSS declared globally ******/
+
+/****** Default Inputs CSS declared globally  ******/
+/* common-input-wrapper is the wrapper around the label and input field or searchable select */
+.common-input-wrapper {
+  display: grid;
+  grid-template-columns: 110px 210px;
+  column-gap: 12px;
+  flex-direction: row;
+  place-items: center;
+}
+
+.common-input-wrapper__label {
+  width: 100px;
+  text-align: right;
+  margin: 0;
+}
+
+.common-input-wrapper__searchable-select {
+  width: 234px;
+}
+
+.common-input-wrapper__input {
+  padding: 0px 10px;
+  width: 234px;
+  height: 42px;
+  background: #ffffff;
+  border: 1px solid #cdd4d8;
+  border-radius: 6px;
+}
+
+.common-input-wrapper__error-container {
+  grid-column-start: 2;
+  width: 234px;
+}
+/****** Default Inputs CSS declared globally  ******/
+
+/* ***** Global CSS for form builder ***** */
+.formio {
+  max-width: calc(1125px + 167px);
+  margin: 0;
+}
+/* Removing the default blue border form all the input tags in bootstrap CSS */
+.formio,
+.formio-component input,
+select,
+textarea,
+.dropdown {
+  box-shadow: none !important;
+  outline: none !important;
+}
+/* Removing the default blue border form all the input tags in bootstrap CSS */
+
+.alert-info {
+  color: var(--grey4);
+}
+
+/* Overriding the default CSS for form area where the components are dragged */
+.formarea {
+  max-width: 1125px;
+  background: var(--white1);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  /* backdrop-filter: blur(97px); */
+  border-radius: 10px;
+  padding-top: 15px;
+}
+
+.drag-and-drop-alert {
+  background: #f7f7f7;
+  border: 1px solid #cdd4d8;
+  border-radius: 6px;
+}
+
+.formio-component-submit {
+  text-align: center;
+  margin-top: 27px;
+}
+
+button[type="submit"] {
+  width: 135px;
+  height: 42px;
+  background: var(--gredientColor);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  /* backdrop-filter: blur(97px); */
+  border-radius: 6px;
+  border: none;
+}
+/* input[type='date']::-webkit-calendar-picker-indicator,
+input[type='date']::-moz-calendar-picker-indicator,
+input[type='date']::-ms-calendar-picker-indicator {
+  cursor: pointer;
+} */
+
+.builder-components > .gu-transit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overriding the default CSS for form area where the components are dragged */
+
+/* Overriding the default CSS for sidebar form components panel */
+.formcomponents {
+  max-width: 170px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  /* backdrop-filter: blur(97px); */
+  border-radius: 10px;
+  padding: 12px 8px;
+  margin-right: 10px;
+}
+
+.form-builder-panel {
+  border: none !important;
+}
+
+/* Overriding the default CSS for sidebar form components panel */
+
+/* Overriding the default CSS for group-panel - Basic, Advanced, Layout etc. */
+div[ref="sidebar-groups"] {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+button[ref="sidebar-anchor"] {
+  background: var(--gredientColor);
+  color: var(--white1);
+  border-radius: 6px;
+  border: none;
+  position: relative;
+}
+
+button[ref="sidebar-anchor"]:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+button[ref="sidebar-anchor"]:hover {
+  color: var(--white1);
+}
+
+.form-builder-panel:has([style="display: none;"])::after {
+  content: "";
+  width: 20px;
+  aspect-ratio: 1/1;
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M2 0.000395298L7.293 5.2934L12.586 0.000395298L14 1.4144L8.707 6.7074C8.33194 7.08234 7.82333 7.29297 7.293 7.29297C6.76267 7.29297 6.25406 7.08234 5.879 6.7074L0.585998 1.4144L2 0.000395298Z' fill='%23FFFFFF' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-builder-panel::after {
+  content: "";
+  width: 20px;
+  aspect-ratio: 1/1;
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M5 2L4.29289 1.29289L5 0.585786L5.70711 1.29289L5 2ZM0.292894 5.29289L4.29289 1.29289L5.70711 2.70711L1.70711 6.70711L0.292894 5.29289ZM5.70711 1.29289L9.70711 5.29289L8.29289 6.70711L4.29289 2.70711L5.70711 1.29289Z' fill='%23FFFFFF' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Overriding the default CSS for group-panel - Basic, Advanced, Layout etc. */
+
+/* Over riding CSS for elements tab - Textfield, textarea, phone number, address etc.  */
+div[ref="sidebar-groups"]
+  div
+  div[ref="sidebar-group"]
+  div[ref="sidebar-container"]
+  span {
+  background: rgba(255, 255, 255, 0.7);
+  height: 25px;
+  border-radius: 6px;
+  color: #181818;
+  /* border: 1px solid #CDD4D8; */
+  border: none !important;
+  transition: 0.2s;
+}
+
+div[ref="sidebar-groups"]
+  div
+  div[ref="sidebar-group"]
+  div[ref="sidebar-container"]
+  span
+  > i {
+  color: #02bf90 !important;
+}
+
+div[ref="sidebar-groups"]
+  div
+  div[ref="sidebar-group"]
+  div[ref="sidebar-container"]
+  span:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+div[ref="sidebar-groups"]
+  div
+  div[ref="sidebar-group"]
+  div[ref="sidebar-container"]
+  span:active {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+div[ref="sidebar-groups"]
+  div
+  div[ref="sidebar-group"]
+  div[ref="sidebar-container"]
+  span:hover {
+  background: var(--white1);
+  transform: scale(1.05);
+  /* color: #181818; */
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: #181818 !important;
+  background-color: #0062cc;
+  border: 1px solid #cdd4d8 !important;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Over riding CSS for elements tab - Textfield, textarea, phone number, address etc.  */
+
+/* Overriding default CSS for search bar which is on top */
+.builder-sidebar_search {
+  background: rgba(255, 255, 255, 0.7);
+  /* backdrop-filter: blur(97px); */
+  border-radius: 6px;
+  border: none;
+  position: relative;
+}
+
+.builder-sidebar_search::placeholder {
+  color: #aaaaaa;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* .builder-sidebar_search {
+  text-indent: -99999em;
+} */
+
+/* Overriding default CSS for search bar which is on top */
+
+/* Dialog CSS overrides */
+.formio-dialog-content {
+  background: var(--white1) !important;
+  border-radius: 10px !important;
+}
+
+.component-edit-container {
+  display: grid !important;
+  gap: 1rem;
+}
+
+.component-edit-container div div:last-child div a {
+  color: #0e26a3;
+}
+
+/* This is for the default header - Dialog */
+.lead {
+  font-weight: var(--font-semibold);
+  font-size: var(--font-24);
+  line-height: 36px;
+  color: var(--black2);
+}
+
+/* This is for the default header - Dialog */
+
+.formio-dialog-close::after {
+  width: 20px;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Ccircle cx='12.5' cy='12.5' r='12.5' fill='%2302BF90' /%3E%3Cpath d='M17.4309 7.56641L7.5625 17.4348' stroke='white' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' /%3E%3Cpath d='M7.56908 7.56641L17.4375 17.4348' stroke='white' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' /%3E%3C/svg%3E");
+  aspect-ratio: 1/1;
+  display: inline-block;
+}
+
+.formio-dialog-close::before {
+  display: none !important;
+}
+
+.nav-tabs > li[role="tab"] > .nav-link {
+  color: black;
+}
+
+.nav-tabs > li[role="tab"] > .nav-link:hover {
+  border: none;
+}
+
+.nav-tabs > li[role="tab"][class="nav-item active"] {
+  min-height: 42px;
+  -webkit-clippath: polygon(0 0, 0 100%, 100% 100%, 100% 95%, 75% 0);
+  clippath: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 78% 0);
+  background: var(--gredientColor);
+  border-radius: 12px 0 0 0px;
+  padding: 0px 10px 0px 10px;
+
+  .nav-link {
+    background: transparent;
+    color: var(--white1);
+    border: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+  }
+}
+
+.formio-component-tabs > .card > .card-header {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.formio-component-tabs {
+  border: none;
+}
+
+.formio-component-tabs > .card {
+  border: none;
+}
+
+.formio-component-tabs > .card > div[role="tabpanel"] {
+  border: 1px solid #cdd4d8 !important;
+}
+
+button[ref="saveButton"] {
+  background: var(--gredientColor);
+  width: 137px;
+  height: 42px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-primary {
+  background: var(--gredientColor);
+  height: 42px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+button[ref="cancelButton"],
+button[ref="removeButton"] {
+  border: 1px solid #0e26a3;
+  border-radius: 6px;
+  color: #0e26a3;
+  background: transparent;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+button[ref="removeButton"]:visited,
+button[ref="removeButton"]:focus,
+button[ref="removeButton"]:hover,
+button[ref="removeButton"]:active,
+button[ref="cancelButton"]:visited,
+button[ref="cancelButton"]:focus,
+button[ref="cancelButton"]:hover,
+button[ref="cancelButton"]:active {
+  border: 1px solid #0e26a3;
+  border-radius: 6px;
+  color: #0e26a3;
+  background: transparent;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger:visited,
+.btn-secondary,
+.btn-secondary:visited,
+.btn-secondary:focus,
+.btn-secondary:hover,
+.btn-secondary:active {
+  border: 1px solid #0e26a3 !important;
+  border-radius: 6px !important;
+  color: #0e26a3 !important;
+  background: transparent !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Tooltip CSS overrides */
+.tippy-box[role="tooltip"] {
+  background: var(--white1);
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: blur(7px); */
+  border-radius: 4px;
+  color: var(--grey4);
+  font-size: var(--font-14);
+  font-style: normal;
+}
+
+.tippy-arrow {
+  color: var(--white1);
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: blur(7px); */
+  border-radius: 4px;
+  font-size: var(--font-14);
+  font-style: normal;
+}
+
+/* Tooltip CSS overrides */
+
+/* Dialog CSS overrides */
+
+/* ***** Global CSS for form builder ***** */
+
+/* Global styles for drawing board */
+
+.drawing-board-container {
+  width: 100% !important;
+
+  z-index: 0;
+}
+
+.drawingBoardContainer[data-hidden="false"] {
+  .drawing-board-container {
+    .ant-layout {
+      .ant-layout-header {
+        :nth-child(5) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.drawing-board-container {
+  .drawing-board-toolbar-icon {
+    width: 55px !important;
+  }
+
+  .drawing-board-toolbar-icon {
+    transition: 0.2s;
+  }
+  .drawing-board-toolbar-icon:hover {
+    background: var(--white1) !important;
+    transform: scale(1.05) !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .drawing-board-toolbar-container {
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(11, 1fr) !important;
+  }
+}
+
+/* Global styles for drawing board */

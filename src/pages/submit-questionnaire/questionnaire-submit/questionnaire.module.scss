@@ -1,0 +1,10 @@
+.successContainer {
+  text-align: center;
+  margin: 150px 0;
+  .title {
+    font-weight: var(--font-semibold);
+    font-size: var(--font-24);
+    color: var(--black2);
+    margin-top: 20px;
+  }
+}

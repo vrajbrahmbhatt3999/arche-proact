@@ -1,0 +1,131 @@
+@import '../../../styles/mixin.scss';
+
+.returnInvoiceModalContainer {
+  width: 70%;
+  height: 500px;
+  // overflow: auto;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 0px 10px 40px 10px;
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .returnInvoiceModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 35px 0px 0px 0px;
+  }
+  .returnInvoiceModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+  .useDetailsAndBtnContainer {
+    @include flexVertical;
+    justify-content: space-between;
+    padding: 0px 15px;
+    // margin: 10px 0px 0px 0px;
+    .userDetails {
+      @include flexVertical;
+      column-gap: 20px;
+      .userDetailLabel {
+        @include flexVertical;
+        column-gap: 10px;
+        .userDetailLableText {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+        }
+        .userDetailText {
+          @include font(var(--grey4), var(--font-16), var(--font-normal));
+        }
+      }
+    }
+  }
+  .paidDetails {
+    @include flexVertical;
+    column-gap: 20px;
+    padding: 0px 15px;
+    .paidAmountLabel {
+      @include flexVertical;
+      column-gap: 10px;
+      .paidAmountLabelText {
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+      }
+      .paidAmountText {
+        @include font(var(--grey4), var(--font-16), var(--font-normal));
+      }
+    }
+  }
+  .returnInvoiceContainer {
+    width: 100%;
+    height: 230px;
+    overflow: auto;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+    // Table Container
+    .tableContainer {
+      width: 100%;
+      white-space: nowrap;
+      padding: 0px 15px;
+      margin: 35px 0px 0px 0px;
+      .deleteIconStyle {
+        cursor: pointer;
+        height: 21px;
+        width: 22px;
+      }
+      .disableDeleteIcon {
+        cursor: not-allowed !important;
+        height: 21px;
+        width: 22px;
+      }
+      .refundAmtField {
+        padding: 0px 10px;
+        width: 61px;
+        height: 29px;
+        background: var(--white1);
+        border: 1px solid #cdd4d8;
+        border-radius: 6px;
+      }
+      .refundAmtFieldDisable {
+        padding: 0px 10px;
+        width: 61px;
+        height: 29px;
+        background: var(--grey15);
+        border: 1px solid #cdd4d8;
+        border-radius: 6px;
+        cursor: not-allowed;
+      }
+    }
+  }
+  .returnInvoiceBtnContaniner {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .invoiceBtn {
+      width: fit-content;
+      padding: 10px 50px;
+      font-weight: var(--font-normal);
+    }
+  }
+}

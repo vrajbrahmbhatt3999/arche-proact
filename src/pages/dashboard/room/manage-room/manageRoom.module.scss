@@ -1,0 +1,61 @@
+@import "../../../../styles/mixin.scss";
+.manageBranchContainer {
+  background-color: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 0 20px 50px 0;
+  .inputFieldsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+  }
+  .btnContainer {
+    @include flexCenter;
+    flex-direction: row;
+    margin: 10px 0 30px 0;
+    .backBtn {
+      margin-right: 10px;
+      border: 1px solid var(--blue1);
+      color: var(--blue1);
+      border-radius: 6px;
+      background: var(--white1);
+    }
+  }
+}
+
+.dropDownField {
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+  margin-block: 10px;
+  gap: 10px;
+
+  .labelWrapper {
+    display: flex;
+    gap: 1px;
+    color: var(--black2);
+    font-size: var(--font-14);
+    font-weight: var(--font-bold);
+    justify-content: flex-end;
+    margin-bottom: unset !important;
+    flex-basis: 31%;
+    text-align: right;
+    .requiredField {
+      color: var(--red3);
+    }
+  }
+
+  .errorMessage {
+    color: var(--errorColor);
+    font-size: var(--font-12);
+    font-weight: var(--font-normal);
+    margin-top: 5px;
+  }
+
+  .errorContainer {
+    flex-basis: 70%;
+  }
+}

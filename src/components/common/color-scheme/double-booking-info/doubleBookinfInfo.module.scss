@@ -1,0 +1,21 @@
+@import '../../../../styles/mixin.scss';
+.mainContainer {
+  background: var(--white1);
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+  // backdrop-filter: blur(7px);
+  border-radius: 10px;
+  white-space: nowrap;
+  padding: 7px;
+  .message {
+    margin-right: 5px;
+    @include font(var(--black1), var(--font-16), var(--font-normal));
+  }
+  .count {
+    display: inline-block;
+    text-align: center;
+    border-radius: 4px;
+    width: 20px;
+    background-color: var(--green1);
+    @include font(var(--white1), var(--font-16), var(--font-semibold));
+  }
+}

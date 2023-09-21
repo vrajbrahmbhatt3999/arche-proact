@@ -1,0 +1,15 @@
+@import "../../../styles/mixin.scss";
+
+.tableContainer {
+  margin: 20px 15px;
+  max-height: 270px;
+  background-color: var(--white1);
+  // overflow: auto;
+  scroll-behavior: smooth;
+  td:nth-last-child(2) {
+    color: var(--yellow1);
+  }
+  // td:nth-last-child(1) {
+  //   color: var(--green1);
+  // }
+}

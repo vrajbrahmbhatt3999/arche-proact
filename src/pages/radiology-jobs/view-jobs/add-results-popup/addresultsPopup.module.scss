@@ -1,0 +1,123 @@
+@import "../../../../styles/mixin.scss";
+.addResultsPopupContainer {
+  width: 66%;
+  height: 500px;
+  padding: 30px 36px 80px;
+  background: var(--white1);
+  border-radius: 10px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+  }
+  .addResultsContainer {
+    .resultsTitle {
+      @include font(var(--black2), var(--font-16), var(--font-semibold));
+      line-height: 36px;
+      text-align: start;
+      .resultsId {
+        @include font(var(--grey4), var(--font-16), var(--font-normal));
+        padding-bottom: 20px;
+        margin-left: 10px;
+      }
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+
+    .tableContainer {
+      height: 300px;
+      width: 100%;
+      margin-top: 20px;
+      white-space: nowrap;
+      overflow-x: auto;
+      padding-top: 16px;
+      td {
+        padding: 12px 12px 12px 0;
+      }
+    }
+    // Add Results Popup
+    .addResultsNotes {
+      @include font(var(--blue1), var(--font-12), var(--font-normal));
+      cursor: pointer;
+    }
+    // Add Result Popup
+    .activityStatusWhite {
+      @include font(var(--black2), var(--font-12), var(--font-semibold));
+    }
+    .activityStatusGreen {
+      @include font(var(--green1), var(--font-12), var(--font-semibold));
+    }
+    .activityStatusRed {
+      @include font(var(--red2), var(--font-12), var(--font-semibold));
+    }
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    .submitBtn {
+      height: 42px;
+      width: 118px;
+    }
+    .resetBtn {
+      background: none;
+      height: 42px;
+      width: 118px;
+      margin-left: 18px;
+      border: 1px solid var(--blue1);
+      border-radius: 6px;
+      color: var(--black1);
+    }
+  }
+}
+
+
+.inputField {
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 8px;
+  width: 70px;
+}
+
+.selectField{
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 8px;
+  width: 80px;
+  display: block;
+  margin: 6px auto;
+}
+
+.view_Btn{
+  color: var(--blue1);
+  font-size: var(--font-12);
+  font-weight: var(--font-medium);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-block: 6px;
+  padding: 8px;
+}
+
+.bgRed{
+  color: #B11313;
+  background: #FFDFDF;
+}
+
+.bgGreen{
+  background: #CAFFF2;
+  color: #02BF90 ;
+}
+
+.alignColumns {
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 8px;
+  margin-block: 6px;
+  background: #fefefe;
+}

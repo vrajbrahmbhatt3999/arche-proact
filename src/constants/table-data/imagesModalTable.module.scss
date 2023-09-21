@@ -1,0 +1,8 @@
+@import "../../styles/mixin.scss";
+
+.viewPopupLink {
+  @include font(var(--blue1), var(--font-12), var(--font-medium));
+  cursor: pointer;
+  position: relative;
+  left: 17px;
+}

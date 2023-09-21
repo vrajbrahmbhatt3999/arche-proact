@@ -1,0 +1,79 @@
+@import "../../../styles//mixin.scss";
+
+  .mainContainer {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+
+    .tabContent {
+      height: 34px;
+      width: max-content;
+      @include flexCenter;
+      @include font(var(--white1), var(--font-13), var(--font-semibold));
+      // -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 95%, 75% 0);
+      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 62% 0);
+      border-radius: 12px 50px 0 0px;
+      padding: 0px 50px 0px 20px;
+      cursor: pointer;
+    }
+
+    .greenTab {
+      background: var(--green1);
+    }
+
+    .yellowTab {
+      background: var(--yellow1);
+      margin: 0 20px 0 12px;
+    }
+
+    .redTab {
+      background: var(--red3);
+      margin: 0 20px 0 12px;
+    }
+    .disableTab {
+      @include font(var(--green1), var(--font-13), var(--font-normal));
+      margin: 10px 10px 0 10px;
+      cursor: pointer;
+    }
+    .orangeDisableTab {
+      @include font(var(--yellow1), var(--font-13), var(--font-normal));
+      margin: 10px 10px 0 10px;
+      cursor: pointer;
+    }
+    .redDisableTab {
+      @include font(var(--red3), var(--font-13), var(--font-normal));
+      margin: 10px 10px 0 10px;
+      cursor: pointer;
+    }
+  }
+
+  .greenTab {
+    background: var(--yellow1);
+  }
+
+  .tableContainer {
+    max-height: 230px;
+    background-color: var(--white1);
+    overflow: auto;
+    scroll-behavior: smooth;
+
+    tr {
+      th {
+        min-width: 120px;
+      }
+    }
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+
+.inputField {
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 8px;
+  width: 70px;
+}

@@ -1,0 +1,94 @@
+@import '../../../../styles/mixin.scss';
+.mainContainer {
+  width: 98%;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding: 40px 25px;
+  .formLayoutContainer {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    margin: 0px auto;
+    .formContainer {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 80px;
+      .formTitle {
+        margin-bottom: 30px;
+        @include font(var(--black2), var(--font-18), var(--font-semibold));
+      }
+      .inputContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 50px;
+        margin-bottom: 30px;
+        .labelField {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 30px;
+          width: 50%;
+          .labelText {
+            margin-right: 15px;
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            width: 110px;
+            display: flex;
+            align-items: center;
+          }
+          .fieldErrorContainer1 {
+            width: 230px;
+          }
+          .fieldErrorContainer {
+            .inputField {
+              background: var(--white1);
+              width: 230px;
+              border: 1px solid var(--grey6);
+              border-radius: 6px;
+              padding: 10px 15px;
+            }
+          }
+        }
+      }
+      .weekDaysContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 50px;
+        .labelText {
+          margin-right: 15px;
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 110px;
+          display: flex;
+          align-items: center;
+        }
+        .selectDaysContainer {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-content: center;
+          .daysNameStyle {
+            margin-right: 15px;
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            // width: 65px;
+            padding: 0px 10px;
+          }
+        }
+      }
+    }
+    .buttonConatiner {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      .resetButtonStyle {
+        background: none;
+        border: 1px solid var(--blue1);
+        border-radius: 6px;
+        color: var(--blue1);
+      }
+    }
+  }
+}

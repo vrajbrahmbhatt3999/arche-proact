@@ -1,0 +1,118 @@
+@import '../../../styles/mixin.scss';
+.labRequestContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  // position: relative;
+  .pageWrapper {
+    width: 92%;
+    background: var(--white1);
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 33px 33px 50px;
+    margin: 0px 20px 30px 0px;
+    // Search Container
+    .searchContainer {
+      @include flexVertical;
+      .search {
+        @include flexVertical;
+        .searchLabel {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 120px;
+          margin-right: 10px;
+          text-align: right;
+        }
+        .searchInput {
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 42px;
+          width: 180px;
+          padding: 0px 12px 0px 10px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        .searchButton {
+          background: var(--green1);
+          padding: 10px 12px;
+          cursor: pointer;
+          border-radius: 20%;
+          margin: 0px 10px;
+        }
+        .smartSearchInput {
+          width: 180px;
+        }
+      }
+      .fileterContainer {
+        margin-left: 10px;
+        @include flexVertical;
+        column-gap: 10px;
+        .selectInputField {
+          outline: none;
+          cursor: pointer;
+          box-shadow: none;
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          // height: 42px;
+        }
+      }
+    }
+    // Table Container
+    .tableContainer {
+      width: 100%;
+      white-space: nowrap;
+      margin: 40px 0px 0px 0px;
+      tr {
+        border-top: 1px solid var(--grey8);
+        td {
+          padding: 14px 14px 14px 0px;
+        }
+      }
+      // Lab Request
+      .viewPopupLink {
+        @include font(var(--blue1), var(--font-12), var(--font-medium));
+        text-decoration: underline;
+        cursor: pointer;
+        position: relative;
+        left: 8px;
+      }
+      .labRequestJobLink {
+        @include font(var(--blue1), var(--font-12), var(--font-normal));
+        cursor: pointer;
+        position: relative;
+        left: 8px;
+      }
+
+      .labRequestPendingText {
+        position: relative;
+        left: 28px;
+        @include font(var(--black3), var(--font-12), var(--font-normal));
+        cursor: pointer;
+        border: 1px solid var(--blue1);
+        border-radius: 20px;
+        padding: 4px 14px;
+        width: fit-content;
+      }
+      .labRequestConfirmText {
+        position: relative;
+        left: 22px;
+        @include font(var(--green1), var(--font-12), var(--font-normal));
+        border: 1px solid var(--green1);
+        border-radius: 20px;
+        padding: 4px 14px;
+        cursor: pointer;
+        width: fit-content;
+      }
+    }
+  }
+  .floatingBarConatainer {
+    // position: absolute;
+    // top: 0px;
+    // right: 20px;
+  }
+}

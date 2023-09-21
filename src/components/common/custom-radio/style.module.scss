@@ -1,0 +1,39 @@
+@import '../../../styles/mixin.scss';
+
+.radioLabel {
+    @include font(var(--grey4), var(--font-16),400);
+    margin-right: 32px;
+    text-transform: capitalize;
+  }
+  .customRadio {
+    left: -8px;
+    top: 5px;
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+    border: 2px solid var(--grey6);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+  }
+
+  /* for inner filled circle */
+  .customRadio::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: var(--green1);
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .radioInput {
+    visibility: hidden;
+  }
+  .radioInput:checked + span:after {
+    opacity: 1;
+  }

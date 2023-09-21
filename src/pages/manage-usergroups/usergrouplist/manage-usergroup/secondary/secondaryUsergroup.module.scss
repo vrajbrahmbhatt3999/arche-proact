@@ -1,0 +1,12 @@
+@import '../../../../../styles/mixin.scss';
+
+.tableContainer {
+  width: 90%;
+  margin: 20px auto;
+  .actionTabName {
+    @include font(var(--grey4), var(--font-16), var(--font-normal));
+  }
+  .secondaryTable {
+    margin: 10px 0px;
+  }
+}

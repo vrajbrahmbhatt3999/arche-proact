@@ -1,0 +1,90 @@
+@import '../../../styles//mixin.scss';
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  .logoContainer {
+    height: 60px;
+    // width: 60px;
+    margin: 0px auto 45px auto;
+    .logoImg {
+      width: 100%;
+      height: 100%;
+      max-width: 450px;
+      max-height: 101px;
+    }
+  }
+  .container {
+    width: 70%;
+    max-height: 520px;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    margin: 0px auto;
+    border-radius: 10px;
+    background-color: var(--white1);
+    @include responsive(576px) {
+      width: 90%;
+      flex-direction: column;
+    }
+    @include responsive(568px) {
+      width: 75%;
+      flex-direction: column;
+    }
+    .formStyleContainer {
+      width: 45%;
+      display: flex;
+      @include responsive(768px) {
+        width: 100%;
+      }
+      .formStyle {
+        width: 80%;
+        margin: 50px auto;
+        @include responsive(768px) {
+          width: 90%;
+          margin: auto 15px;
+          flex-direction: column;
+        }
+        .formTitle {
+          font-size: var(--font-28);
+          font-weight: var(--font-semibold);
+          padding-top: 20px;
+          @include responsive(768px) {
+            font-size: var(--font-28);
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+    .landingPageImageContainer {
+      width: 50%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      @include responsive(768px) {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 80%;
+      }
+    }
+  }
+  .proactLogoFooter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0px 0px 0px;
+    .poweredByText {
+      @include font(var(--black1), var(--font-16), var(--font-semibold));
+      margin: 0px 5px 0px 0px;
+    }
+    .proactLogo {
+      width: 100%;
+      height: 100%;
+      max-width: 55px;
+      max-height: 64px;
+    }
+  }
+}

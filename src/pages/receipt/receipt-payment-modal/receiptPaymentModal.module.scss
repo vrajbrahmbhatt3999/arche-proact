@@ -1,0 +1,156 @@
+@import '../../../styles/mixin.scss';
+
+.receiptPaymentModalContainer {
+  width: 900px;
+  height: 500px;
+  // overflow: auto;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 0px 30px 40px 30px;
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .receiptPaymentModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 35px 0px 0px 0px;
+  }
+
+  .receiptPaymentModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+
+  .outStandingReceiptNoContainer {
+    @include flexVertical;
+    .outStandingReceiptNoLabel {
+      @include font(var(--black2), var(--font-16), var(--font-semibold));
+    }
+    .outStandingReceiptNoTxtContainer {
+      @include flexVertical;
+      column-gap: 2px;
+      margin-left: 6px;
+      .outStandingReceiptNo {
+        @include font(var(--grey4), var(--font-16), var(--font-normal));
+      }
+    }
+  }
+
+  .receiptNoContainer {
+    @include flexVertical;
+    .receiptNoLabel {
+      @include font(var(--black2), var(--font-16), var(--font-semibold));
+    }
+    .receiptNo {
+      @include font(var(--grey4), var(--font-16), var(--font-normal));
+      margin-left: 8px;
+    }
+  }
+
+  .receiptPaymentContainer {
+    width: 860px;
+    height: 320px;
+    overflow: auto;
+    display: flex;
+    column-gap: 20px;
+    margin: 20px 0px 0px 0px;
+    padding: 0px 10px 0px 0px;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+    .receiptPaymentInfoContainer {
+      width: 50%;
+      .receiptPaymentOutstandingAmountDetail {
+        @include font(var(--purple2), var(--font-24), var(--font-medium));
+        padding: 20px 20px;
+        border-radius: 6px;
+        background: rgba(89, 54, 241, 0.1);
+        width: fit-content;
+      }
+      .receiptPaymentAdvanceAmountDetail {
+        @include font(var(--green1), var(--font-24), var(--font-medium));
+        padding: 20px 20px;
+        border-radius: 6px;
+        background: rgba(2, 191, 144, 0.1);
+        width: fit-content;
+      }
+      .receiptPaymentRefundAmountDetail {
+        @include font(var(--yellow1), var(--font-24), var(--font-medium));
+        padding: 20px 20px;
+        border-radius: 6px;
+        background: rgba(255, 160, 9, 0.1);
+        width: fit-content;
+      }
+      .receiptPaymentBtnContainer {
+        @include flexVertical;
+        margin-top: 20px;
+        .AddPaymentModeBtn {
+          width: fit-content;
+          padding: 0px 10px;
+          font-weight: var(--font-medium);
+        }
+        .stylePrint {
+          cursor: pointer;
+          margin-left: 10px;
+        }
+        .styleExport {
+          cursor: pointer;
+          margin-left: 10px;
+        }
+      }
+    }
+    .receiptPaymentInfoTableContainer {
+      width: 50%;
+      .receiptPaymentLink {
+        display: flex;
+        justify-content: flex-end;
+        @include font(var(--blue1), var(--font-16), var(--font-medium));
+        cursor: pointer;
+        margin: 0px 0px 25px 0px;
+      }
+      .receiptPaymentTableContainer {
+        width: 100%;
+        white-space: nowrap;
+        .receiptTableAmountField {
+          padding: 0px 10px;
+          width: 61px;
+          height: 29px;
+          background: #ffffff;
+          border: 1px solid #cdd4d8;
+          border-radius: 6px;
+        }
+      }
+      .receiptPaymentSubmitBtnContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0px 0px 0px;
+        .receiptPaytmentSubmitBtn {
+          width: fit-content;
+          padding: 10px 60px;
+          font-weight: var(--font-medium);
+        }
+      }
+    }
+  }
+}

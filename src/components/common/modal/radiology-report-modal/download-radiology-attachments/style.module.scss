@@ -1,0 +1,41 @@
+@import "../../../../../styles/mixin.scss";
+
+.downloadButton{
+    color: var(--blue1);
+    font-size: var(--font-12);
+    font-weight: var(--font-normal);
+    cursor: pointer;
+    border: 1px solid var(--blue1);
+    border-radius: 20px;
+    padding: 4px 14px;
+}
+
+.tableContainer {
+    width: 100%;
+    white-space: nowrap;
+    overflow: auto;
+    height: 370px;
+    margin-top: 35px;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+  }
+
+
+  .note{
+    color: var(--grey4);
+    font-size: var(--font-14);
+    font-weight: var(--font-medium);
+    text-align: center;
+  }

@@ -1,0 +1,196 @@
+.timelineContainer {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    .title {
+      font-weight: var(--font-semibold);
+      font-size: var(--font-18);
+      color: var(--black2);
+    }
+    .viewLink {
+      font-weight: var(--font-normal);
+      font-size: var(--font-16);
+      color: var(--green2);
+      cursor: pointer;
+    }
+  }
+  .timeline {
+    border-left: 2px solid #cdd4d8;
+    position: relative;
+    margin-left: 30px;
+    // margin: 20px 0 0 20px;
+    // height: 200px;
+    // height: 100vh;
+    height: 178px;
+    width: 30px;
+    // overflow-y: scroll;
+    max-height: fit-content;
+    // &::-webkit-scrollbar {
+    //   display: block;
+    //   width: 7px;
+    //   height: 7px;
+    // }
+    // &::-webkit-scrollbar-track {
+    //   background: transparent;
+    // }
+
+    // &::-webkit-scrollbar-thumb {
+    //   background-color: var(--grey7);
+    //   border-radius: 10px;
+    //   border: 1px solid var(--grey7);
+    // }
+    .yearTimeLine {
+      position: absolute;
+      //   left: -10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .yearNode {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // margin: 50px 0;
+        margin-bottom: 30px;
+        margin-left: -10px;
+        .yearNodeStyle {
+          cursor: pointer;
+        }
+      }
+      .appointment {
+        position: relative;
+        margin-bottom: 30px;
+        .appointmentNode {
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          background-color: var(--grey6);
+          margin-left: -34px;
+          cursor: pointer;
+          // &:hover {
+          //   border: 2px solid var(--green1);
+          //   background-color: var(--white1);
+          // }
+        }
+        .appointmentNodeActive {
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          border: 2px solid var(--green1);
+          background-color: var(--white1);
+          margin-left: -34px;
+          cursor: pointer;
+        }
+        .nameStyle {
+          position: absolute;
+          width: max-content;
+          top: -21px;
+          background-color: var(--white1);
+          box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(7px);
+          padding: 6px;
+          border-radius: 6px;
+          z-index: 1;
+          .dateStyle {
+            color: var(--green1);
+          }
+          .doctorName {
+            color: var(--grey4);
+          }
+        }
+        .nameStyle::before {
+          content: '';
+          position: absolute;
+          top: 26%;
+          right: 100%;
+          margin-top: 2px;
+          border-width: 8px;
+          border-style: solid;
+          border-radius: 2px;
+          border-color: transparent var(--white1) transparent transparent;
+        }
+        .attachmentContainer {
+          position: absolute;
+          width: 100px;
+          top: 4px;
+          left: -22px;
+          backdrop-filter: blur(7px);
+          border-top: 3px solid var(--grey6);
+          // box-shadow: -1px 3px 2px rgba(0, 0, 0, 0.25);
+          .wrapper {
+            margin-top: -3px;
+            margin-left: 100px;
+            width: 115px;
+            transform: rotate(25deg);
+            transform-origin: left;
+            border: 1.5px solid var(--grey6);
+            // box-shadow: -1px 3px 2px rgba(0, 0, 0, 0.25);
+          }
+          .mainContainer {
+            width: 250px;
+            height: 100px;
+            background-color: var(--white1);
+            box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(7px);
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-top: 48px;
+            margin-left: 100px;
+            position: relative;
+            .diagnosisContainer {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              .infoContainer {
+                margin-top: 5px;
+                .dateStyle {
+                  font-weight: var(--font-semibold);
+                  font-size: var(--font-18);
+                  margin-bottom: 10px;
+                }
+                .linkStyle {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  font-weight: 400;
+                  font-size: 18px;
+                  color: var(--blue1);
+                  .spanStyle {
+                    padding: 5px;
+                    margin-right: 10px;
+                    background-color: var(--green1);
+                    color: var(--green1);
+                  }
+                  a {
+                    text-decoration: underline var(--blue1);
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+            .documentContainer {
+              position: absolute;
+              top: 45px;
+              right: 21px;
+              background: rgba(255, 255, 255, 0.9);
+              box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+              backdrop-filter: blur(3.5px);
+              border-radius: 10px;
+              padding: 15px 25px 5px 25px;
+              width: fit-content;
+              .docText {
+                margin-bottom: 20px;
+                cursor: pointer;
+                &:hover {
+                  color: var(--green1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

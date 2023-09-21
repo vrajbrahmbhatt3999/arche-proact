@@ -1,0 +1,38 @@
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+  .labelInputField {
+    align-self: center;
+    font-weight: var(--font-semibold);
+    font-size: var(--font-16);
+    color: var(--black2);
+    width: 88px;
+    border-radius: 6px;
+    border: 1px solid var(--grey6);
+    padding: 10px 5px;
+    margin-right: 10px;
+  }
+  .disabledlabelInputField {
+    align-self: center;
+    font-weight: var(--font-semibold);
+    font-size: var(--font-16);
+    color: var(--black2);
+    width: 88px;
+    border-radius: 6px;
+    border: 1px solid var(--grey6);
+    padding: 10px 5px;
+    margin-right: 10px;
+  }
+  .inputField {
+    background: var(--white1);
+    width: 188px;
+    border: 1px solid var(--grey6);
+    border-radius: 6px;
+    padding: 10px 15px;
+  }
+  .crossIconStyle {
+    align-self: center;
+    margin: 0px 0px 0px 5px;
+  }
+}

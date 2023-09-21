@@ -1,0 +1,102 @@
+@import "../../../../styles/mixin.scss";
+
+.mainContainer {
+  width: 500px;
+  // height: 200px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .addCategoryContainer {
+    margin-top: 42px;
+    .title {
+      text-align: center;
+      @include font(var(--black2), var(--font-24), var(--font-semibold));
+    }
+    .dividerStyle {
+      margin: 10px auto 20px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .mcUpdatecontainer {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+      width: 480px;
+      max-height: 300px;
+      background-color: var(--white1);
+      overflow-y: auto;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      margin: 10px auto;
+      border-radius: 20px;
+      &::-webkit-scrollbar {
+        width: 3px;
+        border-radius: 50px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        -webkit-box-shadow: inset 0 0 100px var(--grey10);
+      }
+      .datecontainer {
+        width: 14%;
+        height: 65px;
+        background: var(--green1);
+        border-radius: 10px;
+        padding: 0px 10px 0px 10px;
+        margin: 0px;
+        .dateStyleText {
+          font-weight: var(--font-semibold);
+          font-size: var(--font-30);
+          text-align: center;
+          color: var(--white1);
+          padding: 0px;
+          margin: 0px;
+          width: 100%;
+          height: 35px;
+        }
+        .monthStyleText {
+          font-weight: var(--font-semibold);
+          font-size: var(--font-17);
+          text-align: center;
+          color: var(--white1);
+          padding: 0px;
+          margin: 0px;
+          width: 100%;
+          height: 20px;
+        }
+      }
+      .updatenewscontainer {
+        display: flex;
+        flex-direction: column;
+        // background-color: yellow;
+        width: 100%;
+        .title {
+          font-weight: var(--font-semibold);
+          font-size: var(--font-16);
+          padding: 0px 13px 5px 13px;
+          text-align: justify;
+        }
+        .description {
+          font-weight: var(--font-normal);
+          font-size: var(--font-12);
+          color: var(--grey4);
+          padding: 0px 13px 5px 13px;
+          text-align: justify;
+        }
+        .linkStyle {
+          font-weight: var(--font-normal);
+          font-size: var(--font-14);
+          color: var(--blue1);
+          padding: 0px 13px 5px 13px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

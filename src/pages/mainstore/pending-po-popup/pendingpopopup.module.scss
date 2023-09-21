@@ -1,0 +1,88 @@
+.pendingPoPopupMainContainer {
+  width: 1000px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 30px 0px 40px 30px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 50px 50px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .paymentContainer {
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+  }
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    // .search {
+    //   display: flex;
+    //   align-items: center;
+    .search {
+      margin-left: 10px;
+    }
+    .text {
+      margin-left: 10px;
+      font-size: var(--font-16);
+      color: var(--black2);
+      font-weight: var(--font-semibold);
+    }
+    .inputSearch {
+      width: 234px;
+      height: 42px;
+      border: 1px solid var(--grey6);
+      background: var(--white1);
+      margin-left: 10px;
+      border-radius: 10px;
+      ::placeholder{
+      color:var(--black2) ;
+    }
+    }
+  }
+
+  // }
+  .tableContainer {
+    margin-top: 30px;
+    max-height: 215px;
+    background-color: var(--white1);
+    overflow: scroll;
+    scroll-behavior: smooth;
+    padding-right: 25px;
+    
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+  }
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,78 @@
+@import '../../../../styles/mixin.scss';
+
+.tagsListModalContainer {
+  width: 400px;
+  height: 300px;
+  // overflow: auto;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  // backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 0px 20px 40px 20px;
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .tagsListModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 35px 0px 0px 0px;
+  }
+
+  .tagsListModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+
+  .tagsListModalDateContainer {
+    @include flexVertical;
+    column-gap: 10px;
+    padding: 0px 0px 0px 30px;
+    .tagsListModalDateTitle {
+      @include font(var(--black2), var(--font-16), var(--font-semibold));
+    }
+    .tagsListModalDate {
+      @include font(var(--grey4), var(--font-16), var(--font-normal));
+    }
+  }
+
+  .tagsListContainer {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0px 0px 0px 30px;
+    gap: 12px 8px;
+    overflow: auto;
+    margin-top: 21px;
+    width: 370px;
+    max-height: 200px;
+    height: 140px;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+    .tagsListText {
+      background: var(--green1);
+      padding: 7px 12px;
+      @include font(var(--white1), var(--font-14), var(--font-normal));
+      border-radius: 50px;
+      height: 40px;
+    }
+  }
+}

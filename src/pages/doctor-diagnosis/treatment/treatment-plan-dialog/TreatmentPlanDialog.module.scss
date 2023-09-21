@@ -1,0 +1,122 @@
+.mainContainer {
+  width: 845px;
+  height: 550px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  font-style: normal;
+  font-weight: var(--font-semibold);
+  font-size: var(--font-16);
+
+  .iconContainer {
+    display: block;
+    text-align: end;
+  }
+  .closeIconStyle {
+    cursor: pointer;
+  }
+  .headerContainer {
+    text-align: center;
+    .title {
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+  }
+
+  .sectionContainer {
+    margin: 44px 0px 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  // .tableContainer {
+  //   overflow: auto;
+  // }
+
+  .buttonContainer {
+    margin: 33px 0px;
+    display: flex;
+    place-content: center;
+  }
+
+  .formContainer {
+    padding: 0px 30px;
+    overflow: auto;
+    height: 400px;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+  }
+
+  .amountContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px;
+  }
+
+  .amountContainer > * {
+    display: grid;
+    place-content: center;
+    height: 34px;
+    border-radius: 6px;
+    padding: 5px 13px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: var(--font-medium);
+    font-size: var(--font-12);
+  }
+
+  .amountContainer > div:first-child {
+    color: #5936f1;
+    background: rgba(89, 54, 241, 0.1);
+  }
+  .amountContainer > div:nth-child(2) {
+    color: #02bf90;
+    background: rgba(2, 191, 144, 0.1);
+  }
+  .amountContainer > div:last-child {
+    color: #ffa009;
+    background: rgba(255, 160, 9, 0.1);
+  }
+
+  .addListButton {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .plus {
+    width: 10px;
+    aspect-ratio: 1;
+  }
+
+  .inputWrapperWithAddButton {
+    display: grid;
+    grid-template-columns: 100px 234px 30px;
+    column-gap: 12px;
+    align-items: baseline;
+  }
+}

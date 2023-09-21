@@ -1,0 +1,31 @@
+@import "../../../../styles/mixin.scss";
+
+.table {
+  width: 100%;
+
+  .tableHeadingRow {
+    background: transparent;
+    border-top: 1px solid var(--grey8);
+    border-bottom: 1px solid var(--grey8);
+
+    .tableHeading {
+      text-align: center;
+    }
+  }
+
+  .tableRow {
+    .tableColumn {
+      text-align: center;
+    }
+  }
+
+  .activeRow {
+    background-color: #e0fff7;
+    cursor: pointer;
+  }
+  .noReordFoundText {
+    text-align: center;
+    @include font(var(--black1), var(--font-16), var(--font-bold));
+    padding: 12px 0px;
+  }
+}

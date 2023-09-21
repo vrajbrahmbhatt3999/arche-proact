@@ -1,0 +1,126 @@
+.notesPopupContainer {
+  width: 680px;
+  // height: 250px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .notesContainer {
+    margin-top: 50px;
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .tableForm {
+      height: 380px;
+      overflow-y: auto;
+      .formContainer {
+        .labelField {
+          display: flex;
+          flex-direction: row;
+          margin-left: 20px;
+          margin-bottom: 30px;
+          .labelText {
+            margin-right: 8px;
+            font-weight: var(--font-semibold);
+            font-size: --font-16;
+            color: var(--black2);
+            width: 110px;
+            margin-top: 8px;
+          }
+          .fieldErrorContainer {
+            .inputField {
+              background: var(--white1);
+              width: 175px;
+              border: 1px solid #cdd4d8;
+              border-radius: 6px;
+              padding: 10px 15px;
+            }
+            .select {
+              width: 175px;
+            }
+            .iconStyle {
+              margin-top: 7px;
+            }
+            .errorText {
+              color: var(--errorColor);
+              font-size: var(--font-12);
+              font-weight: var(--font-medium);
+              padding: 5px 0px;
+              width: 175px;
+            }
+          }
+        }
+        .form {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          .labelField {
+            display: flex;
+            flex-direction: row;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            .labelText {
+              margin-right: 8px;
+              font-weight: var(--font-semibold);
+              font-size: --font-16;
+              color: var(--black2);
+              width: 110px;
+              margin-top: 8px;
+            }
+            .fieldErrorContainer {
+              .inputField {
+                background: var(--white1);
+                width: 175px;
+                border: 1px solid #cdd4d8;
+                border-radius: 6px;
+                padding: 10px 15px;
+              }
+              .select {
+                width: 175px;
+              }
+              .iconStyle {
+                margin-top: 7px;
+              }
+            }
+          }
+        }
+        .btnContainer {
+          margin: 20px auto 40px auto;
+          text-align: center;
+        }
+      }
+      .btnContainer {
+        margin: 20px auto 40px auto;
+        text-align: center;
+      }
+      &::-webkit-scrollbar {
+        display: block;
+        width: 7px;
+        height: 7px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--grey7);
+        border-radius: 10px;
+        border: 1px solid var(--grey7);
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../../styles/mixin.scss";
+.submitQuestionContainer {
+  padding: 0px 50px 0px 50px;
+  background-color: var(--white1);
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      color: var(--black2);
+    }
+    .selectInputfieldContainer {
+      display: flex;
+      flex-direction: row;
+      .selectField {
+        background: var(--white1);
+        width: 132px;
+        border: 1px solid #cdd4d8;
+        border-radius: 6px 0px 0px 6px;
+        padding: 10px 5px 10px 10px;
+      }
+      .selectinputField {
+        background: var(--white1);
+        width: 170px;
+        border: 1px solid #cdd4d8;
+        border-left: none;
+        border-radius: 0px 6px 6px 0px;
+        padding: 10px 15px;
+      }
+    }
+  }
+  .questionContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-weight: var(--font-medium);
+    font-size: var(--font-16);
+    color: var(--black2);
+    margin-bottom: 40px;
+    .questionContent {
+      margin-left: 8px;
+      .optionContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 15px;
+        .answer {
+          color: var(--green1);
+          margin: 0px 50px 0 10px;
+        }
+      }
+    }
+  }
+  .btnContainer {
+    @include flexCenter;
+    flex-direction: row;
+    // margin: 120px 0 30px 0;
+    .backBtn {
+      margin-right: 10px;
+      border: 1px solid var(--blue1);
+      color: var(--blue1);
+      border-radius: 6px;
+      background: var(--white1);
+    }
+  }
+}

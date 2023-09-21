@@ -1,0 +1,223 @@
+@import "../../../styles//mixin.scss";
+
+.newGrnPopupMainContainer {
+  width: 90%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  // height: 590px;
+  border-radius: 10px;
+  padding: 30px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+  }
+  .paymentContainer {
+    .title {
+      text-align: center;
+      @include font(var(--black2), var(--font-24), var(--font-semibold));
+      line-height: 36px;
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+  }
+  .searchContainer {
+    display: flex;
+    justify-content: space-between;
+    .searchDropDownContainer {
+      display: flex;
+      align-items: center;
+      .text {
+        margin-left: 10px;
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+        margin-bottom: 0px;
+        text-align: right;
+        width: 118px;
+      }
+      .search {
+        width: 234px;
+        height: 42px;
+        border: 1px solid var(--grey6);
+        background: var(--white1);
+        margin-left: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    .textFieldContainer {
+      display: flex;
+      align-items: center;
+      .text {
+        margin-left: 10px;
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+        margin-bottom: 0px;
+        text-align: right;
+      }
+      .inputSearch {
+        width: 234px;
+        height: 42px;
+        border: 1px solid var(--grey6);
+        background: var(--white1);
+        margin-left: 10px;
+        border-radius: 10px;
+        padding: 8px;
+      }
+      .inputSearchGrn {
+        width: 234px;
+        height: 42px;
+        border: 1px solid var(--grey6);
+        background-color: var(--grey3);
+        margin-left: 10px;
+        border-radius: 10px;
+        padding: 8px;
+      }
+    }
+    .dateSearch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .dateField {
+        display: flex;
+        align-items: center;
+      }
+      .text {
+        margin-left: 10px;
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+      }
+      .errorText {
+        color: var(--errorColor);
+        font-size: var(--font-12);
+        font-weight: var(--font-medium);
+        padding: 5px 0px;
+        margin-right: 120px;
+      }
+      .inputSearch {
+        cursor: pointer;
+        width: 234px;
+        height: 42px;
+        border: 1px solid var(--grey6);
+        background: var(--white1);
+        margin-left: 10px;
+        border-radius: 10px;
+        padding: 8px;
+      }
+    }
+  }
+  .searchContainer2 {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    .search {
+      display: flex;
+      align-items: center;
+      .text {
+        margin-left: 10px;
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+        margin-bottom: 0px;
+        text-align: right;
+        width: 118px;
+      }
+      .inputSearch {
+        width: 234px;
+        height: 42px;
+        border: 1px solid var(--grey6);
+        background: var(--white1);
+        margin-left: 10px;
+        border-radius: 10px;
+        padding: 8px;
+      }
+    }
+    .attachmentContainer {
+      display: flex;
+      align-items: center;
+      .labelText {
+        color: var(--black2);
+        font-size: var(--font-16);
+        font-weight: var(--font-semibold);
+        margin-bottom: 0px;
+        width: 118px;
+        margin-left: 108px;
+      }
+      .fileNameStyle {
+        margin-left: 30px;
+      }
+      .attachedFile {
+        width: 120px;
+        margin-right: 20px;
+      }
+    }
+    .textFieldContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .text {
+        margin-left: 10px;
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+        margin-bottom: 0px;
+        text-align: right;
+        width: 118px;
+      }
+      .errorText {
+        color: var(--errorColor);
+        font-size: var(--font-12);
+        font-weight: var(--font-medium);
+        padding: 5px 0px;
+        margin-left: 120px;
+      }
+      .inputSearch {
+        width: 234px;
+        height: 42px;
+        border: 1px solid var(--grey6);
+        background: var(--white1);
+        margin-left: 10px;
+        border-radius: 10px;
+        padding: 8px;
+      }
+    }
+  }
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0px;
+  }
+  .table {
+    margin: 20px 15px;
+    max-height: 300px;
+    height: 178px;
+    background-color: var(--white1);
+    overflow: scroll;
+    scroll-behavior: smooth;
+    padding-right: 25px;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 20px;
+  }
+}

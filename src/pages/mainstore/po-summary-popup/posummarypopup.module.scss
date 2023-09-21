@@ -1,0 +1,29 @@
+@import "../../../styles/mixin.scss";
+
+.tablestyle {
+  max-height: 230px;
+  background-color: var(--white1);
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.radioFieldContainer {
+  margin: 25px 0px;
+}
+
+.yellowTextColor {
+  color: #ffa009;
+}
+
+.blueTextColor {
+  color: #0e26a3;
+}
+
+.greenTextColor {
+  color: #02bf90;
+}
+
+.notesContainer {
+  margin-block: 30px;
+  text-align: center;
+}

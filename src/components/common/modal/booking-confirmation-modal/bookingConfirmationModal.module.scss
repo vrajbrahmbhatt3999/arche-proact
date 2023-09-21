@@ -1,0 +1,316 @@
+@import "../../../../styles/mixin.scss";
+
+.bookingConfirmationModalContainer {
+  width: 850px;
+  // height: 600px;
+  height: 100%;
+  margin: auto;
+  // overflow: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 17px 20px 60px 20px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+  }
+
+  .iconConatainer {
+    display: flex;
+    column-gap: 20px;
+    position: absolute;
+    right: 63px;
+    top: 50px;
+  }
+
+  .bookingConfirmationModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 25px 0px 0px 0px;
+  }
+
+  .bookingConfirmationModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 30px;
+  }
+
+  .bookingConfirmForm {
+    width: 800px;
+    // height: 400px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+    .formFieldRow {
+      display: flex;
+      width: 100%;
+      margin-top: 17px;
+      .formFieldContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        .inputFieldContainer {
+          display: flex;
+          align-items: center;
+          position: relative;
+          column-gap: 16px;
+
+          .formLabel {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            min-width: 120px;
+            text-align: right;
+          }
+
+          .inputField {
+            &::-webkit-calendar-picker-indicator {
+              cursor: pointer;
+            }
+            &::-moz-appearance-calendar-picker-indicator {
+              cursor: pointer;
+            }
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            width: 230px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+            padding: 0px 14px 0px 14px;
+          }
+          .selectInputField {
+            background: #ffffff;
+            width: 230px;
+            border-radius: 6px;
+          }
+
+          .inputTimeField {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            padding: 0px 7px 0px 7px;
+            border-radius: 6px;
+            height: 42px;
+            width: 92px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+          }
+
+          .multiSelectField {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            width: 230px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+          }
+          .phoneNumberInput {
+            background: var(--white1);
+            border: 1px solid #cdd4d8;
+            border-radius: 6px;
+            height: 42px;
+            width: 230px;
+            // flex: 1;
+            // min-width: 230px;
+            // max-width: 400px;
+            @include responsive(568px) {
+              width: 100%;
+              max-width: none;
+            }
+          }
+          .extraInputField {
+            width: 230px;
+          }
+          .textAreaContainer {
+            display: flex;
+            flex-direction: column;
+            .textArea {
+              background: var(--white1);
+              border: 1px solid var(--grey6);
+              border-radius: 6px;
+              height: 107px;
+              width: 622px;
+              @include font(var(--grey4), var(--font-16), var(--font-medium));
+              padding: 10px 14px 0px 14px;
+            }
+            .formError {
+              color: var(--errorColor);
+              font-size: var(--font-12);
+              font-weight: var(--font-normal);
+              margin-left: 5px;
+              margin-top: 5px;
+              width: 230px;
+            }
+          }
+          .customButtonClass {
+            width: 230px;
+          }
+          .searchButton {
+            position: absolute;
+            right: -5px;
+            bottom: 0px;
+            @include flexCenter();
+            height: 42px;
+            width: 42px;
+            background: var(--green1);
+            cursor: pointer;
+            border-radius: 20%;
+            margin-right: 5px;
+          }
+        }
+
+        .textAreaFieldContainer {
+          display: flex;
+          align-items: flex-start;
+          position: relative;
+          column-gap: 16px;
+        }
+        .errorContainer {
+          display: flex;
+          .errorExtraDiv {
+            width: 138px;
+          }
+          .formError {
+            color: var(--errorColor);
+            font-size: var(--font-12);
+            font-weight: var(--font-normal);
+            margin-left: 5px;
+            margin-top: 5px;
+            width: 230px;
+          }
+        }
+      }
+      .singleFieldContainer {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        width: 100%;
+        margin-left: 15px;
+        .inputFieldContainer {
+          .inputField {
+            &::-webkit-calendar-picker-indicator {
+              cursor: pointer;
+            }
+            &::-moz-appearance-calendar-picker-indicator {
+              cursor: pointer;
+            }
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .timeFieldRow {
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      margin-top: 17px;
+      .timeLabel {
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+        width: 120px;
+        text-align: right;
+        margin-right: 22px;
+      }
+      .textTimeRow {
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+        margin: 0px 60px 0px 60px;
+      }
+      .timeFieldContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        .timeInputFieldContainer {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          column-gap: 16px;
+          .inputTimeField {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            width: 230px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+          }
+          .phoneNumberInput {
+            background: var(--red1);
+            border: 1px solid #cdd4d8;
+            border-radius: 6px;
+            height: 42px;
+            width: 100%;
+            // flex: 1;
+            min-width: 270px;
+            // max-width: 400px;
+            @include responsive(568px) {
+              width: 100%;
+              max-width: none;
+            }
+          }
+          .formError {
+            color: var(--errorColor);
+            font-size: var(--font-12);
+            font-weight: var(--font-normal);
+            margin-top: 5px;
+            margin-left: 5px;
+            width: 230px;
+          }
+        }
+      }
+    }
+    .recurringContainer {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 20px 0px;
+      .extraForCheckBox {
+        width: 145px;
+      }
+      .recurringText {
+        @include font(var(--black2), var(--font-16), var(--font-medium));
+        margin-left: 8px;
+      }
+    }
+    .formButtonContainer {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 40px 0px 0px 0px;
+
+      .extraDiv {
+        width: 125px;
+      }
+
+      .submitButton {
+        width: 119px;
+        height: 42px;
+        @include font(var(--white1), var(--font-16), var(--font-semibold));
+      }
+
+      .extraButton {
+        padding: 0px 20px;
+        width: fit-content;
+        height: 42px;
+        border: 1px solid var(--blue3);
+        border-radius: 6px;
+        background: transparent;
+        @include font(var(--blue3), var(--font-12), var(--font-normal));
+      }
+    }
+  }
+}
+.inputFieldd {
+  height: 42px;
+  width: 230px;
+}

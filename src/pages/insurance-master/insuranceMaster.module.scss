@@ -1,0 +1,93 @@
+.mainContainer {
+  margin-right: 20px;
+
+  .filterContainer {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(97px);
+    border-radius: 10px;
+    padding: 25px 40px 40px 40px;
+
+    .companyFilter {
+      display: flex;
+      flex-direction: row;
+
+      .filterLable {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 25px;
+
+        .labelText {
+          font-weight: var(--font-semibold);
+          font-size: var(--font-16);
+        }
+
+        .select {
+          width: 245px;
+          margin: 0 10px;
+        }
+
+        .iconStyle {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .filterLable {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .labelText {
+        font-weight: var(--font-semibold);
+        font-size: var(--font-16);
+        width: 185px;
+      }
+
+      .select {
+        width: 245px;
+        margin: 0 10px;
+      }
+
+      .iconStyle {
+        margin-right: 20px;
+      }
+
+      .btnStyle {
+        margin-left: 20px;
+        width: 120px;
+      }
+    }
+  }
+
+  .inputFieldContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 75px 0 20px 0;
+
+    .inputSearchContainer {
+      width: 225px;
+      height: 45px;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+
+    .inputSearchButton {
+      margin-left: 10px;
+    }
+  }
+
+  .tableConatiner {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(97px);
+    border-radius: 10px;
+    padding: 25px;
+  }
+}

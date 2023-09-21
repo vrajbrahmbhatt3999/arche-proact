@@ -1,0 +1,674 @@
+@import '../../../styles/mixin.scss';
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .mainFormContainer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    padding: 0px 10px 0px 20px;
+
+    .formLayoutContainer {
+      display: flex;
+      flex-direction: column;
+      width: 67%;
+
+      .formContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        .formLayout {
+          display: flex;
+          flex-direction: row;
+          height: 62px;
+          margin: 10px 10px;
+
+          .labelFieldContainer {
+            display: flex;
+            flex-direction: row;
+            margin-right: 10px;
+            width: 60%;
+
+            // background-color: rgb(238, 3, 3);
+            .labelText {
+              margin-top: 10px;
+              @include font(var(--black2),
+                var(--font-16),
+                var(--font-semibold));
+              width: 80px;
+            }
+
+            .fieldErrorContainer {
+              position: relative;
+              margin-top: 2px;
+
+              ::-webkit-calendar-picker-indicator {
+                cursor: pointer;
+              }
+
+              ::-moz-appearance-calendar-picker-indicator {
+                cursor: pointer;
+              }
+
+              .radioFieldName {
+                @include font(var(--black2),
+                  var(--font-16),
+                  var(--font-semibold));
+                flex-shrink: 0;
+                text-align: end;
+              }
+
+              .radioLabel {
+                @include font(var(--black2),
+                  var(--font-14),
+                  var(--font-semibold));
+                margin-right: 14px;
+              }
+
+              .customRadio {
+                left: -7px;
+                top: 3px;
+                cursor: pointer;
+                width: 16px;
+                height: 16px;
+                border: 2px solid var(--grey6);
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+                margin-left: -9px;
+              }
+
+              /* for inner filled circle */
+              .customRadio::after {
+                content: '';
+                width: 10px;
+                height: 10px;
+                background: var(--green1);
+                position: absolute;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 0.2s;
+              }
+
+              .radioInput {
+                height: 25px;
+                visibility: hidden;
+              }
+
+              .radioInput:checked+span:after {
+                opacity: 1;
+              }
+
+              .react-tel-input {
+                margin-left: 0px !important;
+              }
+
+              .phoneNumberInput {
+                background: var(--white1);
+                border: 1px solid #cdd4d8;
+                border-radius: 6px;
+                height: 42px;
+                width: 220px;
+              }
+
+              .radiofieldStyle {
+                margin-left: 0px;
+              }
+
+              .radioStyle {
+                font-weight: 400;
+                font-size: 16px;
+                padding: 0px 8px 0px 5px;
+                color: var(--grey4);
+              }
+
+              .inputField {
+                background: var(--white1);
+                width: 220px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 15px;
+              }
+
+              .disabledInput.disabledInput {
+                background: var(--grey14);
+              }
+
+              .fixedFileNoinputField {
+                background: var(--white1);
+                width: 200px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 35px 10px 15px;
+              }
+
+              .searchInputField {
+                background: var(--white1);
+                width: 220px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 35px 10px 15px;
+              }
+
+              .searchInputFieldDisable {
+                background: var(--white1);
+                width: 220px;
+                cursor: pointer;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 35px 10px 15px;
+              }
+
+              .disableInputFields {
+                background-color: var(--grey13);
+                width: 220px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 15px;
+              }
+
+              .disableInputFieldBranchInitials {
+                background-color: var(--white1);
+                width: 60px;
+                border: 1px solid var(--grey6);
+                border-right: none;
+                border-radius: 6px 0px 0px 6px;
+                padding: 10px 15px;
+              }
+
+              .disableInputFieldFileNo {
+                background-color: var(--white1);
+                width: 138px;
+                border-left: none;
+                border: 1px solid var(--grey6);
+                border-radius: 0px 6px 6px 0px;
+                padding: 10px 15px;
+              }
+
+              .disableInputField {
+                background-color: var(--grey13);
+                width: 220px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 15px;
+              }
+
+              .selectInputField {
+                width: 200px;
+                height: 42px;
+                margin-top: 0px;
+                padding: 10px 10px;
+                border-radius: 6px;
+                border: 1px solid var(--grey6);
+                background: var(--white1);
+              }
+
+              .eyeIconStyle {
+                width: 20px;
+                height: 20px;
+                margin-left: 5px;
+                cursor: pointer;
+              }
+
+              .searchIconStyle {
+                position: absolute;
+                width: 10%;
+                // background-color: var(--white1);
+                right: 30px;
+                top: 14px;
+                cursor: pointer;
+              }
+
+              .disableSearchIconStyle {
+                position: absolute;
+                width: 10%;
+                background-color: var(--grey13);
+                right: 30px;
+                top: 14px;
+                cursor: default;
+              }
+            }
+          }
+        }
+      }
+
+      .insuranceContainer {
+        margin: 30px 0px;
+
+        .dividerStyleContainer {
+          display: flex;
+          flex-direction: row;
+
+          .dividerStyle {
+            margin: 20px 10px;
+            width: 38%;
+            height: 2px;
+            background: var(--grey6);
+          }
+
+          .formFieldMoreContainer {
+            display: flex;
+            flex-direction: row;
+            padding-top: 10px;
+            cursor: pointer;
+
+            .dividerText {
+              padding: 0px 10px;
+              font-weight: 600;
+              font-size: 16px;
+              color: #797979;
+            }
+
+            .dropDownIcon {
+              margin-top: 10px;
+              margin-right: 5px;
+            }
+          }
+        }
+
+        .insuranceButtonStyle {
+          margin: 5% 40%;
+        }
+      }
+
+      .referralContainer {
+        margin-bottom: 30px;
+
+        .dividerStyleContainer {
+          display: flex;
+          flex-direction: row;
+
+          .dividerStyle {
+            margin: 20px 10px;
+            width: 37%;
+            height: 2px;
+            background: var(--grey6);
+          }
+
+          .formFieldMoreContainer {
+            display: flex;
+            flex-direction: row;
+            padding-top: 10px;
+            cursor: pointer;
+
+            .dividerText {
+              padding: 0px 10px;
+              font-weight: 600;
+              font-size: 16px;
+              color: #797979;
+            }
+
+            .dropDownIcon {
+              margin-top: 10px;
+              margin-right: 5px;
+            }
+          }
+        }
+
+        .referralLayout {
+          display: flex;
+          flex-direction: column;
+          padding: 0px 0px 0px 10px;
+          margin-top: 10px;
+
+          .labelFieldContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            // margin: 20px auto;
+
+            .fieldErrorContainer {
+              position: relative;
+
+              ::-webkit-calendar-picker-indicator {
+                cursor: pointer;
+              }
+
+              ::-moz-appearance-calendar-picker-indicator {
+                cursor: pointer;
+              }
+
+              .radioFieldName {
+                @include font(var(--black2),
+                  var(--font-16),
+                  var(--font-semibold));
+                flex-shrink: 0;
+                text-align: end;
+              }
+
+              .radioLabel {
+                @include font(var(--black2),
+                  var(--font-14),
+                  var(--font-semibold));
+                margin-right: 14px;
+              }
+
+              .customRadio {
+                left: -7px;
+                top: 3px;
+                cursor: pointer;
+                width: 16px;
+                height: 16px;
+                border: 2px solid var(--grey6);
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+                margin-left: -9px;
+              }
+
+              .customRadioDisable {
+                left: -7px;
+                top: 3px;
+                cursor: default;
+                width: 16px;
+                height: 16px;
+                border: 2px solid var(--grey6);
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+                margin-left: -9px;
+              }
+
+              /* for inner filled circle */
+              .customRadio::after {
+                content: '';
+                width: 10px;
+                height: 10px;
+                background: var(--green1);
+                position: absolute;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 0.2s;
+              }
+
+              .radioInput {
+                height: 25px;
+                visibility: hidden;
+              }
+
+              .radioInput:checked+span:after {
+                opacity: 1;
+              }
+
+              .react-tel-input {
+                margin-left: 0px !important;
+              }
+
+              .phoneNumberInput {
+                background: var(--white1);
+                border: 1px solid #cdd4d8;
+                border-radius: 6px;
+                height: 42px;
+                width: 220px;
+                // flex: 1;
+                // min-width: 270px;
+                // max-width: 400px;
+              }
+
+              .radiofieldStyle {
+                margin-left: 0px;
+              }
+
+              .radioStyle {
+                font-weight: 400;
+                font-size: 16px;
+                padding: 0px 8px 0px 5px;
+                color: var(--grey4);
+              }
+
+              .inputField {
+                background: var(--white1);
+                width: 220px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 15px;
+              }
+
+              .searchInputField {
+                background: var(--white1);
+                width: 220px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 35px 10px 15px;
+              }
+
+              .disableInputFields {
+                background-color: var(--grey13);
+                width: 220px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 15px;
+              }
+
+              .disableInputFieldBranchInitials {
+                background-color: var(--grey13);
+                width: 60px;
+                border: 1px solid var(--grey6);
+                border-right: none;
+                border-radius: 6px 0px 0px 6px;
+                padding: 10px 15px;
+              }
+
+              .disableInputFieldFileNo {
+                background-color: var(--grey13);
+                width: 138px;
+                border-left: none;
+                border: 1px solid var(--grey6);
+                border-radius: 0px 6px 6px 0px;
+                padding: 10px 15px;
+              }
+
+              .disableInputField {
+                background-color: var(--grey13);
+                width: 220px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 15px;
+              }
+
+              .selectInputField {
+                width: 200px;
+                height: 42px;
+                margin-top: 0px;
+                padding: 10px 10px;
+                border-radius: 6px;
+                border: 1px solid var(--grey6);
+                background: var(--white1);
+              }
+
+              .eyeIconStyle {
+                width: 20px;
+                height: 20px;
+                margin-left: 5px;
+                cursor: pointer;
+              }
+
+              .searchIconStyle {
+                position: absolute;
+                width: 10%;
+                // background-color: var(--white1);
+                right: 30px;
+                top: 14px;
+                cursor: pointer;
+              }
+            }
+          }
+
+          .fieldContainer {
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            margin-top: 14px;
+
+            .labelText {
+              margin-top: 10px;
+              @include font(var(--black2),
+                var(--font-16),
+                var(--font-semibold));
+              width: 220px;
+            }
+
+            .fieldErrorContainer {
+              position: relative;
+
+              .inputField {
+                background: var(--white1);
+                width: 300px;
+                cursor: pointer;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 30px 10px 15px;
+              }
+
+              .disableInputField {
+                background-color: var(--grey13);
+                width: 300px;
+                border: 1px solid var(--grey6);
+                border-radius: 6px;
+                padding: 10px 30px 10px 15px;
+              }
+
+              .searchIconStyle {
+                position: absolute;
+                width: 10%;
+                // background-color: white;
+                right: 2px;
+                top: 14px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+
+      .saveButtonStyle {
+        // display: flex;
+        margin: 30px auto;
+      }
+    }
+
+    .settleInvoiceAmountContainer {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+
+      .settleInvoiceContainer {
+        display: flex;
+        flex-direction: column;
+        height: 45px;
+        margin: 20px 0px 0px 0px;
+      }
+
+      .settleButton {
+        align-self: flex-end;
+        margin: 0px;
+      }
+
+      .amountContainer {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        width: 335px;
+        // height: 160px;
+        margin: 20px 0px 0px 0px;
+        border-radius: 10px;
+        background: var(--white1);
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(97px);
+
+        .dueAmountStyle {
+          // width: 220px;
+          // height: 55px;
+          width: fit-content;
+          height: fit-content;
+          margin: 15px 20px 12px 20px;
+          padding: 10px;
+          border-radius: 6px;
+          @include font(var(--red3), var(--font-20), var(--font-normal));
+          background: rgba(177, 19, 19, 0.1);
+        }
+
+        .paintAmtAmountStyle {
+          // width: 270px;
+          // height: 55px;
+          width: fit-content;
+          height: fit-content;
+          margin: 10px 0px 12px 20px;
+          padding: 10px;
+          border-radius: 6px;
+          @include font(var(--green1), var(--font-20), var(--font-normal));
+          background: rgba(2, 191, 144, 0.1);
+        }
+
+        .advanceDueAmountStyle {
+          // width: 270px;
+          // height: 55px;
+          width: fit-content;
+          height: fit-content;
+          margin: 15px 20px 12px 20px;
+          padding: 10px;
+          border-radius: 6px;
+          @include font(var(--green1), var(--font-20), var(--font-normal));
+          background: rgba(2, 191, 144, 0.1);
+        }
+      }
+    }
+  }
+
+  .mainContainerFormActionSidebar {
+    width: 50px;
+    height: 280px;
+    background: var(--white1);
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(47px);
+    opacity: 0.7;
+    border-radius: 10px;
+    margin: 0px 15px 0px 20px;
+
+    // z-index: 2;
+    .sidebarData {
+      .iconStyleContainer {
+        margin: 13px 10px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+
+        .tooltiptext {
+          visibility: hidden;
+          width: 70px;
+          background-color: var(--white1);
+          font-size: var(--font-14);
+          color: var(--black2);
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          top: -4px;
+          right: 142%;
+          box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+          backdrop-filter: blur(47px);
+        }
+
+        &:hover .tooltiptext {
+          visibility: visible;
+          background-color: var(--white1);
+        }
+      }
+    }
+  }
+}

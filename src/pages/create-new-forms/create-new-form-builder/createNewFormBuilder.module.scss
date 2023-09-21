@@ -1,0 +1,55 @@
+.mainFormBuilderContainer {
+  max-width: calc(1125px + 167px);
+  padding-bottom: 20px;
+  margin-right: 20px;
+}
+
+.headerContainer {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  // backdrop-filter: blur(97px);
+  border-radius: 10px;
+  max-width: 1257px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .headerTitle {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .label_data {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .label_data > div:nth-child(1) {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: right;
+    color: #181818;
+  }
+
+  .label_data > div:nth-child(3) {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    color: #0e26a3;
+  }
+
+  .buttonContainer {
+    text-align: end;
+  }
+}

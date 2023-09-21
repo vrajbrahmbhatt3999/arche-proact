@@ -1,0 +1,23 @@
+.globalFilterSection {
+  display: flex;
+  align-items: center;
+  position: relative;
+  .searchIconStyle {
+    position: absolute;
+    left: 260px;
+    top: 14px;
+  }
+  .globalSearchInput {
+    width: 288px;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 10px;
+    border: 1px solid var(--grey6);
+    background: none;
+    border-radius: 10px;
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+}

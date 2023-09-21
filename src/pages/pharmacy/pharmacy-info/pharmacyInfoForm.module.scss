@@ -1,0 +1,359 @@
+@import '../../../styles/mixin.scss';
+.pharmacyInfoFormMainContainer {
+  min-height: 100%;
+  background-color: var(--white2);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(97px);
+  border-radius: 10px;
+  padding-bottom: 25px;
+  margin: 0px 20px 20px 0px;
+
+  .tabledataflex {
+    display: flex;
+    column-gap: 40px;
+    justify-content: end;
+  }
+
+  .pharnacyFormHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 25px;
+    .customerInfoTitle {
+      @include font(var(--black1), var(--font-18), var(--font-semibold));
+    }
+    .buttonUserInfoContainer {
+      display: flex;
+      .documentContainer {
+        display: flex;
+        align-items: center;
+        margin: 0px 15px;
+        .docNoText {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          margin-right: 10px;
+        }
+        .docNo {
+          @include font(var(--grey4), var(--font-16), var(--font-normal));
+        }
+      }
+      .salesPersonContainer {
+        display: flex;
+        align-items: center;
+        margin: 0px 15px;
+
+        .salsePersonText {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          margin-right: 10px;
+        }
+        .salePersonName {
+          @include font(var(--grey4), var(--font-16), var(--font-normal));
+        }
+      }
+      .receiptButton {
+        width: fit-content;
+        margin-right: 15px;
+      }
+      .prescriptionButton {
+        width: fit-content;
+        margin-right: 20px;
+      }
+      .medicinButton {
+        width: fit-content;
+        margin-right: 15px;
+      }
+      .inventoryButton {
+        width: 141px;
+        margin-right: 20px;
+      }
+      .notiifcationIconStyle {
+        width: 22px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .pharmacyInfoFormWrapper {
+    .divider {
+      margin: 0px 25px;
+      width: unset;
+      background-color: var(--grey6);
+    }
+
+    .tablestyle {
+      padding: 0px 27px;
+      margin: 50px 0px;
+    }
+
+    .formsubmitbuttons {
+      display: flex;
+      justify-content: center;
+
+      .nextButton {
+        margin-right: 23px;
+      }
+    }
+
+    .formFieldRow {
+      @include flexVertical;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 5px;
+      .formFieldContainer {
+        @include flexCenter;
+        margin-top: 25px;
+        flex-direction: column;
+        flex-basis: 32%;
+        position: relative;
+        @include responsive(768px) {
+          width: 50%;
+        }
+        @include responsive(568px) {
+          width: 100%;
+        }
+        .inputFieldContainer {
+          @include flexVertical;
+          gap: 10px;
+          width: 100%;
+          .formLabel {
+            @include font(var(--black2), var(--font-16), var(--font-normal));
+            width: 30%;
+            flex-shrink: 0;
+            text-align: end;
+          }
+          .inlineItems {
+            display: flex;
+            align-items: center;
+            flex-basis: 70%;
+
+            .radioLabel {
+              display: flex;
+            }
+
+            .dropdownBox {
+              height: 42px;
+              margin-left: unset;
+              border-top-right-radius: 0px;
+              border-bottom-right-radius: 0px;
+            }
+            .dropdownBody {
+              top: 41px;
+              white-space: nowrap;
+            }
+            .scanContainer {
+              @include flexCenter;
+              border-radius: 50px;
+              width: 50px;
+              height: 50px;
+              background-color: var(--green1);
+            }
+          }
+          .customLabel {
+            flex-basis: 31%;
+            text-align: end;
+          }
+
+          .fileInputField {
+            background: var(--white1);
+            border: none;
+            height: 42px;
+            width: 100%;
+            @include responsive(568px) {
+              width: 100%;
+              max-width: none;
+            }
+          }
+          .inputField {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            padding-left: 10px;
+            height: 42px;
+            width: 100%;
+            @include responsive(568px) {
+              width: 100%;
+              max-width: none;
+            }
+          }
+          .referalInputField {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-left: 0px;
+            border-radius: 6px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            padding-left: 10px;
+            height: 42px;
+            width: 100%;
+            @include responsive(568px) {
+              width: 100%;
+              max-width: none;
+            }
+          }
+          .searchIconStyle {
+            flex-basis: 10%;
+          }
+          // Info Container
+          .infoContainer {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            &:hover::after {
+              @include font(
+                var(--black2),
+                var(--font-12),
+                var(--font-semibold)
+              );
+              @include flexCenter;
+              position: absolute;
+              content: 'Put age in years';
+              background-color: var(--white1);
+              box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+              backdrop-filter: blur(7px);
+              border-radius: 6px;
+              width: 116px;
+              height: 32px;
+              z-index: 111;
+              opacity: 1;
+              left: 36px;
+            }
+            .infoIcon {
+              cursor: pointer;
+              position: absolute;
+              right: -40px;
+            }
+          }
+
+          .phoneNumberInput {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            width: 100%;
+            flex: 1;
+            @include responsive(568px) {
+              width: 100%;
+              max-width: none;
+            }
+          }
+        }
+        .errorContainer {
+          @include flexVertical;
+          position: relative;
+          width: 100%;
+          .extraSpanRadio {
+            width: 24%;
+          }
+          .extraSpan {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            width: 34%;
+            flex-shrink: 0;
+            text-align: end;
+          }
+        }
+        .radioFieldGenderContainer {
+          margin-right: 46px;
+        }
+        input[type='radio']:checked + label {
+          color: var(--green3);
+        }
+        .radioFieldName {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          margin-right: 8px;
+          flex-shrink: 0;
+          text-align: start;
+        }
+        .radioText {
+          @include font(var(--black2), var(--font-16), var(--font-normal));
+        }
+        .customRadio {
+          left: -8px;
+          top: 4px;
+          cursor: pointer;
+          width: 17px;
+          height: 17px;
+          border: 2px solid var(--grey6);
+          border-radius: 50%;
+          display: inline-block;
+          position: relative;
+        }
+        /* for inner filled circle */
+        .customRadio::after {
+          content: '';
+          width: 10px;
+          height: 10px;
+          background: var(--green1);
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: opacity 0.2s;
+        }
+        .radioInput {
+          visibility: hidden;
+        }
+        .radioInput:checked + span:after {
+          opacity: 1;
+        }
+      }
+      .finanicialRemarkInsuaranceContainer {
+        margin: 25px 25px 0px 25px;
+        display: flex;
+        //   flex: 1;
+        gap: 30px;
+        .finacialRemark {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          width: 100%;
+          .financialRemarkText {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+          }
+          .viewLink {
+            @include font(var(--blue1), var(--font-16), var(--font-semibold));
+            cursor: pointer;
+          }
+        }
+        .insuarance {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          .insurancePlanText {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            white-space: nowrap;
+          }
+          .buttonContainer {
+            display: flex;
+            gap: 10px;
+            .button {
+              color: var(--blue1);
+              border: 1px solid var(--blue1);
+              background: rgba(255, 255, 255, 0.7);
+              width: 70px;
+            }
+          }
+        }
+      }
+    }
+
+    .moreLessDivider {
+      display: flex;
+      align-items: center;
+      .divider1 {
+        margin: 0px 0px 0px 25px;
+        background-color: var(--grey6);
+      }
+      .divider2 {
+        margin: 0px 25px 0px 0px;
+        background-color: var(--grey6);
+      }
+    }
+    .medicinFormContainer {
+      .addItemButton {
+        margin: 25px 25px 0px 10%;
+      }
+    }
+  }
+}

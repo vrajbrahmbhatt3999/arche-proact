@@ -1,0 +1,340 @@
+@import '../../../styles/mixin.scss';
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .mainServiceContainer {
+    width: 95%;
+    height: 100%;
+    background-color: var(--white2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    overflow-x: auto;
+
+    .invoiceInfoContainer {
+      height: 30px;
+      display: flex;
+      flex-direction: row;
+      margin: 30px 15px;
+
+      .userNameContainer {
+        display: flex;
+        flex-direction: row;
+
+        .userTextStyle {
+          padding: 0px 5px;
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+        }
+
+        .userNameStyle {
+          padding: 0px 5px;
+          @include font(var(--grey4), var(--font-16), var(--font-normal));
+        }
+      }
+
+      .invoiceDateContainer {
+        display: flex;
+        flex-direction: row;
+        margin-left: 24px;
+
+        .invoiceDateTextStyle {
+          padding: 0px 5px;
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+        }
+
+        .invoiceDateStyle {
+          padding: 0px 5px;
+          @include font(var(--grey4), var(--font-16), var(--font-normal));
+        }
+      }
+    }
+
+    .searchServiceContainer {
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      margin: 0px 15px 20px 15px;
+
+      .searchContainer {
+        display: flex;
+        flex-direction: row;
+        margin-right: 20px;
+
+        .inputSearchContainer {
+          width: 270px;
+          height: 50px;
+          border: none;
+          padding: 15px;
+          border-radius: 10px;
+          background: var(--white1);
+          box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+          border-radius: 10px;
+        }
+
+        .inputSearchButton {
+          margin: 5px 0px 0px 8px;
+        }
+      }
+
+      .buttonIconsContainer {
+        display: flex;
+        flex-direction: row;
+
+        .printIcon {
+          align-self: center;
+          margin: 5px 30px 0px 0px;
+        }
+
+        .exportIcon {
+          align-self: center;
+          margin: 5px 30px 0px 5px;
+        }
+
+        .buttonAddServiceStyle {
+          background: none;
+          border: 1px solid var(--blue3);
+          border-radius: 6px;
+          width: 156px;
+          height: 42px;
+          @include font(var(--blue3), var(--font-12), var(--font-normal));
+        }
+      }
+    }
+
+    .searchFieldContainer {
+      margin: 0px 10px;
+      display: flex;
+      flex-direction: row;
+      height: 50px;
+      margin-bottom: 20px;
+
+      .searchContainer {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 25px;
+
+        .searchInputContainer {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+
+          .inputSearchContainer {
+            width: 270px;
+            height: 50px;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+          }
+
+          .inputSearchButton {
+            margin: 5px 0px 0px 5px;
+          }
+
+          .searchFilter {
+            margin: 0px 0px 0px 0px;
+          }
+        }
+
+        .smartSearchContainer {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          margin-left: 18px;
+
+          .inputSmartSearchContainer {
+            width: 270px;
+            height: 50px;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: var(--grey3);
+            box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+          }
+        }
+      }
+
+      .buttonIconsContainer {
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+
+        .printIcon {
+          align-self: center;
+          margin: 0px 30px 0px 0px;
+        }
+
+        .exportIcon {
+          align-self: center;
+          margin: 0px 20px 0px 5px;
+        }
+
+        .buttonAddServiceStyle {
+          background: none;
+          border: 1px solid var(--blue3);
+          border-radius: 6px;
+          width: 156px;
+          height: 42px;
+          @include font(var(--blue3), var(--font-12), var(--font-normal));
+        }
+      }
+
+      .patientNameContainer {
+        display: flex;
+        flex-direction: row;
+
+        width: 30%;
+
+        .patientTextStyle {
+          align-self: center;
+          padding: 0px 5px;
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+        }
+
+        .patientNameStyle {
+          align-self: center;
+          border: 1px solid var(--grey6);
+          width: 58%;
+          padding: 8px;
+          border-radius: 6px;
+          background-color: var(--white1);
+          @include font(var(--grey4), var(--font-16), var(--font-normal));
+        }
+      }
+    }
+
+    .tableContainer {
+      margin: 20px 15px;
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+
+    .totalAmountContainer {
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      margin: 10px auto 0px auto;
+
+      .amountStyle {
+        height: 40px;
+        margin: 10px 0px 12px 20px;
+        padding: 12px 5px;
+        border-radius: 6px;
+        text-align: center;
+        @include font(var(--purple2), var(--font-12), var(--font-medium));
+        background: rgba(89, 54, 241, 0.1);
+      }
+
+      .discountStyle {
+        height: 40px;
+        margin: 10px 0px 12px 20px;
+        padding: 5px 5px;
+        border-radius: 6px;
+        text-align: center;
+        @include font(var(--green1), var(--font-12), var(--font-medium));
+        background: rgba(2, 191, 144, 0.1);
+
+        .inputFieldServiceTable {
+          border: 1px solid var(--green1);
+          border-radius: 6px;
+          padding: 5px;
+          width: 50px;
+          text-align: center;
+          margin-left: 2px;
+        }
+      }
+
+      .netAmountStyle {
+        height: 40px;
+        margin: 10px 0px 12px 20px;
+        padding: 12px 5px;
+        border-radius: 6px;
+        text-align: center;
+        @include font(var(--red3), var(--font-12), var(--font-medium));
+        background: rgba(177, 19, 19, 0.1);
+      }
+    }
+
+    .proeedButtonContainer {
+      display: flex;
+      justify-content: center;
+      margin: 50px 0px;
+
+      .paymentStyle {
+        width: 175px;
+        height: 42px;
+        // margin: 50px auto;
+        @include font(var(--white1), var(--font-16), var(--font-normal));
+      }
+
+      .backButton {
+        width: 175px;
+        height: 42px;
+        font-weight: var(--font-semibold);
+        font-size: var(--font-16);
+        color: var(--white1);
+        margin-left: 25px;
+        background: none;
+        border: 1px solid var(--blue3);
+        border-radius: 6px;
+        @include font(var(--blue3), var(--font-12), var(--font-normal));
+      }
+    }
+  }
+
+  .mainContainerFormActionSidebar {
+    width: 50px;
+    height: 280px;
+    background: var(--white1);
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(47px);
+    opacity: 0.7;
+    border-radius: 10px;
+    margin: 0px 15px 0px 20px;
+
+    // z-index: 2;
+    .sidebarData {
+      .iconStyleContainer {
+        margin: 13px 10px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+
+        .tooltiptext {
+          visibility: hidden;
+          width: 70px;
+          background-color: var(--white1);
+          font-size: var(--font-14);
+          color: var(--black2);
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          top: -4px;
+          right: 142%;
+          box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+          backdrop-filter: blur(47px);
+        }
+
+        &:hover .tooltiptext {
+          visibility: visible;
+          background-color: var(--white1);
+        }
+      }
+    }
+  }
+}
+
+.inputField {
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 8px;
+  width: 70px;
+}

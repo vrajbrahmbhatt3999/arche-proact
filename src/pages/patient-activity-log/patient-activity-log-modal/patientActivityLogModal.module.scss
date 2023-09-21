@@ -1,0 +1,129 @@
+@import '../../../styles/mixin.scss';
+
+.patientActivityModalContainer {
+  width: 800px;
+  height: 550px;
+  // overflow: auto;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 0px 20px 40px 20px;
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .patientActivityLogModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 35px 0px 0px 0px;
+  }
+
+  .patientActivityLogModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+  .activityLogContainer {
+    width: 775px;
+    height: 400px;
+    overflow: auto;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+
+    .searchIconContainer {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 10px;
+      padding-top: 20px;
+      .inputFieldContainer {
+        @include flexVertical;
+        column-gap: 12px;
+        margin: 0px 0px 20px 0px;
+        .formLabel {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 90px;
+          text-align: right;
+        }
+        .selectInputField {
+          // height: 42px;
+          // width: 160px;
+          outline: none;
+          box-shadow: none;
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          width: 170px;
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+        }
+      }
+      .searchFieldContainer {
+        @include flexVertical;
+        column-gap: 12px;
+        margin-right: 10px;
+        .searchLabel {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 50px;
+          text-align: right;
+        }
+        .searchInput {
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 42px;
+          width: 170px;
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          padding: 0px 14px 0px 14px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+      }
+      .searchButton {
+        background: var(--green1);
+        padding: 10px 12px;
+        cursor: pointer;
+        border-radius: 20%;
+        margin-right: 10px;
+      }
+      .patientActivitySearch {
+        background: rgba(255, 255, 255, 0.7) !important;
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05) !important;
+      }
+      .stylePrint {
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      .styleExport {
+        margin: 10px 0px 0px 10px;
+        cursor: pointer;
+      }
+    }
+    .tableContainer {
+      // height: 100%;
+      width: 100%;
+      white-space: nowrap;
+      // overflow-x: auto;
+      margin-top: 35px;
+    }
+  }
+}

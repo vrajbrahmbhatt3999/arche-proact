@@ -1,0 +1,13 @@
+@import "../../styles/mixin.scss";
+
+.viewPopupLink {
+  @include font(var(--blue1), var(--font-12), var(--font-medium));
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.iconStyle {
+  cursor: pointer;
+  height: 21px;
+  width: 22px;
+}

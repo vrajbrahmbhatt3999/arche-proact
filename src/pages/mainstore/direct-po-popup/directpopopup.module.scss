@@ -1,0 +1,24 @@
+@import "../../../styles/mixin.scss";
+
+.tablestyle {
+  max-height: 230px;
+  background-color: var(--white1);
+  overflow: auto;
+  scroll-behavior: smooth;
+
+  tr {
+    th {
+      min-width: 130px;
+    }
+  }
+
+  td:nth-last-child(8) {
+    color: var(--blue1);
+  }
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}

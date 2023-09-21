@@ -1,0 +1,42 @@
+@mixin pageWrapper($padding) {
+  background: var(--white2);
+  // backdrop-filter: blur(6px);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: $padding;
+  margin: 20px 20px 30px 0px;
+}
+
+@mixin font($color, $size, $weight) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexVertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin responsive($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin animation($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}

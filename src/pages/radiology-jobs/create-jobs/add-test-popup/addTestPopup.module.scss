@@ -1,0 +1,159 @@
+@import "../../../../styles/mixin.scss";
+
+.addTestPopupContainer {
+  width: 80%;
+  margin: auto;
+  height: 600px;
+  overflow: hidden;
+  background: var(--white1);
+  border-radius: 10px;
+  padding-bottom: 40px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 2%;
+    top: 3%;
+  }
+  .addTestContainer {
+    // DropDown
+    padding: 0px 50px 30px 50px;
+    .titleContainer {
+      position: relative;
+    }
+  
+    .textUnderline {
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      background: #02bf90;
+      width: 62px;
+      height: 3px;
+      transform: translate(-50%, -50%);
+    }
+  
+    .addTestHeading {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 800;
+      margin-top: 3%;
+    }
+    .addTestDropDownContainer {
+      @include flexVertical;
+      // padding: 54px 0px 20px 50px;
+      .inputFieldContainer {
+        position: relative;
+        margin-right: 70px;
+      }
+      .dropDownLableText {
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+        margin-right: 20px;
+        flex-shrink: 0;
+        text-align: end;
+      }
+      .selectInputField {
+        background: var(--white1);
+        border: 1px solid var(--grey6);
+        border-radius: 6px;
+        height: 42px;
+        width: 254px;
+        @include font(var(--grey4), var(--font-16), var(--font-medium));
+        padding: 0px 14px 0px 14px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+      }
+      .downArrowStyle {
+        position: absolute;
+        right: 16px;
+        top: 18px;
+      }
+    }
+    // Search Cotainer
+    .searchContainer {
+      @include flexVertical;
+      padding: 30px 0;
+      .search {
+        @include flexVertical;
+        .searchInput {
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 50px;
+          width: 285px;
+          padding: 0px 12px 0px 10px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        .searchButton {
+          background: var(--green1);
+          padding: 17px 14px;
+          cursor: pointer;
+          border-radius: 20%;
+          margin-left: 8px;
+          height: 50px;
+          svg {
+            vertical-align: inherit;
+          }
+        }
+      }
+      .viewAllBtn {
+        @include font(var(--black2), var(--font-14), var(--font-normal));
+        border: 1px solid var(--blue1);
+        border-radius: 6px;
+        background: var(--white1);
+        margin-left: 24px;
+        height: 42px;
+        width: 86px;
+      }
+    }
+    // Table
+    .tableContainer {
+      margin: 20px 15px;
+      max-height: 250px;
+      background-color: var(--white1);
+      overflow-y: auto;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      td {
+        padding: 12px 10px 12px 0;
+      }
+    }
+    .addButtonContainer {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 30px;
+    }
+    .addTestPopupAddToJob {
+      .addToJobAddText {
+        @include font(var(--blue1), var(--font-12), var(--font-normal));
+        cursor: pointer;
+        border: 1px solid var(--blue1);
+        border-radius: 20px;
+        padding: 4px 14px;
+      }
+
+      .addToJobAddGreenText {
+        @include font(var(--green1), var(--font-12), var(--font-normal));
+        border: 1px solid var(--green1);
+        border-radius: 20px;
+        padding: 4px 14px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.view_Btn{
+  color: var(--blue1);
+  font-size: var(--font-12);
+  font-weight: var(--font-medium);
+  text-decoration: underline;
+  cursor: pointer;
+  position: relative;
+  left: 8px;
+}

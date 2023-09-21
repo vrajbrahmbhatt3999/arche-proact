@@ -1,0 +1,114 @@
+@import '../../../styles/mixin.scss';
+
+.notificationHide {
+  font-size: var(--XXSmall);
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  transform: 0.6s ease-in-out;
+  animation: toast-in-left 0.7s;
+  visibility: hidden;
+  z-index: 100;
+  @include responsive(768px) {
+    right: 0px;
+  }
+  .notification {
+    position: relative;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 10px #999;
+    opacity: 0.9;
+    // min-height: 50px;
+    // width: 565px;
+    width: 100%;
+    .notificationHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--white1);
+      padding: 10px;
+      .title {
+        display: flex;
+        align-items: center;
+      }
+      .image {
+        margin-right: 5px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+      }
+      .notificationTitle {
+        @include font(var(--black1), var(--font-12), var(--font-semibold));
+        font-size: var(--XSmall);
+        margin-top: 0;
+        width: 100px;
+        min-width: 300px;
+        // height: 18px;
+      }
+    }
+  }
+}
+.notificationShow {
+  visibility: visible;
+  opacity: 1;
+  font-size: var(--XXSmall);
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 100;
+  transform: 0.6s ease-in-out;
+  animation: toast-in-right 0.7s;
+
+  .notification {
+    position: relative;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 10px #999;
+    opacity: 0.9;
+    // min-height: 50px;
+    width: 100%;
+    z-index: 100;
+
+    .notificationHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--white1);
+      padding: 10px;
+      .title {
+        display: flex;
+        align-items: center;
+      }
+      .image {
+        margin-right: 5px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+      }
+      .notificationTitle {
+        @include font(var(--black1), var(--font-12), var(--font-semibold));
+        margin-top: 0;
+        width: 100%;
+        min-width: 300px;
+      }
+    }
+  }
+}
+@keyframes toast-in-right {
+  from {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+  to {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+@keyframes toast-in-left {
+  from {
+    transform: translateX(0%);
+    visibility: visible;
+  }
+  to {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+}

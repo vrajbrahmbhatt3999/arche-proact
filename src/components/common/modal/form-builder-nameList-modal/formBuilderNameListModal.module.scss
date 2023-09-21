@@ -1,0 +1,115 @@
+@import "../../../../styles/mixin.scss";
+
+.mainContainer {
+  width: 190px;
+  margin: 5px 0px 0px 0px;
+  background: var(--white1);
+  box-shadow: 0px 2px 6px rgba(13, 10, 44, 0.08);
+  border-radius: 20px;
+  position: absolute;
+  z-index: 2;
+  // right: 256px;
+  top: 40px;
+
+  .container {
+    width: 183px;
+    max-height: 145px;
+    background-color: var(--white1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    border-radius: 20px;
+    // margin: 10px auto;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      border-radius: 50px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 50px;
+      -webkit-box-shadow: inset 0 0 100px var(--grey10);
+    }
+
+    .noRecordTextStyle {
+      text-align: center;
+      margin: 50px auto;
+      font-size: var(--font-18);
+      font-weight: var(--font-semibold);
+    }
+
+    .formContainer {
+      display: flex;
+      flex-direction: row;
+      margin: 3px 5px 5px 5px;
+      padding: 5px 0px 0px 10px;
+      cursor: pointer;
+
+      .iconStyle {
+        margin-top: 2px;
+      }
+
+      .formNameTextStyle {
+        padding: 0px 5px 0px 10px;
+        @include font(var(--black2), var(--font-16), var(--font-normal));
+
+        &:hover {
+          @include font(var(--green1), var(--font-16), var(--font-normal));
+        }
+      }
+    }
+
+    .insurancePlan {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 3px 5px 5px 5px;
+      padding: 10px 0px 10px 5px;
+
+      .insurance {
+        display: flex;
+        flex-direction: row;
+
+        .iconStyle {
+          margin-top: 2px;
+        }
+
+        .formNameTextStyle {
+          padding: 0px 5px 0px 10px;
+          cursor: pointer;
+          @include font(var(--black2), var(--font-16), var(--font-normal));
+
+          &:hover {
+            @include font(var(--green1), var(--font-16), var(--font-normal));
+          }
+        }
+      }
+
+      .arrowStyle {
+        transform: rotate(-0.25turn);
+      }
+    }
+
+    .optionContainer {
+      background-color: var(--white1);
+      border-radius: 6px;
+      padding: 10px;
+      position: absolute;
+      top: 25px;
+      left: 182px;
+      width: 170px;
+      box-shadow: 0px 2px 6px rgba(13, 10, 44, 0.3);
+
+      .insuranceText {
+        padding: 3px 4px;
+        cursor: pointer;
+        @include font(var(--black2), var(--font-16), var(--font-normal));
+
+        &:hover {
+          @include font(var(--green1), var(--font-16), var(--font-normal));
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../../styles/mixin.scss';
+
+.labelWrapper {
+  display: flex;
+  gap: 1px;
+  color: var(--black2);
+  font-size: var(--font-16);
+  font-weight: var(--font-bold);
+  justify-content: flex-end;
+  margin-bottom: unset !important;
+  .requiredField {
+    color: var(--red3);
+  }
+}

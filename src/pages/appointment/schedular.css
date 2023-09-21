@@ -1,0 +1,85 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#root > div {
+  width: 100%;
+  height: 100%;
+}
+
+.smart-scheduler {
+  width: 97%;
+  height: 100%;
+  margin: auto;
+  border-radius: 10px;
+  font-family: 'Poppins' !important;
+  --smart-scheduler-timeline-header-horizontal-group-size: 100px;
+  --smart-scheduler-timeline-header-horizontal-cells-size: 50px;
+  --smart-scheduler-timeline-cell-height: 40px;
+}
+.smart-container {
+  font-family: 'Poppins' !important;
+}
+
+.smart-scheduler .custom-group-content {
+  display: flex;
+  align-items: center;
+  grid-column-gap: 10px;
+}
+
+.smart-scheduler .custom-group-content .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  grid-row-gap: 5px;
+}
+
+.smart-scheduler .custom-group-content .details .name {
+  font-size: 18px;
+}
+
+.smart-scheduler .custom-group-content .details .speciality {
+  font-weight: 400;
+}
+
+.smart-scheduler .header-day-number {
+  font-size: 18px;
+}
+/* .smart-content-container {
+  display: none !important;
+} */
+/* .smart-element {
+  width: 97%;
+  margin: auto;
+} */
+.smart-scheduler-header {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.smart-button {
+  min-width: fit-content !important;
+  text-align: center !important;
+  font-weight: var(--font-medium) !important;
+  color: var(--black1);
+  /* padding: 0px 3px; */
+}
+/* .smart-scheduler[view-type='month']
+  .smart-scheduler-cells-container
+  .smart-scheduler-cell:not(.scale)[today]
+  > div:not([class]) {
+} */
+.smart-scheduler
+  .smart-scheduler-cells-container
+  .smart-scheduler-cell:not(.scale)
+  > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.smart-scheduler-event-content {
+  padding: 0px 5px 5px 5px !important;
+}

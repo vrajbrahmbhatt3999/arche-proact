@@ -1,0 +1,93 @@
+@import '../../../../styles/mixin.scss';
+
+.appointmentDetailsContainer {
+  width: 390px;
+  // max-height: 400px;
+  margin: auto;
+  // overflow: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 17px 20px 30px 20px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+  }
+  .appointmentDetailsHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 25px 0px 0px 0px;
+  }
+
+  .appointmentDetailsDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 30px;
+  }
+  &::-webkit-scrollbar {
+    display: block;
+    width: 7px;
+    height: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--grey7);
+    border-radius: 10px;
+    border: 1px solid var(--grey7);
+  }
+  .mainDetailsContainer {
+    margin: 0px 0px 0px 15px;
+    max-height: 334px;
+    overflow-y: auto;
+    .detailsRow {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin: 10px;
+      .detailsLabel {
+        display: inline-block;
+        width: 70px;
+        @include font(var(--black2), var(--font-16), var(--font-semibold));
+      }
+      .detailsValue {
+        display: inline-block;
+        max-width: 200px;
+        overflow-wrap: break-word;
+        margin: 0px 0px 0px 20px;
+        @include font(var(--grey4), var(--font-16), var(--font-normal));
+      }
+    }
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+  }
+  .buttonContainer {
+    display: flex;
+    .cancelButton {
+      //   width: 100%;
+      white-space: nowrap;
+      background: none;
+      border: 1px solid var(--red1);
+      border-radius: 6px;
+      color: var(--red1);
+      font-weight: var(--font-normal);
+      font-size: var(--font-12);
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import "../../../../styles/mixin.scss";
+.addResultsPopupContainer {
+  width: 66%;
+  height: 570px;
+  padding: 30px 36px 80px;
+  background: var(--white1);
+  border-radius: 10px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+  }
+  .addResultsContainer {
+    .filesContainer {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .formContainer {
+      margin-block: 10px;
+
+      .inputWid {
+        margin-top: 15px;
+        margin-bottom: 8px;
+        flex-basis: 30%;
+      }
+    }
+    .tableContainer {
+      height: 200px;
+      width: 100%;
+      white-space: nowrap;
+      overflow-x: auto;
+      padding-top: 16px;
+      table {
+        height: initial;
+      }
+      td {
+        padding: 12px 12px 12px 0;
+      }
+    }
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    .submitBtn {
+      height: 42px;
+      width: 118px;
+    }
+    .resetBtn {
+      background: none;
+      height: 42px;
+      width: 118px;
+      margin-left: 18px;
+      border: 1px solid var(--blue1);
+      border-radius: 6px;
+      color: var(--black1);
+    }
+  }
+  .titleContainer {
+    position: relative;
+  }
+
+  .textUnderline {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    background: #02bf90;
+    width: 62px;
+    height: 3px;
+    transform: translate(-50%, -50%);
+  }
+
+  .addClaimHeading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 3%;
+  }
+}
+
+.view_Btn{
+  color: var(--blue1);
+  font-size: var(--font-12);
+  font-weight: var(--font-medium);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.note{
+  color: var(--grey4);
+  font-size: var(--font-14);
+  font-weight: var(--font-medium);
+  text-align: center;
+  margin-top: 15px;
+}

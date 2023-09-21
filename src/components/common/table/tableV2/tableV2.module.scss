@@ -1,0 +1,38 @@
+@import "../../../../styles/mixin.scss";
+
+.table {
+  width: 100%;
+
+  .tableHeadingRow {
+    background: transparent;
+    border-top: 1px solid var(--grey8);
+    border-bottom: 1px solid var(--grey8);
+
+    .tableHeading {
+      text-align: center;
+
+      .headerContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .tableRow {
+    .tableColumn {
+      text-align: center;
+    }
+  }
+
+  .activeRow {
+    background-color: #e0fff7;
+  }
+
+  .noReordFoundText {
+    text-align: center;
+    @include font(var(--black1), var(--font-16), var(--font-bold));
+    padding: 12px 0px;
+  }
+}

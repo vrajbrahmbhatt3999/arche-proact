@@ -1,0 +1,154 @@
+@import '../../../styles/mixin.scss';
+
+.receiptPayOnlineModalContainer {
+  width: 900px;
+  height: 500px;
+  // overflow: auto;
+  margin: auto;
+  background: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  padding: 0px 30px 40px 30px;
+  position: relative;
+  .closeIconStyle {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  .receiptPayOnlineModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 35px 0px 0px 0px;
+  }
+
+  .receiptPayOnlineModalDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 20px;
+  }
+
+  .receiptPayOnlineFormContainer {
+    width: 860px;
+    height: 320px;
+    overflow: auto;
+    margin: 20px 0px 0px 0px;
+    padding: 0px 10px 0px 0px;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+    .formFieldContainer {
+      margin: 25px 0px 25px 0px;
+      @include flexVertical;
+      .inputFieldContainer {
+        display: flex;
+        align-items: baseline;
+        column-gap: 12px;
+        flex: 1;
+        // flex-basis: 33%;
+        .formLabel {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 140px;
+          text-align: right;
+        }
+        .fieldAndErrorTxtContainer {
+          width: 60%;
+          position: relative;
+          .inputField {
+            width: 90%;
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+            padding: 0px 14px 0px 14px;
+          }
+          .extraInputField {
+            width: 90%;
+          }
+          .phoneNumberInput {
+            width: 90%;
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+          }
+          .selectInputField {
+            width: 90%;
+            outline: none;
+            cursor: pointer;
+            box-shadow: none;
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+          }
+          .formError {
+            @include font(
+              var(--errorColor),
+              var(--font-12),
+              var(--font-normal)
+            );
+            margin-left: 5px;
+            margin-top: 5px;
+          }
+        }
+        .textAreaContainer {
+          display: flex;
+          flex-direction: column;
+          width: 85%;
+          .textArea {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 100px;
+            width: 95%;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+            padding: 10px 14px 0px 14px;
+          }
+          .formError {
+            color: var(--errorColor);
+            font-size: var(--font-12);
+            font-weight: var(--font-normal);
+            margin-left: 5px;
+            margin-top: 5px;
+            width: 230px;
+          }
+        }
+      }
+      .textAreaFieldContainer {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        column-gap: 16px;
+      }
+    }
+    .receiptPayOnlineBtnContainer {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0px 0px 0px;
+      .receiptPaytmentBtn {
+        width: fit-content;
+        padding: 10px 30px;
+        font-weight: var(--font-medium);
+        @include font(var(--blue1), var(--font-16), var(--font-medium));
+        background: none;
+        border: 1px solid var(--blue1);
+      }
+    }
+  }
+}

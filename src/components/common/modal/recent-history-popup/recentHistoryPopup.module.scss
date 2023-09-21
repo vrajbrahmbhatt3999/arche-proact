@@ -1,0 +1,53 @@
+.popupContainer {
+  width: 400px;
+  //   height: 0px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .recentHistory {
+    margin-top: 50px;
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .recentContent {
+      margin: 0 40px;
+      .date {
+        font-weight: var(--font-normal);
+        font-size: var(--font-12);
+        color: var(--grey4);
+        margin-bottom: 6px;
+      }
+      .questionContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        font-weight: var(--font-medium);
+        font-size: var(--font-16);
+        color: var(--black2);
+        margin-bottom: 40px;
+        .questionContent {
+          margin-left: 8px;
+          .answer {
+            color: var(--green1);
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}

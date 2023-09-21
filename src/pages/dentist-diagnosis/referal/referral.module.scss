@@ -1,0 +1,387 @@
+.referralMainContainer {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  backdrop-filter: blur(97px);
+  padding: 20px 25px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  .radioContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input[type='radio'] {
+      accent-color: green;
+    }
+    .internalRadio {
+      display: flex;
+      align-items: center;
+
+      .radioInput {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-left: 12px;
+        outline: none;
+        border: 2px solid gray;
+        position: relative;
+      }
+      .radioInput:before {
+        cursor: pointer;
+        content: '';
+        top: 52%;
+        left: 50%;
+        width: 74%;
+        height: 74%;
+        position: absolute;
+        border-radius: 50%;
+        display: block;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.2s;
+      }
+      .radioInput:checked:before {
+        background: var(--green1);
+      }
+      .radioInput:checked {
+        border-color: var(--green1);
+      }
+      .internalText {
+        margin-left: 8px;
+        font-weight: var(--font-medium);
+        font-size: var(--font-16);
+        color: var(--green1);
+        margin-bottom: 0px;
+      }
+      .disableText {
+        margin-left: 8px;
+        font-weight: var(--font-medium);
+        font-size: var(--font-16);
+        color: var(--grey4);
+        margin-bottom: 0px;
+      }
+    }
+    .externalRadio {
+      display: flex;
+      align-items: center;
+      margin-left: 37px;
+
+      .radioInput {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-left: 12px;
+        outline: none;
+        border: 2px solid gray;
+        position: relative;
+      }
+      .radioInput:before {
+        cursor: pointer;
+        content: '';
+        top: 52%;
+        left: 50%;
+        width: 74%;
+        height: 74%;
+        position: absolute;
+        border-radius: 50%;
+        display: block;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.2s;
+      }
+      .radioInput:checked:before {
+        background: var(--green1);
+      }
+      .radioInput:checked {
+        border-color: var(--green1);
+      }
+      .radioLable {
+        margin-left: 10px;
+      }
+      .externalText {
+        margin-left: 8px;
+        font-weight: var(--font-medium);
+        font-size: var(--font-16);
+        color: var(--green1);
+        margin-bottom: 0px;
+      }
+      .disableText {
+        margin-left: 8px;
+        font-weight: var(--font-medium);
+        font-size: var(--font-16);
+        color: var(--grey4);
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .customRadio {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .customRadio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .customRadio span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--green1); /* Border color for the radio button */
+    border-radius: 50%; /* Make the radio button round */
+  }
+
+  .customRadio input:checked ~ span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--green1); /* Accent color */
+    border-radius: 50%;
+  }
+
+  .customRadio label {
+    font-weight: var(--font-medium);
+    font-size: var(--font-16);
+  }
+
+  /* Adjust the margin and positioning as needed */
+  .customRadio:nth-child(2) {
+    margin-left: 37px;
+  }
+
+  .doctorContainer {
+    margin: 30px 20px;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    .dateInputFieldContainer {
+      display: flex;
+      align-items: center;
+      .dateText {
+        font-size: var(--font-16);
+        font-weight: var(--font-semibold);
+        color: var(--black1);
+        margin-bottom: 0px;
+      }
+      .dateInputField {
+        width: 250px;
+        height: 42px;
+        padding: 0px 10px 0px 10px;
+        background: var(--white1);
+        border: 1px solid var(--grey6);
+        border-radius: 6px;
+        margin-left: 12px;
+      }
+    }
+    .doctorInputFieldContainer {
+      display: flex;
+      align-items: center;
+      // margin-left: 67px;
+
+      .doctorText {
+        font-size: var(--font-16);
+        font-weight: var(--font-semibold);
+        color: var(--black1);
+        margin-bottom: 0px;
+        text-align: right;
+        width: 87px;
+      }
+      .errorContainer {
+        display: flex;
+        flex-direction: column;
+        .doctorInputField {
+          width: 250px;
+          height: 42px;
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          margin-left: 12px;
+          padding: 0px 10px 0px 10px;
+        }
+        .errorText {
+          color: var(--errorColor);
+          font-size: var(--font-14);
+          font-weight: var(--font-medium);
+          padding: 5px 0px 0px 12px;
+        }
+      }
+    }
+    .referDoctorInputFieldContainer {
+      height: 45px;
+      // margin-left: 55px;
+      .referDoctorContainer {
+        display: flex;
+        align-items: center;
+        // margin-top: 20px;
+
+        .referDoctorText {
+          font-size: var(--font-16);
+          font-weight: var(--font-semibold);
+          color: var(--black1);
+          margin-bottom: 0px;
+          text-align: right;
+          width: 95px;
+        }
+        .customClassContent {
+          margin-left: 12px;
+          width: 250px;
+          background: var(--white1);
+          border-radius: 6px;
+        }
+      }
+
+      .errorContainer {
+        display: flex;
+        .errorExtraDiv {
+          // width: 138px;
+        }
+        .formError {
+          color: var(--errorColor);
+          font-size: var(--font-14);
+          font-weight: var(--font-normal);
+          margin-left: 110px;
+          margin-top: 5px;
+          // width: 230px;
+        }
+      }
+    }
+  }
+
+  .appMaincontiner {
+    display: flex;
+
+    .appointmentMainContainer {
+      display: flex;
+      flex-direction: column;
+      // margin-top: 37px;
+      .appointmentContainer {
+        display: flex;
+        align-items: center;
+        .appointmentText {
+          color: var(--black1);
+          font-size: var(--font-16);
+          font-weight: var(--font-semibold);
+          margin-bottom: 0px;
+          text-align: right;
+          width: 144px;
+        }
+
+        .customClassContent {
+          margin-left: 25px;
+          width: 250px;
+          background: var(--white1);
+          border-radius: 6px;
+        }
+      }
+      .errorContainer {
+        display: flex;
+        .errorExtraDiv {
+          width: 138px;
+        }
+        .formError {
+          color: var(--errorColor);
+          font-size: var(--font-14);
+          font-weight: var(--font-normal);
+          margin-left: 35px;
+          margin-top: 5px;
+          // width: 230px;
+        }
+      }
+    }
+  }
+  .remarksMainContainer {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    margin-top: 36px;
+    .remarksContainer {
+      display: flex;
+      align-items: center;
+
+      .remarksText {
+        font-size: var(--font-16);
+        font-weight: var(--font-semibold);
+        color: var(--black1);
+        margin-left: 87px;
+
+        margin-bottom: 0px;
+      }
+      .errorContainer {
+        display: flex;
+        flex-direction: column;
+        .remarksInputField {
+          width: 250px;
+          height: 42px;
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          margin-left: 12px;
+          padding-left: 10px;
+        }
+        .errorText {
+          color: var(--errorColor);
+          font-size: var(--font-14);
+          font-weight: var(--font-medium);
+          padding: 5px 0px 0px 12px;
+        }
+      }
+    }
+
+    .paymentRemarksContainer {
+      display: flex;
+      align-items: center;
+      margin-left: 40px;
+
+      .remarksText {
+        font-size: var(--font-16);
+        font-weight: var(--font-semibold);
+        color: var(--black1);
+        width: 117px;
+        margin-bottom: 0px;
+        text-align: right;
+      }
+      .errorContainer {
+        display: flex;
+        flex-direction: column;
+        .paymentRemarksInputField {
+          width: 250px;
+          height: 42px;
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          margin-left: 12px;
+          padding-left: 10px;
+        }
+        .errorText {
+          color: var(--errorColor);
+          font-size: var(--font-14);
+          font-weight: var(--font-medium);
+          padding: 5px 0px 0px 12px;
+        }
+      }
+    }
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    .endDiagnosisBtn {
+      color: var(--blue1);
+      border: 1px solid var(--blue1);
+      background: rgba(255, 255, 255, 0.7);
+    }
+  }
+}

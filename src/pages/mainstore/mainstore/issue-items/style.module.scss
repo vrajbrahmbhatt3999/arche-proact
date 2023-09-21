@@ -1,0 +1,18 @@
+@import "../../../../styles//mixin.scss";
+
+.tableContainer {
+  width: 100%;
+  white-space: nowrap;
+  margin: 40px 0px 0px 0px;
+  height: 250px;
+  overflow: auto;
+  tr {
+    th {
+      min-width: 120px;
+    }
+  }
+  .viewPdfLink {
+    @include font(var(--blue1), var(--font-12), var(--font-medium));
+    cursor: pointer;
+  }
+}

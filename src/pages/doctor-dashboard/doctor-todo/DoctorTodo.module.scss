@@ -1,0 +1,243 @@
+.todoContainer {
+  display: flex;
+  flex-direction: column;
+  .todoHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .todoTitle {
+      font-weight: var(--font-semibold);
+      font-size: var(--font-20);
+      padding: 10px 0px 20px 0px;
+    }
+    .addNewStyle {
+      font-weight: var(--font-normal);
+      font-size: var(--font-16);
+      color: var(--green1);
+      padding: 10px 0px 20px 10px;
+      cursor: pointer;
+    }
+  }
+  .mainContainerTodo {
+    position: relative;
+    width: 366px;
+    height: 396px;
+    margin: 0px 0px 30px 0px;
+    background: #ffffff;
+    box-shadow: 0px 2px 6px rgba(13, 10, 44, 0.08);
+    border-radius: 20px;
+
+    .container {
+      width: 356px;
+      max-height: 380px;
+      background-color: #ffffff;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      margin: 10px auto;
+      border-radius: 20px;
+      &::-webkit-scrollbar {
+        width: 4px;
+        border-radius: 50px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        -webkit-box-shadow: inset 0 0 100px var(--grey10);
+      }
+      .noRecordTextStyle {
+        text-align: center;
+        margin: 50px auto;
+        font-size: var(--font-20);
+        font-weight: var(--font-semibold);
+      }
+      .notifyContainer {
+        .isReadStyle {
+          margin: 5px;
+          padding: 5px;
+          border-radius: 5px;
+
+          .titleStatusContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .titleStatusStyleContainer {
+              display: flex;
+              flex-direction: row;
+
+              .iconStyle {
+                margin: 7px 5px 5px 0px;
+              }
+              .titleStyle {
+                padding: 5px 0px 5px 5px;
+                font-weight: var(--font-semibold);
+                font-size: var(--font-16);
+                text-decoration: line-through;
+                overflow-wrap: anywhere;
+              }
+            }
+            .alarmPriorityContainer {
+              display: flex;
+              flex-direction: row;
+              width: 18%;
+              .priorityListStyleContainer {
+                .mediumPriorityStyle {
+                  width: 60px;
+                  text-align: center;
+                  border-radius: 4px;
+                  padding: 1px 5px;
+                  margin-top: 4px;
+                  background-color: var(--yellow2);
+                  color: var(--yellow1);
+                  font-weight: 500;
+                  font-size: 12px;
+                }
+                .highPriorityStyle {
+                  width: 60px;
+                  text-align: center;
+                  border-radius: 4px;
+
+                  padding: 1px 5px;
+                  margin-top: 4px;
+                  background-color: var(--red4);
+                  color: var(--red3);
+                  font-weight: 500;
+                  font-size: 12px;
+                }
+                .lowPriorityStyle {
+                  width: 60px;
+                  text-align: center;
+                  border-radius: 4px;
+                  padding: 1px 5px;
+                  margin-top: 4px;
+                  background-color: var(--green4);
+                  color: var(--green1);
+                  font-weight: 500;
+                  font-size: 12px;
+                }
+              }
+              .alarmIcon {
+                display: flex;
+                margin: 3px 0px 0px 10px;
+              }
+            }
+          }
+          .textStyle {
+            font-style: normal;
+            font-weight: var(--font-normal);
+            font-size: var(--font-12);
+            color: var(--grey4);
+            padding-left: 5px;
+            text-decoration: line-through;
+            padding: 0px 8px 10px 31px;
+            overflow-wrap: anywhere;
+          }
+        }
+        .unReadStyle {
+          margin: 5px;
+          padding: 5px;
+          border-radius: 5px;
+          .titleStatusContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .titleStatusStyleContainer {
+              display: flex;
+              flex-direction: row;
+              .iconStyle {
+                margin: 7px 5px 5px 0px;
+              }
+              .titleStyle {
+                padding: 5px 0px 5px 5px;
+                font-weight: var(--font-semibold);
+                font-size: var(--font-16);
+                overflow-wrap: anywhere;
+              }
+            }
+            .alarmPriorityContainer {
+              display: flex;
+              flex-direction: row;
+              width: 27%;
+              .priorityListStyleContainer {
+                .mediumPriorityStyle {
+                  width: 60px;
+                  text-align: center;
+                  border-radius: 4px;
+
+                  padding: 1px 5px;
+                  margin-top: 4px;
+                  background-color: var(--yellow2);
+                  color: var(--yellow1);
+                  font-weight: 500;
+                  font-size: 12px;
+                }
+                .highPriorityStyle {
+                  width: 60px;
+                  text-align: center;
+                  border-radius: 4px;
+
+                  padding: 1px 3px;
+                  margin-top: 4px;
+                  background-color: var(--red4);
+                  color: var(--red3);
+                  font-weight: 500;
+                  font-size: 12px;
+                }
+                .lowPriorityStyle {
+                  width: 60px;
+                  text-align: center;
+                  border-radius: 4px;
+
+                  padding: 1px 3px;
+                  margin-top: 4px;
+                  background-color: var(--green4);
+                  color: var(--green1);
+                  font-weight: 500;
+                  font-size: 12px;
+                }
+              }
+              .alarmIcon {
+                display: flex;
+                margin: 3px 0px 0px 10px;
+              }
+            }
+          }
+          .textStyle {
+            font-style: normal;
+            font-weight: var(--font-normal);
+            font-size: var(--font-12);
+            color: var(--grey4);
+            padding: 0px 8px 10px 31px;
+            overflow-wrap: anywhere;
+          }
+          .buttonContainer {
+            display: flex;
+            flex-direction: row;
+            margin-left: 25px;
+            .editButtonStyle {
+              width: 58px;
+              height: 30px;
+              background: var(--grey4);
+              border-radius: 6px;
+              font-size: 12px;
+            }
+            .deleteButtonStyle {
+              width: 58px;
+              height: 30px;
+              background: var(--red3);
+              border-radius: 6px;
+              font-size: 12px;
+            }
+          }
+        }
+
+        .divider {
+          width: 95%;
+          height: 1px;
+          margin: 3px 0px 3px 12px;
+          background: var(--grey5);
+        }
+      }
+    }
+  }
+}

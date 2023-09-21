@@ -1,0 +1,70 @@
+@import "../../../styles/mixin.scss";
+
+.fileInputField {
+  background: var(--white1);
+  border: none;
+  height: 42px;
+  width: 100%;
+  padding: 0 7px;
+  @include responsive(568px) {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.labelWrapper {
+  display: flex;
+  gap: 1px;
+  color: var(--black2);
+  font-size: var(--font-14);
+  font-weight: var(--font-bold);
+  justify-content: flex-end;
+  margin-bottom: unset !important;
+  flex-basis: 31%;
+  text-align: right;
+  .requiredField {
+    color: var(--red3);
+  }
+}
+
+.inputFieldContainer {
+  @include flexVertical;
+  gap: 10px;
+  width: 100%;
+  .inlineItems {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--grey6);
+    border-radius: 5px;
+    flex-basis: 70%;
+    padding: 0 5px;
+  }
+
+  .searchIconStyle {
+    flex-basis: 10%;
+    margin-right: 7px;
+    cursor: pointer;
+  }
+}
+
+.errorContainer {
+  @include flexVertical;
+  position: relative;
+  width: 100%;
+  .extraSpanRadio {
+    width: 24%;
+  }
+  .extraSpan {
+    @include font(var(--black2), var(--font-16), var(--font-semibold));
+    width: 34%;
+    flex-shrink: 0;
+    text-align: end;
+  }
+}
+
+.rdSpan {
+  color: var(--grey4);
+  background: var(--grey14);
+  padding: 8px 14px;
+  border-right: 1px solid;
+}

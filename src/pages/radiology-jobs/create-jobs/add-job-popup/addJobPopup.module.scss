@@ -1,0 +1,37 @@
+@import "../../../../styles/mixin.scss";
+
+.addJobPopupContainer {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 2%;
+    top: 3%;
+  }
+  .addJobContainer {
+    margin-top: 50px;
+    .title {
+      @include font(var(--black2), var(--font-24), var(--font-semibold));
+      text-align: center;
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 0px auto 30px auto;
+      width: 62px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .descriptionText {
+      padding: 10px 20px 20px;
+      @include font(var(--grey4), var(--font-14), var(--font-normal));
+      max-height: 120px;
+      overflow: auto;
+    }
+  }
+}

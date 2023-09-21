@@ -1,0 +1,109 @@
+@import "../../../../styles/mixin.scss";
+
+.search {
+  @include flexVertical;
+  gap: 15px;
+  margin: 35px 0 20px 0;
+
+  .searchInput {
+    @include font(var(--grey4), var(--font-16), var(--font-medium));
+    background: var(--white1);
+    border: 1px solid var(--grey6);
+    border-radius: 6px;
+    height: 50px;
+    width: 285px;
+    padding: 0px 12px 0px 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .searchButton {
+    background: var(--green1);
+    cursor: pointer;
+    border-radius: 20%;
+    margin: 0 18px 0 5px;
+    height: 50px;
+    width: 50px;
+    @include flexCenter;
+  }
+  .stylePrint {
+    cursor: pointer;
+  }
+  .styleExport {
+    cursor: pointer;
+  }
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  .text {
+    display: flex;
+    .subText {
+      @include font(var(--black2), var(--font-16), var(--font-semibold));
+    }
+    .physicianName {
+      margin-left: 10px;
+    }
+  }
+  .text1 {
+    display: flex;
+    margin-left: 20px;
+    .subText {
+      @include font(var(--black2), var(--font-16), var(--font-semibold));
+    }
+    .physicianName {
+      margin-left: 10px;
+    }
+  }
+}
+.tableContainer {
+  width: 100%;
+  white-space: nowrap;
+  overflow: auto;
+  height: 250px;
+  margin-top: 35px;
+  &::-webkit-scrollbar {
+    display: block;
+    width: 7px;
+    height: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--grey7);
+    border-radius: 10px;
+    border: 1px solid var(--grey7);
+  }
+}
+
+.blueLinkText {
+  color: var(--blue1);
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.diacomModalClass {
+  z-index: 3;
+  width: 98%;
+  height: 100vh;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  overflow: auto;
+}
+
+.diacomIframeContainer {
+  width: 100%;
+  white-space: nowrap;
+  overflow: auto;
+  height: 100vh;
+}
+
+.closeModal {
+  top: 0 !important;
+}

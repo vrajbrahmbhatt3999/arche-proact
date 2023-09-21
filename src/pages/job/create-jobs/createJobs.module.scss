@@ -1,0 +1,293 @@
+@import '../../../styles/mixin.scss';
+
+.pageWrapper {
+  background: var(--white1);
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 10px 117px 14px #0000000d;
+  border-radius: 10px;
+  padding: 20px 5px;
+  margin: 0px 20px 32px 0px;
+  // Create Job Form
+  .createJobForm {
+    .branchNameWrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 33.33%;
+      padding-left: 16px;
+
+      label {
+        flex-basis: 30%;
+        font-size: 16px;
+      }
+
+      select {
+        flex-basis: 70%;
+        border: 1px solid var(--grey6);
+        border-radius: 5px;
+        height: 42px;
+        padding: 0 7px;
+      }
+    }
+    .formFieldRow {
+      @include flexVertical;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 100%;
+      .formFieldContainer {
+        @include flexCenter;
+        position: relative;
+        margin-top: 25px;
+        flex-direction: column;
+        flex-basis: 32%;
+        position: relative;
+        @include responsive(768px) {
+          width: 50%;
+        }
+        @include responsive(568px) {
+          width: 100%;
+        }
+
+        .mt_0 {
+          margin-top: 0;
+        }
+        .pd_0 {
+          padding-left: 0;
+        }
+        .radioFieldName {
+          font-weight: var(--font-bold);
+        }
+        .inputFieldContainer {
+          @include flexVertical;
+          gap: 10px;
+          width: 100%;
+          .disabledFields {
+            background: var(--grey14);
+            input {
+              background: var(--grey14);
+            }
+          }
+          .customLabel {
+            flex-basis: 31%;
+            font-size: 14px;
+          }
+
+          .phoneNumberInput {
+            // background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            width: 100%;
+            flex: 1;
+            @include responsive(568px) {
+              width: 100%;
+              max-width: none;
+            }
+          }
+        }
+        .errorContainer {
+          @include flexVertical;
+          position: relative;
+          width: 100%;
+          .extraSpanRadio {
+            width: 24%;
+          }
+          .extraSpan {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            width: 34%;
+            flex-shrink: 0;
+            text-align: end;
+          }
+        }
+        // Radio Button
+        .radioFieldGenderContainer {
+          margin-right: 46px;
+        }
+        .customRadioLabel {
+          margin: 0;
+          color: var(--black2);
+          font-size: var(--font-16);
+          font-weight: var(--font-semibold);
+        }
+      }
+    }
+    // Button Container
+    .formButtonContainer {
+      @include flexCenter;
+      width: 100%;
+      margin: 40px 0px 0px 0px;
+    }
+  }
+}
+// Search Container
+.searchContainer {
+  @include flexVertical;
+  gap: 20px;
+  padding-top: 22px;
+  .smartSearchInput {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  }
+  .search {
+    @include flexVertical;
+    .searchInput {
+      @include font(var(--grey4), var(--font-16), var(--font-medium));
+      background: var(--white1);
+      border: 1px solid var(--grey6);
+      border-radius: 6px;
+      height: 50px;
+      width: 285px;
+      padding: 0px 12px 0px 10px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    .searchButton {
+      background: var(--green1);
+      cursor: pointer;
+      border-radius: 20%;
+      margin-left: 8px;
+      height: 50px;
+      width: 50px;
+      @include flexCenter;
+    }
+  }
+  .checkboxContainer {
+    @include font(var(--grey4), var(--font-16), var(--font-medium));
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100px;
+    margin-bottom: 0;
+
+    .checkboxField {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .checkboxLabel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 22px;
+      width: 22px;
+      background-color: var(--white1);
+      border: 1.5px solid var(--grey4);
+      border-radius: 3px;
+    }
+
+    .checkboxField:checked ~ .checkboxLabel {
+      background-color: var(--white1);
+      border: 1.5px solid var(--green1);
+    }
+
+    .checkboxLabel:after {
+      content: '';
+      position: absolute;
+      display: none;
+    }
+
+    .checkboxField:checked ~ .checkboxLabel:after {
+      display: block;
+    }
+
+    .checkboxLabel:after {
+      left: 7px;
+      top: 3px;
+      width: 6px;
+      height: 12px;
+      border: solid var(--green1);
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+// Table
+.TableMainContainer {
+  width: 98%;
+  padding-bottom: 48px;
+  margin-bottom: 30px;
+  background: var(--white2);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(97px);
+  border-radius: 10px;
+  .tableContainer {
+    width: 96%;
+    height: 100%;
+    white-space: nowrap;
+    overflow: auto;
+    margin: 22px 32px 30px 26px;
+    padding-top: 14px;
+    tr {
+      border-top: 1px solid var(--grey8);
+      td {
+        padding: 12px 14px 12px 0px;
+      }
+    }
+  }
+
+  .createJobBtnContainer {
+    @include flexCenter;
+    width: 100%;
+  }
+}
+
+.eyeIcon {
+  cursor: pointer;
+  position: absolute;
+  right: -30px;
+  z-index: 20;
+}
+
+.infoContainer {
+  cursor: pointer;
+  position: absolute;
+  right: -30px;
+  z-index: 1;
+
+  &:hover::after {
+    @include font(var(--black2), var(--font-12), var(--font-semibold));
+    @include flexCenter;
+    position: absolute;
+    content: 'Put age in years';
+    background-color: var(--white1);
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(7px);
+    border-radius: 6px;
+    width: 116px;
+    height: 36px;
+    // z-index: 111;
+    opacity: 1;
+    left: 28px;
+    top: -4px;
+  }
+}
+
+.inputField {
+  border: 1px solid var(--grey6);
+  border-radius: 6px;
+  padding: 8px;
+  width: 70px;
+}
+
+.disabledFields {
+  background: var(--grey14);
+  input {
+    background: var(--grey14);
+  }
+}
+
+.mt_0 {
+  margin-top: 0 !important;
+}

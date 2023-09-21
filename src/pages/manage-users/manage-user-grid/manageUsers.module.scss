@@ -1,0 +1,52 @@
+@import "../../../styles/mixin.scss";
+.mainContainer {
+  // width: 98%;
+  // height: 500px;
+  // background: rgba(255, 255, 255, 0.7);
+  // box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  // border-radius: 10px;
+  .searchAndBtnContainer {
+    @include flexVertical;
+    justify-content: space-between;
+    margin: 15px 0px 20px 0px;
+    .searchContainer {
+      @include flexVertical;
+      column-gap: 10px;
+      .searchFieldContainer {
+        @include flexVertical;
+        column-gap: 12px;
+        .searchLabel {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 50px;
+          text-align: right;
+        }
+        .searchInput {
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 42px;
+          width: 230px;
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          padding: 0px 14px 0px 14px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+      }
+      .searchButton {
+        background: var(--green1);
+        padding: 10px 12px;
+        cursor: pointer;
+        border-radius: 20%;
+        margin-right: 5px;
+      }
+    }
+  }
+  @include pageWrapper(10px);
+  .tableContainer {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}

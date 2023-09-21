@@ -1,0 +1,131 @@
+@import '../../../styles/mixin.scss';
+
+.sidebarContainer {
+  border-left: 10px solid var(--white1);
+  // width: 150px;
+  width: 10%;
+  padding: 25px 25px 25px 0;
+  min-height: 100vh;
+  height: 100%;
+  .logoStyle {
+    // margin-bottom: 40px;
+    // padding-left: 25px;
+    margin-left: 18px;
+    height: 56px;
+    width: 56px;
+    cursor: pointer;
+  }
+  .sidebarData {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+    .sidebarContent {
+      padding: 20px;
+      margin: 10px 0;
+    }
+    .iconTooltip {
+      position: relative;
+      display: inline-block;
+    }
+    .iconTooltipText {
+      @include font(var(--grey4), var(--font-14), var(--font-normal));
+      visibility: hidden;
+      width: 130px;
+      background-color: var(--white1);
+      text-align: center;
+      padding: 8px 10px;
+      position: absolute;
+      z-index: 11111111;
+      top: -5px;
+      margin-left: 55px;
+      box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(7px);
+      border-radius: 4px;
+      opacity: 0;
+    }
+    .iconTooltipText::after {
+      content: '';
+      position: absolute;
+      top: 26%;
+      right: 100%;
+      margin-top: 2px;
+      border-width: 8px;
+      border-style: solid;
+      border-color: transparent var(--white1) transparent transparent;
+    }
+    .iconTooltip:hover .iconTooltipText {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .active {
+      cursor: pointer;
+      padding: 20px 0px 20px 20px;
+      background-color: var(--white1);
+      border-radius: 0px 40px 40px 0px;
+      position: relative;
+      width: 80px;
+      margin: 10px 0;
+      .iconTooltip {
+        position: relative;
+        display: inline-block;
+      }
+
+      .iconTooltipText {
+        @include font(var(--grey4), var(--font-14), var(--font-normal));
+        visibility: hidden;
+        width: 130px;
+        background-color: var(--white1);
+        text-align: center;
+        padding: 8px 10px;
+        position: absolute;
+        z-index: 11111111;
+        top: -5px;
+        margin-left: 80px;
+        box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7px);
+        border-radius: 4px;
+        opacity: 0;
+      }
+
+      .iconTooltipText::after {
+        content: '';
+        position: absolute;
+        top: 26%;
+        right: 100%;
+        margin-top: 2px;
+        border-width: 8px;
+        border-style: solid;
+        border-radius: 2px;
+        border-color: transparent var(--white1) transparent transparent;
+      }
+      .iconTooltip:hover .iconTooltipText {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    .active::before {
+      content: '';
+      position: absolute;
+      top: -39px;
+      left: 0;
+      height: 40px;
+      width: 50px;
+      border-bottom-left-radius: 50%;
+      background-color: transparent;
+      box-shadow: 0 15px 0 0 var(--white1);
+    }
+    .active::after {
+      content: '';
+      position: absolute;
+      bottom: -39px;
+      left: 0;
+      height: 40px;
+      width: 50px;
+      border-top-left-radius: 50%;
+      background-color: transparent;
+      box-shadow: 0 -15px 0 0 var(--white1);
+    }
+  }
+}

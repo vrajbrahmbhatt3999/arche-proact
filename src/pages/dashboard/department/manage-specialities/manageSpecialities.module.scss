@@ -1,0 +1,51 @@
+@import "../../../../styles/mixin.scss";
+
+.manageSpecialitiesContainer {
+  background-color: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 0 20px 50px 0;
+  .form {
+    .labelField {
+      display: flex;
+      flex-direction: row;
+      margin-left: 40px;
+      margin-bottom: 30px;
+      .labelText {
+        margin-right: 15px;
+        margin-top: 10px;
+        font-weight: var(--font-semibold);
+        font-size: --font-16;
+        color: var(--black2);
+        width: 160px;
+      }
+      .fieldErrorContainer {
+        .inputField {
+          background: #ffffff;
+          width: 233px;
+          border: 1px solid #cdd4d8;
+          border-radius: 6px;
+          padding: 10px 15px;
+        }
+        .selectInputField {
+          background: #ffffff;
+          width: 233px;
+          border-radius: 6px;
+        }
+      }
+    }
+    .btnContainer {
+      @include flexCenter;
+      flex-direction: row;
+      margin: 10px 0 30px 0;
+      .backBtn {
+        margin-right: 10px;
+        border: 1px solid var(--blue1);
+        color: var(--blue1);
+        border-radius: 6px;
+        background: var(--white1);
+      }
+    }
+  }
+}

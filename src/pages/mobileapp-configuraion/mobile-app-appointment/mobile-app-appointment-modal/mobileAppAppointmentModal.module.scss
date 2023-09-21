@@ -1,0 +1,179 @@
+@import "../../../../styles/mixin.scss";
+
+.appointmentModalContainer {
+  width: 600px;
+  height: 100%;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 17px 14px 60px 0px;
+
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+
+  .appointmentModalHeading {
+    @include font(var(--black2), var(--font-24), var(--font-semibold));
+    text-align: center;
+    margin: 25px 0px 0px 0px;
+  }
+
+  .appointmentDivider {
+    width: 62px;
+    height: 3px;
+    background: var(--green1);
+    margin-bottom: 25px;
+  }
+
+  .addAppointMentForm {
+    width: 100%;
+    // padding: 0px 40px 20px 0px;
+
+    .formFieldColumn {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .formFieldContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        margin-top: 17px;
+
+        .inputFieldContainer {
+          display: flex;
+          align-items: center;
+          position: relative;
+          column-gap: 16px;
+
+          .formLabel {
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+            width: 102px;
+            text-align: right;
+          }
+
+          .attachmentContainerCustomClass {
+            width: 230px;
+            flex-direction: row;
+          }
+
+          .inputField {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 42px;
+            width: 230px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+            padding: 0px 14px 0px 14px;
+          }
+
+          .textArea {
+            background: var(--white1);
+            border: 1px solid var(--grey6);
+            border-radius: 6px;
+            height: 78px;
+            width: 230px;
+            @include font(var(--grey4), var(--font-16), var(--font-medium));
+            padding: 10px 14px 0px 14px;
+          }
+
+          .checkboxContainerBlank {
+            width: 100px;
+          }
+
+          .checkboxContainer {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            width: 100px;
+            @include font(var(--black2), var(--font-16), var(--font-semibold));
+
+            .checkboxField {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+            }
+
+            .checkboxLabel {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 25px;
+              width: 25px;
+              background-color: var(--white1);
+              border: 1.5px solid var(--grey4);
+              border-radius: 3px;
+            }
+
+            .checkboxField:checked ~ .checkboxLabel {
+              background-color: var(--white1);
+              border: 1.5px solid var(--green1);
+            }
+
+            .checkboxLabel:after {
+              content: "";
+              position: absolute;
+              display: none;
+            }
+
+            .checkboxField:checked ~ .checkboxLabel:after {
+              display: block;
+            }
+
+            .checkboxLabel:after {
+              left: 8px;
+              top: 3px;
+              width: 8px;
+              height: 15px;
+              border: solid var(--green1);
+              border-width: 0 3px 3px 0;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+            }
+          }
+        }
+
+        .formError {
+          color: var(--errorColor);
+          font-size: var(--font-12);
+          font-weight: var(--font-normal);
+          margin-top: 5px;
+          width: 230px;
+        }
+      }
+    }
+
+    .formButtonContainer {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 40px 0px 0px 0px;
+
+      .submitButton {
+        width: 119px;
+        height: 42px;
+      }
+
+      .resetButton {
+        width: 119px;
+        height: 42px;
+        border: 1px solid var(--blue1);
+        border-radius: 6px;
+        background: transparent;
+        color: var(--blue1);
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../../../styles/mixin.scss";
+.viewAttachmentPopupContainer {
+  width: 30%;
+  padding: 20px 36px;
+  background: var(--white1);
+  border-radius: 10px;
+  position: relative;
+  .closeIconStyle {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    .dividerStyle {
+      margin: 4px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+  }
+
+  .viewAttachmentContainer {
+    margin-top: 20px;
+    padding: 0 10px 20px;
+    .title {
+      @include font(var(--black2), var(--font-24), var(--font-semibold));
+      text-align: center;
+      line-height: 36px;
+    }
+    .dividerStyle {
+      margin: 0px auto 26px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .discriptionText {
+      @include font(var(--grey4), var(--font-16), var(--font-normal));
+      // margin: 5px 0 20px 0;
+      max-height: 100px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }
+
+}

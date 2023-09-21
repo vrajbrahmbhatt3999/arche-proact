@@ -1,0 +1,85 @@
+@import '../../../../styles/mixin.scss';
+
+.kpiRevenueMainContainer {
+  margin: 25px 0px 0px 0px;
+  overflow: auto;
+  .ButtonDropdownContanier {
+    display: flex;
+    justify-content: space-between;
+    .targetButton {
+      background: var(--green1);
+    }
+    .dropDownContainer {
+      display: flex;
+      .dropdown {
+        display: flex;
+        align-items: center;
+        margin: 0px 15px 0px 0px;
+        .dropdownName {
+          margin: 0px 10px 0px 0px;
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+        }
+        .selectInputField {
+          background: var(--white1);
+          width: 270px;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+  .targetsKPIContainer {
+    margin: 30px 0px 0px 0px;
+    .title {
+      @include font(var(--black2), var(--font-18), var(--font-semibold));
+    }
+    .kpiCardsContainer {
+      align-items: center;
+      margin: 20px 0px 0px 0px;
+      display: flex;
+      flex-wrap: wrap;
+      .kpiBoxContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--grey6);
+        border-radius: 10px;
+        // height: 100%;
+        // width: 100%;
+        margin: 0px 10px 0px 0px;
+        width: 250px;
+        height: 175px;
+        flex: 1;
+        .kpiValueLabelContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .kpiValue {
+            @include font(var(--black2), var(--font-50), var(--font-bold));
+          }
+          .kpiLabel {
+            @include font(var(--grey4), var(--font-14), var(--font-medium));
+          }
+        }
+        .kpiRiseContainer {
+          .kpiRise {
+            @include font(var(--green1), var(--font-12), var(--font-bold));
+          }
+          .kpiFall {
+            @include font(var(--red1), var(--font-12), var(--font-medium));
+          }
+        }
+      }
+    }
+  }
+  .comparaticeAnalysisGraph {
+    margin: 30px 0px 0px 0px;
+    .title {
+      @include font(var(--black2), var(--font-18), var(--font-semibold));
+    }
+    .imgGraph {
+      width: 100%;
+      margin: 10px 0px 0px 0px;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import "../../../../styles/mixin.scss";
+
+.mainContainer {
+  width: 970px;
+  height: 100%;
+  background: var(--white1);
+  border-radius: 10px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+
+  .closeIconContainer {
+    width: 6%;
+    height: 30px;
+    align-self: end;
+    margin: 11px 8px 0px 2px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: var(--font-semibold);
+    font-size: var(--font-24);
+    color: var(--black2);
+  }
+
+  .dividerStyle {
+    margin: 10px auto 30px auto;
+    width: 80px;
+    height: 3px;
+    background: var(--green1);
+  }
+
+  .searchFieldContainer {
+    margin: 0px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+
+    // background-color: red;
+    .inputSearchContainer {
+      width: 270px;
+      height: 50px;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+    }
+
+    .inputSmartSearchContainer {
+      width: 270px;
+      height: 50px;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: var(--grey3);
+      box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+    }
+
+    .inputSearchButton {
+      margin: 5px 0px 0px 5px;
+    }
+
+    .searchFilter {
+      margin: 0px 0px 0px 0px;
+    }
+  }
+
+  .buttonStyle {
+    align-self: center;
+  }
+
+  .dividerStyling {
+    margin: 0px 0px 20px 0px;
+    width: 100%;
+    height: 1px;
+    background: var(--grey6);
+  }
+
+  .tableContainer {
+    width: 97%;
+    max-height: 250px;
+    background-color: var(--white1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin: 10px auto;
+    cursor: pointer;
+
+    // border-radius: 20px;
+    &::-webkit-scrollbar {
+      width: 3px;
+      border-radius: 50px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 50px;
+      -webkit-box-shadow: inset 0 0 100px var(--grey10);
+    }
+  }
+  .submitButtonStyle {
+    margin: 20px auto;
+    width: 100px;
+  }
+}

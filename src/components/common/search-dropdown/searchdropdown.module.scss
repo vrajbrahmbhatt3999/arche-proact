@@ -1,0 +1,53 @@
+@media only screen and (min-width: 768px) {
+  .inputData {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 234px;
+    height: 42px;
+    border: 1px solid var(--grey6);
+    background: var(--white1);
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+    .inputFilled {
+      border: none;
+      background: var(--white1);
+      font-size: var(--XSmall);
+      width: 78%;
+    }
+    :focus {
+      outline: none;
+    }
+    .seeDataInDropDownMain {
+      position: absolute;
+      cursor: pointer;
+      padding: 10px 0px 10px 0px;
+      width: 234px;
+      max-height: 145px;
+      overflow-y: scroll;
+      border: 1px solid var(--grey6);
+      background: var(--white1);
+      top: 41px;
+      left: -1px;
+      border-radius: 10px;
+      z-index: 10;
+
+      :-webkit-scrollbar {
+        display: none;
+      }
+
+      .dropdownItemText {
+        cursor: pointer;
+        margin: 0px 0 5px 10px;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .hideDataInDropDownMain {
+      display: none;
+    }
+  }
+}

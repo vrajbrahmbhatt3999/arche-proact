@@ -1,0 +1,78 @@
+.raiseRequestPopupMainContaier {
+  width: 900px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 20px;
+
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+
+  .uploadContainer {
+    margin-top: 50px;
+    padding: 0 40px;
+
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+
+    .searchMainContainer {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+
+      .inputFieldContainer {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+
+        .label {
+          color: var(--black2);
+          font-weight: var(--font-semibold);
+          font-size: var(--font-16);
+          margin-top: 7px;
+          width: 120px;
+          margin: 7px 0 0 10px;
+        }
+
+        .fieldErrorContainer {
+          .inputField {
+            background: var(--white1);
+            width: 245px;
+            border: 1px solid #cdd4d8;
+            border-radius: 6px;
+            padding: 7px 10px;
+            margin-right: 10px;
+          }
+
+          .select {
+            width: 245px;
+            height: 45px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 55px;
+    }
+  }
+}

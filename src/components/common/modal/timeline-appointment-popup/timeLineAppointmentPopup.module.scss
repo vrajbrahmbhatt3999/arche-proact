@@ -1,0 +1,65 @@
+.mainContainer {
+  width: 650px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 10px;
+  .closeIconStyle {
+    cursor: pointer;
+    float: right;
+  }
+  .uploadContainer {
+    margin-top: 50px;
+    .title {
+      text-align: center;
+      font-weight: var(--font-semibold);
+      font-size: var(--font-24);
+      line-height: 36px;
+      color: var(--black2);
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+    .searchContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 35px;
+      .labelText {
+        font-weight: var(--font-semibold);
+        font-size: var(--font-16);
+        margin-right: 7px;
+      }
+      .searchInput {
+        background: var(--white1);
+        width: 180px;
+        border: 1px solid #cdd4d8;
+        border-radius: 6px;
+        padding: 10px 15px;
+        margin-right: 10px;
+      }
+    }
+    .tableContainer {
+      height: 400px;
+      overflow-y: scroll;
+      margin: 20px 0;
+      &::-webkit-scrollbar {
+        display: block;
+        width: 7px;
+        height: 7px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--grey7);
+        border-radius: 10px;
+        border: 1px solid var(--grey7);
+      }
+    }
+  }
+}

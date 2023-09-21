@@ -1,0 +1,80 @@
+@import '../../../../styles/mixin.scss';
+.manageBranchContainer {
+  background-color: var(--white1);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 0 20px 50px 0;
+  .inputFieldsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .labelField {
+      display: flex;
+      flex-direction: row;
+      margin-left: 40px;
+      margin-bottom: 30px;
+      .labelText {
+        margin-right: 15px;
+        font-weight: var(--font-semibold);
+        font-size: --font-16;
+        color: var(--black2);
+
+        width: 160px;
+
+        .infoContainer {
+          position: relative;
+
+          top: -25px;
+          right: -45px;
+
+          .iconStyle {
+            cursor: pointer;
+          }
+          .infoText {
+            padding: 10px 15px;
+            font-weight: var(--font-medium);
+            font-size: var(--font-14);
+            background-color: var(--white1);
+            box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            width: 210px;
+            z-index: 1;
+            left: -50px;
+            top: 33px;
+            position: absolute;
+          }
+        }
+      }
+
+      .fieldErrorContainer {
+        .inputField {
+          background: #ffffff;
+          width: 230px;
+          border: 1px solid #cdd4d8;
+          border-radius: 6px;
+          padding: 10px 15px;
+        }
+        .inputDisable {
+          background: var(--grey1);
+          width: 230px;
+          border: 1px solid #cdd4d8;
+          border-radius: 6px;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+  .btnContainer {
+    @include flexCenter;
+    flex-direction: row;
+    margin: 10px 0 30px 0;
+    .backBtn {
+      margin-right: 10px;
+      border: 1px solid var(--blue1);
+      color: var(--blue1);
+      border-radius: 6px;
+      background: var(--white1);
+    }
+  }
+}

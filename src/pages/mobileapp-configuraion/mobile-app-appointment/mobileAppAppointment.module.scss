@@ -1,0 +1,58 @@
+@import "../../../styles/mixin.scss";
+
+.appointmentMainContainer {
+  @include pageWrapper(20px);
+  margin: 0 20px 50px 0;
+
+  .searchBtnContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    .searchContainer {
+      @include flexVertical;
+      column-gap: 10px;
+      .searchFieldContainer {
+        @include flexVertical;
+        column-gap: 12px;
+        .searchLabel {
+          @include font(var(--black2), var(--font-16), var(--font-semibold));
+          width: 50px;
+          text-align: right;
+        }
+        .searchInput {
+          background: var(--white1);
+          border: 1px solid var(--grey6);
+          border-radius: 6px;
+          height: 42px;
+          width: 230px;
+          @include font(var(--grey4), var(--font-16), var(--font-medium));
+          padding: 0px 14px 0px 14px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+      }
+      .searchButton {
+        background: var(--green1);
+        padding: 10px 12px;
+        cursor: pointer;
+        border-radius: 20%;
+        margin-right: 5px;
+      }
+    }
+
+    .btnContainer {
+      width: 217px;
+      height: 42px;
+      @include font(var(--white1), var(--font-16), var(--font-semibold));
+    }
+  }
+
+  .tableContainer {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}

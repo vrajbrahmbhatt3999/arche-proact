@@ -1,0 +1,111 @@
+.mainContainer {
+  // max-width: 1200px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(97px);
+  border-radius: 10px;
+  padding: 25px 17px;
+  font-weight: var(--font-semibold);
+  font-size: var(--font-16);
+  font-style: normal;
+  margin-right: 20px;
+  margin-bottom: 40px;
+
+  .addNewButtonStyle {
+    text-align: center;
+    color: #0e26a3;
+    height: 42px;
+    border-radius: 6px;
+    background: transparent;
+    border: 1px solid #0e26a3;
+    padding: 10px 15px;
+  }
+
+  .headerContainer {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .searchContainer {
+    margin: 45px 0px 20px 0px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .searchInputContainer {
+      position: relative;
+    }
+
+    .searchIconStyle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 14px 13px;
+    }
+  }
+
+  .amountContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px;
+  }
+
+  .amountContainer > * {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    // grid-template-columns: repeat(auto-fill, 200px);
+    height: 44px;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: var(--font-medium);
+    font-size: var(--font-18);
+  }
+
+  .amountContainer > div:first-child {
+    color: #5936f1;
+    background: rgba(89, 54, 241, 0.1);
+  }
+  .amountContainer > div:nth-child(2) {
+    color: #02bf90;
+    background: rgba(2, 191, 144, 0.1);
+  }
+  .amountContainer > div:last-child {
+    color: #ffa009;
+    background: rgba(255, 160, 9, 0.1);
+  }
+  .buttonContainer {
+    display: flex;
+    place-content: center;
+    .endButtonStyle {
+      color: var(--blue1);
+      border: 1px solid var(--blue1);
+      background: var(--white1);
+      margin-left: 20px;
+    }
+  }
+  .tableContainer {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey7);
+      border-radius: 10px;
+      border: 1px solid var(--grey7);
+    }
+  }
+}

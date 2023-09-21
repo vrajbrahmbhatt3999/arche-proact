@@ -1,0 +1,343 @@
+.purchaseInvoiceMainContainer {
+  width: 98%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 30px 0px 40px 30px;
+
+  .searchContainer {
+    display: flex;
+
+    .search {
+      display: flex;
+      align-items: center;
+
+      .text {
+        margin-left: 10px;
+        font-size: var(--font-16);
+        color: var(--black2);
+        font-weight: var(--font-semibold);
+      }
+
+      .search {
+        width: 234px;
+        height: 42px;
+        border: 1px solid var(--grey6);
+        background: var(--white1);
+        margin-left: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    .dateSearch {
+      display: flex;
+      align-items: center;
+      margin-left: 100px;
+
+      .text {
+        margin-left: 10px;
+        font-size: var(--font-16);
+        color: var(--black2);
+        font-weight: var(--font-semibold);
+      }
+
+      .inputSearch {
+        width: 234px;
+        height: 42px;
+        border: 1px solid var(--grey6);
+        background: var(--white1);
+        margin-left: 10px;
+        border-radius: 10px;
+        padding: 5px;
+      }
+    }
+  }
+
+  .searchContainer2 {
+    margin-top: 30px;
+    display: flex;
+
+    .search {
+      display: flex;
+      align-items: center;
+
+      .text {
+        margin-left: 10px;
+        font-size: var(--font-16);
+        color: var(--black2);
+        font-weight: var(--font-semibold);
+        margin-bottom: 0px;
+        text-align: right;
+        width: 118px;
+      }
+
+      .inputSearch {
+        width: 234px;
+        height: 42px;
+        border: 1px solid var(--grey6);
+        background: var(--white1);
+        margin-left: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    .textFieldContainer {
+      display: flex;
+      align-items: center;
+
+      .text {
+        margin-left: 10px;
+        font-size: var(--font-16);
+        color: var(--black2);
+        font-weight: var(--font-semibold);
+        margin-bottom: 0px;
+        text-align: right;
+        width: 118px;
+      }
+
+      .inputSearch {
+        width: 234px;
+        height: 42px;
+        border: 1px solid var(--grey6);
+        background: var(--white1);
+        margin-left: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    .dropDownContainer {
+      display: flex;
+      align-items: center;
+
+      .dropDownLabel {
+        color: var(--black2);
+        font-weight: var(--font-semibold);
+        font-size: var(--font-16);
+
+        margin-bottom: 0px;
+        text-align: right;
+        width: 150px;
+      }
+
+      .select {
+        width: 234px;
+        margin-left: 10px;
+      }
+
+      .dropDown {
+        margin-left: 12px;
+      }
+
+      .dropDownContent {
+        margin-left: 12px;
+      }
+
+      .dropDownValue {
+        border-bottom: none;
+        font-weight: var(--font-medium);
+        color: var(--grey4);
+      }
+    }
+  }
+
+  .radioContainer {
+    display: flex;
+    margin-top: 40px;
+
+    input[type='radio'] {
+      accent-color: green;
+    }
+
+    .internalRadio {
+      display: flex;
+      align-items: center;
+
+      .radioInput {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-left: 12px;
+        outline: none;
+        border: 2px solid gray;
+        position: relative;
+      }
+
+      .radioInput:before {
+        cursor: pointer;
+        content: '';
+        top: 52%;
+        left: 50%;
+        width: 74%;
+        height: 74%;
+        position: absolute;
+        border-radius: 50%;
+        display: block;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.2s;
+      }
+
+      .radioInput:checked:before {
+        background: var(--green1);
+      }
+
+      .radioInput:checked {
+        border-color: var(--grey6);
+      }
+
+      .internalText {
+        margin-left: 8px;
+        font-weight: var(--font-medium);
+        font-size: var(--font-16);
+        color: var(--green1);
+        margin-bottom: 0px;
+      }
+
+      .disableText {
+        margin-left: 8px;
+        font-weight: var(--font-medium);
+        font-size: var(--font-16);
+        color: var(--grey4);
+        margin-bottom: 0px;
+      }
+    }
+
+    .externalRadio {
+      display: flex;
+      align-items: center;
+      margin-left: 37px;
+
+      .radioInput {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-left: 12px;
+        outline: none;
+        border: 2px solid gray;
+        position: relative;
+      }
+
+      .radioInput:before {
+        cursor: pointer;
+        content: '';
+        top: 52%;
+        left: 50%;
+        width: 74%;
+        height: 74%;
+        position: absolute;
+        border-radius: 50%;
+        display: block;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.2s;
+      }
+
+      .radioInput:checked:before {
+        background: var(--green1);
+      }
+
+      .radioInput:checked {
+        border-color: var(--grey6);
+      }
+
+      .radioLable {
+        margin-left: 10px;
+      }
+
+      .externalText {
+        margin-left: 8px;
+        font-weight: var(--font-medium);
+        font-size: var(--font-16);
+        color: var(--green1);
+        margin-bottom: 0px;
+      }
+
+      .disableText {
+        margin-left: 8px;
+        font-weight: var(--font-medium);
+        font-size: var(--font-16);
+        color: var(--grey4);
+        margin-bottom: 0px;
+      }
+    }
+
+    .attechmentContainer {
+      display: flex;
+      align-items: center;
+      margin-left: 92px;
+
+      .text {
+        margin-right: 10px;
+        font-size: var(--font-16);
+        color: var(--black2);
+        font-weight: var(--font-semibold);
+        margin-bottom: 0px;
+        text-align: right;
+        width: 118px;
+      }
+    }
+  }
+
+}
+
+.tableMainContainer {
+  width: 98%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+  border-radius: 10px;
+  margin-bottom: 47px;
+  margin-top: 59px;
+
+  .searchContainer {
+    display: flex;
+    padding-top: 41px;
+
+    .smartSearch {
+      margin-left: 36px;
+
+      .inputSearch {
+        border: 1px solid var(--white1);
+        width: 285px;
+        height: 50px;
+        box-shadow: 0px 10px 117px 14px rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  .tableContainer {
+    padding: 40px 26px 53px 26px;
+
+    th {
+      background: none;
+    }
+
+    td:nth-last-child(4) {
+      color: var(--red3);
+    }
+
+    .submitbtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+
+      .reqSubmit {
+        width: 247px;
+      }
+    }
+  }
+
+  .tableContainer1 {
+    padding: 40px 26px 53px 26px;
+
+    th {
+      background: none;
+    }
+
+    td:nth-last-child(4) {
+      color: var(--green1);
+    }
+
+  }
+}

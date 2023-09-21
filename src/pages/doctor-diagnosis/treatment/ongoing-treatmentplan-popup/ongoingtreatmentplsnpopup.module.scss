@@ -1,0 +1,39 @@
+@import "../../../../styles/mixin.scss";
+
+.mainContainer {
+  width: 60%;
+  height: 550px;
+  margin: auto;
+  background: var(--white1);
+  border-radius: 10px;
+  padding: 30px;
+  font-style: normal;
+  position: relative;
+
+  .tableContainer{
+    height: 400px;
+    overflow: auto;
+  }
+
+  .iconContainer {
+    position: absolute;
+    right: 4%;
+    top: 4%;
+  }
+  .closeIconStyle {
+    cursor: pointer;
+  }
+  .headerContainer {
+    text-align: center;
+    .title {
+      @include font(var(--black2), var(--font-24), var(--font-semibold));
+      line-height: 36px;
+    }
+    .dividerStyle {
+      margin: 10px auto 30px auto;
+      width: 80px;
+      height: 3px;
+      background: var(--green1);
+    }
+  }
+}

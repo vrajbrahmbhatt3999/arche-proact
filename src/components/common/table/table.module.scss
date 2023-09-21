@@ -1,0 +1,41 @@
+@import "../../../styles/mixin.scss";
+.viewLinkStyle {
+  text-decoration: none;
+  color: #0e26a3;
+}
+.actionIconStyle {
+  .iconStyle {
+    cursor: pointer;
+    // margin-right: 10px;
+  }
+  .editIconStyle {
+    // margin-right: 10px;
+  }
+}
+
+.notView {
+  cursor: default;
+  color: #0e26a3;
+}
+.view {
+  color: #0e26a3;
+  cursor: pointer;
+}
+
+.noReordFoundText {
+  text-align: center;
+  @include font(var(--black1), var(--font-16), var(--font-bold));
+  padding: 12px 0px;
+}
+.toogleStyle {
+  display: flex;
+  justify-content: center;
+  // margin-top: 8px;
+}
+.iconImg {
+  max-width: unset !important;
+  display: inline-block !important;
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 5px !important;
+}
